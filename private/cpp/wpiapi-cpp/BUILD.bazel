@@ -1,0 +1,8 @@
+cc_library(
+    name = "shared",
+    linkstatic = 1,
+    visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
+    deps = ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_headers//:headers"] + select({
+        "@rules_roborio_toolchain//constraints/is_roborio:roborio": ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_linuxathena//:shared_libs"],
+    }),
+)

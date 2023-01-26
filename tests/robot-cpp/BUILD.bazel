@@ -1,0 +1,27 @@
+load("@rules_bazelrio//:robot_rules.bzl", "robot_cc_binary")
+
+cc_library(
+    name = "robot-lib",
+    srcs = ["robot.cpp"],
+    hdrs = ["robot.hpp"],
+    deps = [
+        "//robot-cpp/commands",
+        "//robot-cpp/subsystems",
+        "@bzlmodrio-allwpilib//libraries/cpp/cameraserver",
+    ],
+)
+
+cc_library(
+    name = "robot-main",
+    srcs = ["main.cpp"],
+    deps = [
+        "robot-lib",
+    ],
+)
+
+robot_cc_binary(
+    name = "robot",
+    halsim_deps = ["@bzlmodrio-allwpilib//libraries/cpp/halsim_gui:halsim_gui"],
+    lib_name = "robot-main",
+    team_number = 9999,
+)

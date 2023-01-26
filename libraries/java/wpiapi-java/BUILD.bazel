@@ -1,0 +1,9 @@
+java_import(
+    name = "wpiapi-java",
+    jars = ["@com_ctre_phoenix_wpiapi_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/java/wpilibj",
+        "@bzlmodrio-phoenix//libraries/java/api-java",
+    ],
+)

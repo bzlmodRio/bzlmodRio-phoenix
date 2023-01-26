@@ -1,0 +1,26 @@
+py_library(
+    name = "get_ctre_dependencies",
+    srcs = ["get_ctre_dependencies.py"],
+    deps = [
+        "@bzlmodrio-allwpilib-gentool//:get_allwpilib_dependencies",
+        "@bzlmodrio-gentool//bazelrio_gentool",
+    ],
+)
+
+py_binary(
+    name = "generate",
+    srcs = ["generate.py"],
+    deps = [
+        ":get_ctre_dependencies",
+        "@bzlmodrio-gentool//bazelrio_gentool",
+    ],
+)
+
+py_binary(
+    name = "publish",
+    srcs = ["publish.py"],
+    deps = [
+        ":get_ctre_dependencies",
+        "@bzlmodrio-gentool//bazelrio_gentool",
+    ],
+)

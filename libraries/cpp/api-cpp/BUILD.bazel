@@ -1,0 +1,52 @@
+alias(
+    name = "api-cpp",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "shared",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps =
+        # Binaries
+        select({
+            "@rules_roborio_toolchain//constraints/is_roborio:roborio": [
+                "//private/cpp/api-cpp:shared",
+                "//private/cpp/cci:shared",
+                "@bzlmodrio-ni//libraries/cpp/ni:shared",
+            ],
+            "//conditions:default": [
+                "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
+                "//private/cpp/api-cpp-sim:shared",
+                "//private/cpp/cci-sim:shared",
+                "//private/cpp/simCANCoder:shared",
+                "//private/cpp/simPigeonIMU:shared",
+                "//private/cpp/simTalonFX:shared",
+                "//private/cpp/simTalonSRX:shared",
+                "//private/cpp/simVictorSPX:shared",
+            ],
+        }),
+)
+
+cc_library(
+    name = "jni",
+    visibility = ["//visibility:public"],
+    deps = select({
+        "@rules_roborio_toolchain//constraints/is_roborio:roborio": [
+            "//private/cpp/api-cpp:shared",
+            "//private/cpp/cci:shared",
+        ],
+        "//conditions:default": [
+            "@bzlmodrio-allwpilib//libraries/cpp/hal:jni",
+            "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
+            "//private/cpp/api-cpp-sim:shared",
+            "//private/cpp/cci-sim:shared",
+            "//private/cpp/simCANCoder:shared",
+            "//private/cpp/simPigeonIMU:shared",
+            "//private/cpp/simTalonFX:shared",
+            "//private/cpp/simTalonSRX:shared",
+            "//private/cpp/simVictorSPX:shared",
+        ],
+    }),
+)

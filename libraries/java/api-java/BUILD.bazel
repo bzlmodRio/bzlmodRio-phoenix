@@ -1,0 +1,8 @@
+java_import(
+    name = "api-java",
+    jars = ["@com_ctre_phoenix_api_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-phoenix//libraries/cpp/api-cpp:jni",
+    ],
+)

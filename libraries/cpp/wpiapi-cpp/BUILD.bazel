@@ -1,0 +1,24 @@
+alias(
+    name = "wpiapi-cpp",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "shared",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
+        "@bzlmodrio-phoenix//libraries/cpp/api-cpp:shared",
+    ] +
+    # Binaries
+    select({
+        "@rules_roborio_toolchain//constraints/is_roborio:roborio": [
+            "//private/cpp/wpiapi-cpp:shared",
+        ],
+        "//conditions:default": [
+            "//private/cpp/wpiapi-cpp-sim:shared",
+        ],
+    }),
+)

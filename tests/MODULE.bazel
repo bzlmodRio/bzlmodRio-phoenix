@@ -1,0 +1,35 @@
+bazel_dep(name = "bzlmodrio-phoenix", version = "", repo_name = "bzlmodrio-phoenix")
+local_path_override(
+    module_name = "bzlmodrio-phoenix",
+    path = "..",
+)
+
+bazel_dep(name = "googletest", version = "1.11.0")
+bazel_dep(name = "rules_cc", version = "0.0.2")
+bazel_dep(name = "rules_jvm_external", version = "4.4.2")
+bazel_dep(name = "rules_bazelrio", version = "0.0.9")
+bazel_dep(name = "rules_roborio_toolchain", version = "2022-1")
+bazel_dep(name = "bzlmodrio-allwpilib", version = "2022.3.1")
+bazel_dep(name = "bzlmodrio-opencv", version = "4.5.2-1")
+bazel_dep(name = "bzlmodrio-ni", version = "2022.4.0")
+
+maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
+maven.install(
+    artifacts = [
+        "org.junit.jupiter:junit-jupiter-api:5.8.2",
+        "org.junit.jupiter:junit-jupiter-params:5.8.2",
+        "org.junit.jupiter:junit-jupiter-engine:5.8.2",
+        "org.junit.platform:junit-platform-commons:1.6.1",
+        "org.junit.platform:junit-platform-console:1.6.1",
+        "org.junit.platform:junit-platform-engine:1.6.1",
+        "org.junit.platform:junit-platform-launcher:1.6.1",
+        "org.junit.platform:junit-platform-suite-api:1.6.1",
+    ],
+    repositories = [
+        "https://repo1.maven.org/maven2",
+    ],
+)
+use_repo(
+    maven,
+    "maven",
+)
