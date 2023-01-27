@@ -22,9 +22,9 @@ def download_dependencies():
     # Roborio Toolchain
     http_archive(
         name = "rules_roborio_toolchain",
-        sha256 = "2b63624390bb28dd0bddcff3b24decbb34a0cead961237cc6583bef64b2fe510",
-        strip_prefix = "rules_roborio_toolchain-2022-1",
-        url = "https://github.com/bzlmodRio/rules_roborio_toolchain/archive/refs/tags/2022-1.tar.gz",
+        sha256 = "2f37129a12941f918931d8a676156bc933f3d6437735d142fa7d8c9f0e57da48",
+        strip_prefix = "rules_roborio_toolchain-2023-7",
+        url = "https://github.com/bzlmodRio/rules_roborio_toolchain/archive/refs/tags/2023-7.tar.gz",
     )
 
     ########################
@@ -33,25 +33,25 @@ def download_dependencies():
     # bzlmodrio-allwpilib
     http_archive(
         name = "bzlmodrio-allwpilib",
-        sha256 = "d54218d7c89f515967b2acfd311add024a1c16c4530188eb070806275a659692",
-        strip_prefix = "bzlmodRio-allwpilib-2022.3.1",
-        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/archive/refs/tags/2022.3.1.tar.gz",
+        sha256 = "6c0f78beb6b28685949ec52b5b91c37a7c516a974ce08186cb62734977473cdc",
+        strip_prefix = "bzlmodRio-allwpilib-2023.1.1",
+        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/archive/refs/tags/2023.1.1.tar.gz",
     )
 
     # bzlmodrio-opencv
     http_archive(
         name = "bzlmodrio-opencv",
-        sha256 = "f506a482f5f09826d065af8492844904c514374ab1745c03e1b4e3a3bad3dffd",
-        strip_prefix = "bzlmodRio-opencv-4.5.2-1",
-        url = "https://github.com/bzlmodRio/bzlmodRio-opencv/archive/refs/tags/4.5.2-1.tar.gz",
+        sha256 = "641fb23aa8e22d8567f500fcc3c9d294412d8d55b759aee4fa67aaa6d3059b6a",
+        strip_prefix = "bzlmodRio-opencv-4.6.0-4",
+        url = "https://github.com/bzlmodRio/bzlmodRio-opencv/archive/refs/tags/4.6.0-4.tar.gz",
     )
 
     # bzlmodrio-ni
     http_archive(
         name = "bzlmodrio-ni",
-        sha256 = "e41e562f148aef838f3153a29006d601551352a007e3d08443f616b7b67cc637",
-        strip_prefix = "bzlmodRio-ni-2022.4.0",
-        url = "https://github.com/bzlmodRio/bzlmodRio-ni/archive/refs/tags/2022.4.0.tar.gz",
+        sha256 = "133a09b3743bf4c1aeeb7c2d55efd9d9452ed3d8998b050c1a0cc5788ec59ad0",
+        strip_prefix = "bzlmodRio-ni-2023.3.0",
+        url = "https://github.com/bzlmodRio/bzlmodRio-ni/archive/refs/tags/2023.3.0.tar.gz",
     )
 
     ########################

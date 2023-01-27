@@ -16,7 +16,7 @@ def get_ctre_dependencies(
     group = vendordep_dependency(
         "bzlmodrio-phoenix",
         os.path.join(SCRIPT_DIR, f"vendor_dep.json"),
-        year=2022,
+        year=2023,
         fail_on_hash_miss=False,
         has_static_libraries=False,
     )
@@ -38,14 +38,19 @@ def get_ctre_dependencies(
             "@rules_roborio_toolchain//constraints/is_roborio:roborio": [
                 "api-cpp",
                 "cci",
+                "tools",
                 "ni",
             ],
             "//conditions:default": [
                 "hal-cpp",
                 "api-cpp-sim",
                 "cci-sim",
+                "tools-sim",
                 "simCANCoder",
                 "simPigeonIMU",
+                "simProCANcoder",
+                "simProPigeon2",
+                "simProTalonFX",
                 "simTalonFX",
                 "simTalonSRX",
                 "simVictorSPX",
@@ -55,14 +60,19 @@ def get_ctre_dependencies(
             "@rules_roborio_toolchain//constraints/is_roborio:roborio": [
                 "api-cpp",
                 "cci",
+                "tools",
             ],
             "//conditions:default": [
                 "hal-cpp",
                 "wpiutil-cpp",
                 "api-cpp-sim",
                 "cci-sim",
+                "tools-sim",
                 "simCANCoder",
                 "simPigeonIMU",
+                "simProCANcoder",
+                "simProPigeon2",
+                "simProTalonFX",
                 "simTalonFX",
                 "simTalonSRX",
                 "simVictorSPX",

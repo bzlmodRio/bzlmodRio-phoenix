@@ -46,7 +46,7 @@ public class DriveTrain extends SubsystemBase {
 
     m_gyro = new ADXRS450_Gyro();
 
-    m_odometry = new DifferentialDriveOdometry(m_gyro.getRotation2d());
+    m_odometry = new DifferentialDriveOdometry(m_gyro.getRotation2d(), 0, 0);
     m_field = new Field2d();
 
     SmartDashboard.putData("Field", m_field);

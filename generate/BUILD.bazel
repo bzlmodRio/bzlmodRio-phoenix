@@ -1,6 +1,7 @@
 py_library(
     name = "get_ctre_dependencies",
     srcs = ["get_ctre_dependencies.py"],
+    visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib-gentool//:get_allwpilib_dependencies",
         "@bzlmodrio-gentool//bazelrio_gentool",

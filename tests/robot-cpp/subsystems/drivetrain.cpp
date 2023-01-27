@@ -8,7 +8,7 @@
 #include "frc/simulation/SimDeviceSim.h"
 #include <units/length.h>
 
-#include <wpi/numbers>
+#include <numbers>
 
 DriveTrain::DriveTrain()
     : m_leftMotorA{kDrivetrainMotorLeftAPort},
@@ -17,7 +17,7 @@ DriveTrain::DriveTrain()
       m_rightMotorB{kDrivetrainMotorRightBPort},
       m_gyro{kPigeonPort},
       m_robotDrive{m_leftMotorA, m_rightMotorA},
-      m_odometry{frc::Rotation2d()},
+      m_odometry{frc::Rotation2d(), 0_m, 0_m},
       m_drivetrainSimulator(
           frc::sim::DifferentialDrivetrainSim::CreateKitbotSim(
               frc::sim::DifferentialDrivetrainSim::KitbotMotor::DualCIMPerSide,

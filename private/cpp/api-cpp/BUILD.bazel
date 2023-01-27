@@ -3,6 +3,8 @@ cc_library(
     linkstatic = 1,
     visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
     deps = ["@bazelrio_com_ctre_phoenix_api-cpp_headers//:headers"] + select({
+        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix_api-cpp_windowsx86-64//:shared_libs"],
+        "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenix_api-cpp_linuxx86-64//:shared_libs"],
         "@rules_roborio_toolchain//constraints/is_roborio:roborio": ["@bazelrio_com_ctre_phoenix_api-cpp_linuxathena//:shared_libs"],
     }),
 )

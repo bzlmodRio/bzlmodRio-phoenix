@@ -1,0 +1,10 @@
+cc_library(
+    name = "shared",
+    linkstatic = 1,
+    visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
+    deps = ["@bazelrio_com_ctre_phoenixpro_tools_headers//:headers"] + select({
+        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenixpro_tools_windowsx86-64//:shared_libs"],
+        "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenixpro_tools_linuxx86-64//:shared_libs"],
+        "@rules_roborio_toolchain//constraints/is_roborio:roborio": ["@bazelrio_com_ctre_phoenixpro_tools_linuxathena//:shared_libs"],
+    }),
+)

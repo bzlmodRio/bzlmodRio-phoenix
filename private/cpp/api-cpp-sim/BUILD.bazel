@@ -9,6 +9,6 @@ cc_library(
     deps = ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_headers//:headers"] + select({
         "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_windowsx86-64//:shared_libs"],
         "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_linuxx86-64//:shared_libs"],
-        "@rules_bazelrio//conditions:osx": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_osxx86-64//:shared_libs"],
+        "@rules_bazelrio//conditions:osx": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_osxuniversal//:shared_libs"],
     }),
 )

@@ -49,7 +49,7 @@ public class Elevator extends PIDSubsystem {
       SimDeviceSim deviceSim = new SimDeviceSim("SPARK MAX [" + m_motor.getDeviceID() + "]");
       m_elevatorSim = new ElevatorSim(kElevatorGearbox, kElevatorGearing, kCarriageMass,
               kElevatorDrumRadius, kMinElevatorHeight,
-              kMaxElevatorHeight);
+              kMaxElevatorHeight, true);
     }
   }
 
