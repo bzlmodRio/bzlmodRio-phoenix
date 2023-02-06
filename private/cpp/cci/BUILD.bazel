@@ -5,6 +5,6 @@ cc_library(
     deps = ["@bazelrio_com_ctre_phoenix_cci_headers//:headers"] + select({
         "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix_cci_windowsx86-64//:shared_libs"],
         "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenix_cci_linuxx86-64//:shared_libs"],
-        "@rules_roborio_toolchain//constraints/is_roborio:roborio": ["@bazelrio_com_ctre_phoenix_cci_linuxathena//:shared_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@bazelrio_com_ctre_phoenix_cci_linuxathena//:shared_libs"],
     }),
 )

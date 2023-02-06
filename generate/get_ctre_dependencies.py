@@ -35,7 +35,7 @@ def get_ctre_dependencies(
         "api-cpp",
         deps=[],
         platform_deps={
-            "@rules_roborio_toolchain//constraints/is_roborio:roborio": [
+            "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
                 "api-cpp",
                 "cci",
                 "tools",
@@ -57,7 +57,7 @@ def get_ctre_dependencies(
             ],
         },
         jni_deps={
-            "@rules_roborio_toolchain//constraints/is_roborio:roborio": [
+            "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
                 "api-cpp",
                 "cci",
                 "tools",
@@ -84,7 +84,7 @@ def get_ctre_dependencies(
         "wpiapi-cpp",
         deps=["wpilibc-cpp", "api-cpp"],
         platform_deps={
-            "@rules_roborio_toolchain//constraints/is_roborio:roborio": [
+            "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
                 "wpiapi-cpp",
             ],
             "//conditions:default": [

@@ -1,17 +1,17 @@
 package frc.robot;
 
+import edu.wpi.first.math.util.Units;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.math.util.Units;
-import frc.robot.commands.SetElevatorSetpointCommand;
+import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.JoystickDriveCommand;
+import frc.robot.commands.SetElevatorSetpointCommand;
 import frc.robot.commands.ShooterRpmCommand;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.Elevator;
 import frc.robot.subsystems.Shooter;
-import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -29,10 +29,8 @@ public class RobotContainer {
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
-
     // Assign default commands
-    m_drivetrain.setDefaultCommand(
-        new JoystickDriveCommand(m_drivetrain, m_joystick));
+    m_drivetrain.setDefaultCommand(new JoystickDriveCommand(m_drivetrain, m_joystick));
 
     // Configure the button bindings
     configureButtonBindings();
@@ -56,9 +54,12 @@ public class RobotContainer {
     shootFastButton.whileHeld(new ShooterRpmCommand(m_shooter, 1500));
     shootSlowButton.whileHeld(new ShooterRpmCommand(m_shooter, 1000));
 
-    elevatorLowButton.whileHeld(new SetElevatorSetpointCommand(m_elevator, Units.inchesToMeters(10)));
-    elevatorMidButton.whileHeld(new SetElevatorSetpointCommand(m_elevator, Units.inchesToMeters(20)));
-    elevatorHighButton.whileHeld(new SetElevatorSetpointCommand(m_elevator, Units.inchesToMeters(30)));
+    elevatorLowButton.whileHeld(
+        new SetElevatorSetpointCommand(m_elevator, Units.inchesToMeters(10)));
+    elevatorMidButton.whileHeld(
+        new SetElevatorSetpointCommand(m_elevator, Units.inchesToMeters(20)));
+    elevatorHighButton.whileHeld(
+        new SetElevatorSetpointCommand(m_elevator, Units.inchesToMeters(30)));
   }
 
   /**

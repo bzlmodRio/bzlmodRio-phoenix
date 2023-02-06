@@ -9,9 +9,9 @@ local_repository(
 # Google Test
 http_archive(
     name = "googletest",
-    sha256 = "755f9a39bc7205f5a0c428e920ddad092c33c8a1b46997def3f1d4a82aded6e1",
-    strip_prefix = "googletest-5ab508a01f9eb089207ee87fd547d290da39d015",
-    urls = ["https://github.com/google/googletest/archive/5ab508a01f9eb089207ee87fd547d290da39d015.zip"],
+    sha256 = "24564e3b712d3eb30ac9a85d92f7d720f60cc0173730ac166f27dda7fed76cb2",
+    strip_prefix = "googletest-release-1.12.1",
+    urls = ["https://github.com/google/googletest/archive/release-1.12.1.zip"],
 )
 
 load("@bzlmodrio-phoenix//private/non_bzlmod_dependencies:download_dependencies.bzl", "download_dependencies")

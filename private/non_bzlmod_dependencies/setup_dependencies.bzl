@@ -1,12 +1,13 @@
 load("@bzlmodrio-phoenix//:maven_cpp_deps.bzl", "setup_legacy_bzlmodrio_phoenix_cpp_dependencies")
 load("@bzlmodrio-phoenix//:maven_java_deps.bzl", "setup_legacy_bzlmodrio_phoenix_java_dependencies")
+load("@rules_jvm_external//:repositories.bzl", "rules_jvm_external_deps")
 load("@bzlmodrio-allwpilib//:maven_cpp_deps.bzl", "setup_legacy_bzlmodrio_allwpilib_cpp_dependencies")
 load("@bzlmodrio-allwpilib//:maven_java_deps.bzl", "get_bzlmodrio_allwpilib_java_dependencies", "setup_legacy_bzlmodrio_allwpilib_java_dependencies")
 load("@bzlmodrio-opencv//:maven_cpp_deps.bzl", "setup_legacy_bzlmodrio_opencv_cpp_dependencies")
 load("@bzlmodrio-opencv//:maven_java_deps.bzl", "setup_legacy_bzlmodrio_opencv_java_dependencies")
 load("@bzlmodrio-ni//:maven_cpp_deps.bzl", "setup_legacy_bzlmodrio_ni_cpp_dependencies")
-load("@rules_roborio_toolchain//:maven_deps.bzl", "setup_legacy_setup_toolchains_dependencies")
-load("@rules_roborio_toolchain//toolchains:load_toolchains.bzl", "load_toolchains")
+load("@rules_bzlmodrio_toolchains//:maven_deps.bzl", "setup_legacy_setup_toolchains_dependencies")
+load("@rules_bzlmodrio_toolchains//toolchains:load_toolchains.bzl", "load_toolchains")
 load("@rules_bazelrio//:nonbzlmod_setup.bzl", "setup_rules_bazelrio")
 
 def _setup_toolchains():
@@ -18,6 +19,15 @@ def _setup_toolchains():
         "@local_roborio//:macos",
         "@local_roborio//:linux",
         "@local_roborio//:windows",
+        "@local_raspi_32//:macos",
+        "@local_raspi_32//:linux",
+        "@local_raspi_32//:windows",
+        "@local_bullseye_32//:macos",
+        "@local_bullseye_32//:linux",
+        "@local_bullseye_32//:windows",
+        "@local_bullseye_64//:macos",
+        "@local_bullseye_64//:linux",
+        "@local_bullseye_64//:windows",
     )
 
 def _setup_cpp_dependencies():
@@ -27,6 +37,7 @@ def _setup_cpp_dependencies():
     setup_legacy_bzlmodrio_ni_cpp_dependencies()
 
 def _setup_java_dependencies():
+    rules_jvm_external_deps()
     setup_legacy_bzlmodrio_phoenix_java_dependencies()
     setup_legacy_bzlmodrio_allwpilib_java_dependencies()
     setup_legacy_bzlmodrio_opencv_java_dependencies()

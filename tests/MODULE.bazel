@@ -1,17 +1,17 @@
-bazel_dep(name = "bzlmodrio-phoenix", version = "", repo_name = "bzlmodrio-phoenix")
+bazel_dep(name = "bzlmodrio-phoenix", version = "")
 local_path_override(
     module_name = "bzlmodrio-phoenix",
     path = "..",
 )
 
-bazel_dep(name = "googletest", version = "1.11.0")
-bazel_dep(name = "rules_cc", version = "0.0.2")
-bazel_dep(name = "rules_jvm_external", version = "4.4.2")
+bazel_dep(name = "googletest", version = "1.12.1")
+bazel_dep(name = "rules_cc", version = "0.0.4")
+bazel_dep(name = "rules_jvm_external", version = "4.5")
 bazel_dep(name = "rules_bazelrio", version = "0.0.9")
-bazel_dep(name = "rules_roborio_toolchain", version = "2023-7")
-bazel_dep(name = "bzlmodrio-allwpilib", version = "2023.1.1")
-bazel_dep(name = "bzlmodrio-opencv", version = "4.6.0-4")
-bazel_dep(name = "bzlmodrio-ni", version = "2023.3.0")
+bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2023-7")
+bazel_dep(name = "bzlmodrio-allwpilib", version = "2023.2.1-1")
+bazel_dep(name = "bzlmodrio-opencv", version = "4.6.0-4-1")
+bazel_dep(name = "bzlmodrio-ni", version = "2023.3.0-1")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(

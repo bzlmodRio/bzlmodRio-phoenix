@@ -4,26 +4,23 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import edu.wpi.first.math.kinematics.DifferentialDriveOdometry;
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 import edu.wpi.first.wpilibj.RobotBase;
 import edu.wpi.first.wpilibj.RobotController;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-import edu.wpi.first.math.kinematics.DifferentialDriveOdometry;
 import edu.wpi.first.wpilibj.simulation.ADXRS450_GyroSim;
 import edu.wpi.first.wpilibj.simulation.DifferentialDrivetrainSim;
 import edu.wpi.first.wpilibj.smartdashboard.Field2d;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import edu.wpi.first.hal.SimDouble;
-import edu.wpi.first.wpilibj.simulation.SimDeviceSim;
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 public class DriveTrain extends SubsystemBase {
-
   private final WPI_TalonSRX m_leftLeader;
-  private final WPI_TalonSRX m_leftFollower;
+  private final WPI_TalonSRX m_leftFollower; // NOPMD(SingularField)
   private final WPI_TalonSRX m_rightLeader;
-  private final WPI_TalonSRX m_rightFollower;
+  private final WPI_TalonSRX m_rightFollower; // NOPMD(SingularField)
 
   private final DifferentialDrive m_drive;
 
@@ -42,6 +39,9 @@ public class DriveTrain extends SubsystemBase {
     m_rightLeader = new WPI_TalonSRX(PortMap.kDrivetrainMotorRightAPort);
     m_rightFollower = new WPI_TalonSRX(PortMap.kDrivetrainMotorRightBPort);
 
+    m_leftFollower.follow(m_leftLeader);
+    m_rightFollower.follow(m_rightLeader);
+
     m_drive = new DifferentialDrive(m_leftLeader, m_rightLeader);
 
     m_gyro = new ADXRS450_Gyro();
@@ -51,10 +51,11 @@ public class DriveTrain extends SubsystemBase {
 
     SmartDashboard.putData("Field", m_field);
 
-    if(RobotBase.isSimulation()) {
+    if (RobotBase.isSimulation()) {
       m_gyroSim = new ADXRS450_GyroSim(m_gyro);
 
-      m_drivetrainSimulator = DifferentialDrivetrainSim.createKitbotSim(
+      m_drivetrainSimulator =
+          DifferentialDrivetrainSim.createKitbotSim(
               DifferentialDrivetrainSim.KitbotMotor.kDualCIMPerSide,
               DifferentialDrivetrainSim.KitbotGearing.k12p75,
               DifferentialDrivetrainSim.KitbotWheelSize.kSixInch,
@@ -86,11 +87,15 @@ public class DriveTrain extends SubsystemBase {
   }
 
   public double getAverageDistance() {
-    return (m_leftLeader.getSelectedSensorPosition() + m_rightLeader.getSelectedSensorPosition()) / 2;
+    return (m_leftLeader.getSelectedSensorPosition() + m_rightLeader.getSelectedSensorPosition())
+        / 2;
   }
 
   void updateOdometry() {
-    m_odometry.update(m_gyro.getRotation2d(), m_leftLeader.getSelectedSensorPosition(), m_rightLeader.getSelectedSensorPosition());
+    m_odometry.update(
+        m_gyro.getRotation2d(),
+        m_leftLeader.getSelectedSensorPosition(),
+        m_rightLeader.getSelectedSensorPosition());
     m_field.setRobotPose(m_odometry.getPoseMeters());
   }
 
@@ -103,18 +108,22 @@ public class DriveTrain extends SubsystemBase {
   @Override
   public void simulationPeriodic() {
     m_drivetrainSimulator.setInputs(
-            m_leftLeader.get() * RobotController.getInputVoltage(),
-            m_rightLeader.get() * RobotController.getInputVoltage());
+        m_leftLeader.get() * RobotController.getInputVoltage(),
+        m_rightLeader.get() * RobotController.getInputVoltage());
     m_drivetrainSimulator.update(0.02);
 
-    m_leftLeader.getSimCollection().setQuadratureRawPosition((int)
-            m_drivetrainSimulator.getLeftPositionMeters());
-    m_leftLeader.getSimCollection().setQuadratureVelocity((int)
-            m_drivetrainSimulator.getLeftVelocityMetersPerSecond());
-    m_rightLeader.getSimCollection().setQuadratureRawPosition((int)
-            m_drivetrainSimulator.getRightPositionMeters());
-    m_rightLeader.getSimCollection().setQuadratureVelocity((int)
-            m_drivetrainSimulator.getRightVelocityMetersPerSecond());
+    m_leftLeader
+        .getSimCollection()
+        .setQuadratureRawPosition((int) m_drivetrainSimulator.getLeftPositionMeters());
+    m_leftLeader
+        .getSimCollection()
+        .setQuadratureVelocity((int) m_drivetrainSimulator.getLeftVelocityMetersPerSecond());
+    m_rightLeader
+        .getSimCollection()
+        .setQuadratureRawPosition((int) m_drivetrainSimulator.getRightPositionMeters());
+    m_rightLeader
+        .getSimCollection()
+        .setQuadratureVelocity((int) m_drivetrainSimulator.getRightVelocityMetersPerSecond());
     m_gyroSim.setAngle(-m_drivetrainSimulator.getHeading().getDegrees());
   }
 

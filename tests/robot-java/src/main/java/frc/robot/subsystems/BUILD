@@ -1,3 +1,5 @@
+load("//styleguide:java_styleguide.bzl", "java_styleguide")
+
 java_library(
     name = "subsystems",
     srcs = glob(["*.java"]),
@@ -11,3 +13,5 @@ java_library(
         "@bzlmodrio-phoenix//libraries/java/wpiapi-java",
     ],
 )
+
+java_styleguide(name = "subsystems")

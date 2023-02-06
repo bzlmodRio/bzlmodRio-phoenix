@@ -11,7 +11,7 @@ cc_library(
     deps =
         # Binaries
         select({
-            "@rules_roborio_toolchain//constraints/is_roborio:roborio": [
+            "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
                 "//private/cpp/api-cpp:shared",
                 "//private/cpp/cci:shared",
                 "//private/cpp/tools:shared",
@@ -38,7 +38,7 @@ cc_library(
     name = "jni",
     visibility = ["//visibility:public"],
     deps = select({
-        "@rules_roborio_toolchain//constraints/is_roborio:roborio": [
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
             "//private/cpp/api-cpp:shared",
             "//private/cpp/cci:shared",
             "//private/cpp/tools:shared",

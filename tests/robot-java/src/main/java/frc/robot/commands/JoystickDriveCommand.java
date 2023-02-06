@@ -5,9 +5,8 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.Joystick;
-import frc.robot.subsystems.DriveTrain;
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import java.util.function.DoubleSupplier;
+import frc.robot.subsystems.DriveTrain;
 
 /** Have the robot drive tank style. */
 public class JoystickDriveCommand extends CommandBase {

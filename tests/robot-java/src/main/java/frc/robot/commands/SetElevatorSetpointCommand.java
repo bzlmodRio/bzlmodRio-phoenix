@@ -6,17 +6,17 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.PIDCommand;
 import frc.robot.subsystems.Elevator;
-import edu.wpi.first.wpilibj2.command.CommandBase;
 
 public class SetElevatorSetpointCommand extends PIDCommand {
   private final Elevator m_elevator;
 
   public SetElevatorSetpointCommand(Elevator elevator, double setpoint) {
-    super(elevator.getController(),
-            () -> elevator.getMeasurement(),
-            setpoint,
-            (double output) -> elevator.useOutput(output, setpoint),
-            elevator);
+    super(
+        elevator.getController(),
+        () -> elevator.getMeasurement(),
+        setpoint,
+        (double output) -> elevator.useOutput(output, setpoint),
+        elevator);
     m_elevator = elevator;
   }
 

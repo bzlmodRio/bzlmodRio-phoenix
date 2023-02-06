@@ -14,7 +14,7 @@ cc_library(
     ] +
     # Binaries
     select({
-        "@rules_roborio_toolchain//constraints/is_roborio:roborio": [
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
             "//private/cpp/wpiapi-cpp:shared",
         ],
         "//conditions:default": [
