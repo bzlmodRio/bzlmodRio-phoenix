@@ -34,6 +34,9 @@ def main():
     mandetory_dependencies = create_default_mandatory_settings(
         use_local_roborio=args.use_local_roborio,
         use_local_bazelrio=args.use_local_bazelrio,
+        use_local_rules_pmd=args.use_local_rules_pmd,
+        use_local_rules_checkstyle=args.use_local_rules_checkstyle,
+        use_local_rules_wpiformat=args.use_local_rules_wpiformat,
     )
 
     clean_existing_version(REPO_DIR, force_tests=args.force_tests)

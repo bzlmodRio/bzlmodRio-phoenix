@@ -33,9 +33,9 @@ def download_dependencies():
     # bzlmodrio-allwpilib
     http_archive(
         name = "bzlmodrio-allwpilib",
-        sha256 = "4421ec2ef4e4904af632e7f38c6e0fe1b7fe5fd6d10955759b26e76d76551d55",
-        strip_prefix = "bzlmodRio-allwpilib-2023.2.1-1",
-        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/archive/refs/tags/2023.2.1-1.tar.gz",
+        sha256 = "2faa5dedf3ded5191d08638a62840ad59e938c25fc0905c9f7072d1865020479",
+        strip_prefix = "bzlmodRio-allwpilib-2023.3.2",
+        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/archive/refs/tags/2023.3.2.tar.gz",
     )
 
     # bzlmodrio-opencv
