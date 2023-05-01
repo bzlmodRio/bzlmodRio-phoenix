@@ -45,18 +45,47 @@ maven_install(
     # maven_install_json = "//build_scripts/bazel/deps:maven_install.json",
 )
 
-load("//styleguide/private:download_styleguide_deps.bzl", "download_styleguide_deps")
+#####################
+# Styleguide
+#####################
+local_repository(
+    name = "rules_pmd",
+    path = "../../rules_pmd",
+)
 
-download_styleguide_deps()
+local_repository(
+    name = "rules_checkstyle",
+    path = "../../rules_checkstyle",
+)
 
-load("//styleguide/private:load_styleguide_deps.bzl", "load_styleguide_deps")
+local_repository(
+    name = "rules_spotless",
+    path = "../../rules_spotless",
+)
 
-load_styleguide_deps()
+local_repository(
+    name = "rules_wpiformat",
+    path = "../../rules_wpiformat",
+)
 
-load("//styleguide/private:setup_styleguide.bzl", "setup_styleguide")
+local_repository(
+    name = "rules_wpi_styleguide",
+    path = "../../rules_wpi_styleguide",
+)
+
+load("@rules_wpi_styleguide//dependencies:load_rule_dependencies.bzl", "load_styleguide_rule_dependencies")
+
+load_styleguide_rule_dependencies()
+
+load("@rules_wpi_styleguide//dependencies:load_dependencies.bzl", "load_styleguide_dependencies")
+
+load_styleguide_dependencies()
+
+load("@rules_wpi_styleguide//dependencies:setup_styleguide.bzl", "setup_styleguide")
 
 setup_styleguide()
 
-load("@rules_wpiformat_pip//:requirements.bzl", "install_deps")
+load("@rules_wpi_styleguide//dependencies:load_pins.bzl", "load_styleguide_pins")
 
-install_deps()
+load_styleguide_pins()
+#####################

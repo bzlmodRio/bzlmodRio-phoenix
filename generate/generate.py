@@ -9,7 +9,7 @@ from bazelrio_gentool.clean_existing_version import clean_existing_version
 from bazelrio_gentool.generate_module_project_files import (
     create_default_mandatory_settings,
 )
-from bazelrio_gentool.cli import add_generic_cli
+from bazelrio_gentool.cli import add_generic_cli, GenericCliArgs
 import argparse
 
 
@@ -30,18 +30,12 @@ def main():
         use_local_opencv=args.use_local_opencv,
         use_local_ni=args.use_local_ni,
     )
-
-    mandetory_dependencies = create_default_mandatory_settings(
-        use_local_roborio=args.use_local_roborio,
-        use_local_bazelrio=args.use_local_bazelrio,
-        use_local_rules_pmd=args.use_local_rules_pmd,
-        use_local_rules_checkstyle=args.use_local_rules_checkstyle,
-        use_local_rules_wpiformat=args.use_local_rules_wpiformat,
-    )
+    
+    mandatory_dependencies = create_default_mandatory_settings(GenericCliArgs(args))
 
     clean_existing_version(REPO_DIR, force_tests=args.force_tests)
     generate_module_project_files(
-        REPO_DIR, group, mandetory_dependencies=mandetory_dependencies
+        REPO_DIR, group, mandetory_dependencies=mandatory_dependencies
     )
     generate_meta_deps(output_dir, group, force_tests=args.force_tests)
 
