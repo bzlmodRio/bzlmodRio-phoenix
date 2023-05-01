@@ -1,4 +1,4 @@
-load("//styleguide:cc_styleguide.bzl", "cc_styleguide")
+load("@rules_wpi_styleguide//styleguide:cc_styleguide.bzl", "cc_styleguide")
 
 cc_binary(
     name = "main",
