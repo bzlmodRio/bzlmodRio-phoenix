@@ -30,7 +30,7 @@ def main():
         use_local_opencv=args.use_local_opencv,
         use_local_ni=args.use_local_ni,
     )
-    
+
     mandatory_dependencies = create_default_mandatory_settings(GenericCliArgs(args))
 
     clean_existing_version(REPO_DIR, force_tests=args.force_tests)
