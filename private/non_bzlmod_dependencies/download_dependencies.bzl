@@ -4,8 +4,7 @@ def download_dependencies():
     # JVM External
     RULES_JVM_EXTERNAL_COMMITISH = "4.5"
     RULES_JVM_EXTERNAL_SHA = "b17d7388feb9bfa7f2fa09031b32707df529f26c91ab9e5d909eb1676badd9a6"
-    maybe(
-        http_archive,
+    http_archive(
         name = "rules_jvm_external",
         sha256 = RULES_JVM_EXTERNAL_SHA,
         strip_prefix = "rules_jvm_external-{}".format(RULES_JVM_EXTERNAL_COMMITISH),
