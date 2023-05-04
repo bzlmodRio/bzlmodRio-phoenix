@@ -35,7 +35,7 @@ def main():
 
     clean_existing_version(REPO_DIR, force_tests=args.force_tests)
     generate_module_project_files(
-        REPO_DIR, group, mandetory_dependencies=mandatory_dependencies
+        REPO_DIR, group, mandatory_dependencies=mandatory_dependencies
     )
     generate_meta_deps(output_dir, group, force_tests=args.force_tests)
 
