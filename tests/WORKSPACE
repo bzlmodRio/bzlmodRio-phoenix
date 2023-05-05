@@ -49,29 +49,11 @@ maven_install(
 # Styleguide
 #####################
 
-local_repository(
-    name = "rules_pmd",
-    path = "../../../rules/rules_pmd",
-)
-
-local_repository(
-    name = "rules_checkstyle",
-    path = "../../../rules/rules_checkstyle",
-)
-
-local_repository(
-    name = "rules_spotless",
-    path = "../../../rules/rules_spotless",
-)
-
-local_repository(
-    name = "rules_wpiformat",
-    path = "../../../rules/rules_wpiformat",
-)
-
-local_repository(
+http_archive(
     name = "rules_wpi_styleguide",
-    path = "../../../rules/rules_wpi_styleguide",
+    sha256 = "48b0382de215f9997fde99ecc7c77a16994883cbd00368bccebf0bf3a4c2d44b",
+    strip_prefix = "rules_wpi_styleguide-1.0.0",
+    url = "https://github.com/bzlmodRio/rules_wpi_styleguide/archive/refs/tags/1.0.0.tar.gz",
 )
 
 load("@rules_wpi_styleguide//dependencies:load_rule_dependencies.bzl", "load_styleguide_rule_dependencies")
