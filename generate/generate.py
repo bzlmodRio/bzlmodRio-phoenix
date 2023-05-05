@@ -1,10 +1,8 @@
-import sys
 import os
 
 from get_ctre_dependencies import get_ctre_dependencies
 from bazelrio_gentool.generate_group import generate_meta_deps
 from bazelrio_gentool.generate_module_project_files import generate_module_project_files
-from bazelrio_gentool.generate_vendordep_raw_libs import generate_vendordep_raw_libs
 from bazelrio_gentool.clean_existing_version import clean_existing_version
 from bazelrio_gentool.generate_module_project_files import (
     create_default_mandatory_settings,
