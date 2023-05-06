@@ -51,7 +51,7 @@ maven_install(
 
 http_archive(
     name = "rules_wpi_styleguide",
-    sha256 = "48b0382de215f9997fde99ecc7c77a16994883cbd00368bccebf0bf3a4c2d44b",
+    sha256 = "767ae068dcbbfce024afcc42d0a39c3e8241d2325146eec141509c8ec72398c2",
     strip_prefix = "rules_wpi_styleguide-1.0.0",
     url = "https://github.com/bzlmodRio/rules_wpi_styleguide/archive/refs/tags/1.0.0.tar.gz",
 )
