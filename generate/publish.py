@@ -1,6 +1,6 @@
 import os
 from get_ctre_dependencies import get_ctre_dependencies
-from bazelrio_gentool.generate_json import generate_json
+from bazelrio_gentool.publish_module import publish_module
 
 
 def main():
@@ -12,7 +12,7 @@ def main():
     group = get_ctre_dependencies()
 
     os.chdir(SCRIPT_DIR)
-    generate_json(
+    publish_module(
         registry_location, group, module_json_template=None, module_template=None
     )
 
