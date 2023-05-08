@@ -31,25 +31,22 @@ def download_dependencies():
     # bzlmodrio-allwpilib
     http_archive(
         name = "bzlmodrio-allwpilib",
-        sha256 = "None",
-        strip_prefix = "bzlmodRio-allwpilib-2023.3.2",
-        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/archive/refs/tags/2023.3.2.tar.gz",
+        sha256 = "4c944b1e9a3de134614565f8da49bd278ee1f086615a8dcdc5e0a75692b68f13",
+        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/releases/download/2023.3.2/bzlmodRio-allwpilib-2023.3.2.tar.gz",
     )
 
     # bzlmodrio-opencv
     http_archive(
         name = "bzlmodrio-opencv",
-        sha256 = "None",
-        strip_prefix = "bzlmodRio-opencv-4.6.0-4",
-        url = "https://github.com/bzlmodRio/bzlmodRio-opencv/archive/refs/tags/4.6.0-4.tar.gz",
+        sha256 = "a92e0d7851590601e0c8eb839d0751dfae4d8a11bde23a6d877660bd565b07a5",
+        url = "https://github.com/bzlmodRio/bzlmodRio-opencv/releases/download/4.6.0-4/bzlmodRio-opencv-4.6.0-4.tar.gz",
     )
 
     # bzlmodrio-ni
     http_archive(
         name = "bzlmodrio-ni",
-        sha256 = "None",
-        strip_prefix = "bzlmodRio-ni-2023.3.0-1",
-        url = "https://github.com/bzlmodRio/bzlmodRio-ni/archive/refs/tags/2023.3.0-1.tar.gz",
+        sha256 = "46de316b2209cb3a854928810413850ff77306ae858cbffe16428df7cc816686",
+        url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2023.3.0/bzlmodRio-ni-2023.3.0.tar.gz",
     )
 
     ########################

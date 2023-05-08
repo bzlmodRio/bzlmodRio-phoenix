@@ -10,7 +10,7 @@ bazel_dep(name = "rules_bazelrio", version = "0.0.10")
 bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2023-7")
 bazel_dep(name = "bzlmodrio-allwpilib", version = "2023.3.2")
 bazel_dep(name = "bzlmodrio-opencv", version = "4.6.0-4")
-bazel_dep(name = "bzlmodrio-ni", version = "2023.3.0-1")
+bazel_dep(name = "bzlmodrio-ni", version = "2023.3.0")
 
 setup_bzlmodrio_phoenix_cpp_dependencies = use_extension("//:maven_cpp_deps.bzl", "setup_bzlmodrio_phoenix_cpp_dependencies")
 use_repo(
