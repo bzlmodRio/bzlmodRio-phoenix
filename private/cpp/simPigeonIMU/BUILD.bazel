@@ -1,6 +1,12 @@
 cc_library(
     name = "shared",
     linkstatic = 1,
+    target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
     visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
     deps = ["@bazelrio_com_ctre_phoenixpro_sim_simpigeonimu_headers//:headers"] + select({
         "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenixpro_sim_simpigeonimu_windowsx86-64//:shared_libs"],
