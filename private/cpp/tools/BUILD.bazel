@@ -3,6 +3,7 @@ cc_library(
     linkstatic = 1,
     target_compatible_with = select({
         "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@platforms//:incompatible"],
+        "@bazel_tools//src/conditions:darwin": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
