@@ -1,5 +1,5 @@
 load("@rules_bazelrio//:robot_rules.bzl", "robot_java_binary")
-load("//styleguide:java_styleguide.bzl", "java_styleguide")
+load("@rules_wpi_styleguide//styleguide:java_styleguide.bzl", "java_styleguide")
 
 java_library(
     name = "robot-lib",

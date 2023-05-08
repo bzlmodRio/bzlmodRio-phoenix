@@ -1,0 +1,106 @@
+name: Auto Update
+on:
+  push:
+    branches-ignore:
+      - 'autoupdate'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  auto_update_module:
+    name: "Auto Update Module"
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Go 1.15.x
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.15.x
+      id: go
+
+    - uses: actions/checkout@v3
+
+    - name: Install Buildifier
+      run: |
+        cd $(mktemp -d)
+        GO111MODULE=on go get github.com/bazelbuild/buildtools/buildifier@6.0.0
+
+    # Checkout repository
+    - uses: actions/checkout@v3
+      with:
+        path: libraries/bzlmodrio-phoenix
+
+    # Checkout gentool
+    - uses: actions/checkout@v3
+      with:
+        repository: 'bzlmodRio/gentool.git'
+        fetch-depth: 0
+        path: gentool
+        ref: refactor_dev
+
+    # Checkout bzlmodrio-allwpilib
+    - uses: actions/checkout@v3
+      with:
+        repository: 'bzlmodRio/bzlmodrio-allwpilib.git'
+        fetch-depth: 0
+        path: libraries/bzlmodrio-phoenix/../../libraries/bzlmodRio-allwpilib
+        ref: refactor_dev
+
+    # Checkout bzlmodrio-opencv
+    - uses: actions/checkout@v3
+      with:
+        repository: 'bzlmodRio/bzlmodrio-opencv.git'
+        fetch-depth: 0
+        path: libraries/bzlmodrio-phoenix/../../libraries/bzlmodRio-opencv
+        ref: refactor_dev
+
+    # Checkout bzlmodrio-ni
+    - uses: actions/checkout@v3
+      with:
+        repository: 'bzlmodRio/bzlmodrio-ni.git'
+        fetch-depth: 0
+        path: libraries/bzlmodrio-phoenix/../../libraries/bzlmodRio-ni
+        ref: refactor_dev
+
+
+
+    - name: Setup Cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/bzlmod_cache/*.sha256
+        key: ${{ runner.os }}-${{ hashFiles('**/generate/**') }}
+        restore-keys: |
+          ${{ runner.os }}-
+          ${{ runner.os }}
+
+    # Run update
+    - name: Run update
+      run: bazel run //:auto_update
+      working-directory: libraries/bzlmodrio-phoenix/generate
+
+    - name: Generate if changed
+      run: |
+        if [[ $(git --no-pager diff --exit-code HEAD) != '' ]]; then
+          echo "Something changed, need to re-generate"
+          bazel run //:generate
+          buildifier --lint=fix -r ..
+        else
+          echo "No changes!"
+        fi;
+      working-directory: libraries/bzlmodrio-phoenix/generate
+
+
+    # Create pull requests
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v4
+      env:
+        GITHUB_TOKEN: ${{ secrets.AUTO_UPDATE_KEY }}
+      with:
+        path: libraries/bzlmodrio-phoenix
+        base: refactor_dev
+        token: ${{ secrets.AUTO_UPDATE_KEY }}
+        reviewers: pjreiniger
+        branch: autoupdate
+        title: "Auto-update"

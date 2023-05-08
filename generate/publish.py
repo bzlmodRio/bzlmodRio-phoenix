@@ -1,17 +1,27 @@
 import os
 from get_ctre_dependencies import get_ctre_dependencies
-from bazelrio_gentool.generate_json import generate_json
+from bazelrio_gentool.publish_module import publish_module
+from bazelrio_gentool.utils import TEMPLATE_BASE_DIR
 
 
 def main():
-    SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
-    registry_location = os.path.join(SCRIPT_DIR, "..", "..", "bazel-central-registry")
+    SCRIPT_DIR = os.environ["BUILD_WORKSPACE_DIRECTORY"]
+    registry_location = os.path.join(
+        SCRIPT_DIR, "..", "..", "..", "bazel-central-registry"
+    )
 
     group = get_ctre_dependencies()
 
+    module_template = os.path.join(
+        TEMPLATE_BASE_DIR, "library_wrapper", "MODULE.bazel.jinja2"
+    )
+
     os.chdir(SCRIPT_DIR)
-    generate_json(
-        registry_location, group, module_json_template=None, module_template=None
+    publish_module(
+        registry_location,
+        group,
+        module_json_template=None,
+        module_template=module_template,
     )
 
 

@@ -1,10 +1,8 @@
-import sys
 import os
 
 from bazelrio_gentool.load_vendordep_dependency import vendordep_dependency
 from get_allwpilib_dependencies import get_allwpilib_dependencies
 from bazelrio_gentool.deps.dependency_container import (
-    DependencyContainer,
     ModuleDependency,
 )
 
@@ -26,7 +24,7 @@ def get_ctre_dependencies(
             use_local_opencv=use_local_opencv, use_local_ni=use_local_ni
         ),
         use_local_version=use_local_allwpilib,
-        local_rel_folder="../../bzlmodRio-allwpilib",
+        local_rel_folder="../../libraries/bzlmodRio-allwpilib",
         remote_repo="bzlmodRio-allwpilib",
     )
     group.add_module_dependency(allwpilib_dependency)
