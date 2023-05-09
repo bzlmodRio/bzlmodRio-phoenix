@@ -7,7 +7,7 @@ from bazelrio_gentool.deps.dependency_container import (
 )
 
 
-def get_ctre_dependencies(
+def get_phoenix_dependencies(
     use_local_allwpilib=False, use_local_opencv=False, use_local_ni=True
 ):
     SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))

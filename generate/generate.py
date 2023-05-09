@@ -1,6 +1,6 @@
 import os
 
-from get_ctre_dependencies import get_ctre_dependencies
+from get_phoenix_dependencies import get_phoenix_dependencies
 from bazelrio_gentool.generate_group import generate_meta_deps
 from bazelrio_gentool.generate_module_project_files import generate_module_project_files
 from bazelrio_gentool.clean_existing_version import clean_existing_version
@@ -23,7 +23,7 @@ def main():
     parser.add_argument("--use_local_ni", action="store_true")
     args = parser.parse_args()
 
-    group = get_ctre_dependencies(
+    group = get_phoenix_dependencies(
         use_local_allwpilib=args.use_local_allwpilib,
         use_local_opencv=args.use_local_opencv,
         use_local_ni=args.use_local_ni,
