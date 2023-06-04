@@ -22,8 +22,8 @@ bazelrio_java_test(
         "bazelrio_test",
     ],
     env = {
-        "PATH": ".",
         "LD_LIBRARY_PATH": ".",
+        "PATH": ".",
     },  # TODO fishy
     jvm_flags = [
         "-Djava.library.path=.",
