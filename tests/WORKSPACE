@@ -10,7 +10,8 @@ local_repository(
 http_archive(
     name = "googletest",
     sha256 = "24564e3b712d3eb30ac9a85d92f7d720f60cc0173730ac166f27dda7fed76cb2",
-    url = "https://github.com/bazelbuild/googletest/releases/download/1.12.1/googletest-1.12.1.tar.gz",
+    strip_prefix = "googletest-release-1.12.1",
+    urls = ["https://github.com/google/googletest/archive/release-1.12.1.zip"],
 )
 
 load("@bzlmodrio-phoenix//private/non_bzlmod_dependencies:download_dependencies.bzl", "download_dependencies")
@@ -50,7 +51,7 @@ maven_install(
 
 http_archive(
     name = "rules_wpi_styleguide",
-    sha256 = "d0f717a73d18b40f5e7f921e434692cffa1dea5b3138c2cc64c5355530f4eb47",
+    sha256 = "c5c032e8e8b04cdd74d2a637c39e787156cd289d128cd9747b5c8c6d87d4f252",
     url = "https://github.com/bzlmodRio/rules_wpi_styleguide/releases/download/1.0.0/rules_wpi_styleguide-1.0.0.tar.gz",
 )
 
@@ -61,6 +62,10 @@ load_styleguide_rule_dependencies()
 load("@rules_wpi_styleguide//dependencies:load_dependencies.bzl", "load_styleguide_dependencies")
 
 load_styleguide_dependencies()
+
+load("@rules_wpi_styleguide//dependencies:load_transitive_dependencies.bzl", "load_styleguide_transitive_dependencies")
+
+load_styleguide_transitive_dependencies()
 
 load("@rules_wpi_styleguide//dependencies:setup_styleguide.bzl", "setup_styleguide")
 

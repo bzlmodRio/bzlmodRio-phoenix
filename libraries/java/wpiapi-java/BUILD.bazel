@@ -1,5 +1,3 @@
-load("@rules_java//java:defs.bzl", "java_import")
-
 java_import(
     name = "wpiapi-java",
     jars = ["@com_ctre_phoenix_wpiapi_java//jar:file"],
