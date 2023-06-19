@@ -1,16 +1,41 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
 cc_library(
-    name = "shared",
-    linkstatic = 1,
+    name = "shared_interface",
+    srcs = select({
+        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenixpro_sim_simtalonsrx_windowsx86-64//:static_libs"],
+    }),
+    linkstatic = True,
+    tags = ["manual"],
     target_compatible_with = select({
-        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
-    deps = ["@bazelrio_com_ctre_phoenixpro_sim_simtalonsrx_headers//:headers"] + select({
-        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenixpro_sim_simtalonsrx_windowsx86-64//:shared_libs"],
+    deps = ["@bazelrio_com_ctre_phoenixpro_sim_simtalonsrx_headers//:headers"],
+)
+
+cc_library(
+    name = "shared",
+    srcs = select({
         "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenixpro_sim_simtalonsrx_linuxx86-64//:shared_libs"],
         "@rules_bazelrio//conditions:osx": ["@bazelrio_com_ctre_phoenixpro_sim_simtalonsrx_osxuniversal//:shared_libs"],
+        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenixpro_sim_simtalonsrx_windowsx86-64//:shared_libs"],
     }),
+    target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
+    deps = select({
+        "@rules_bazelrio//conditions:windows": [":shared_interface"],
+        "//conditions:default": [],
+    }) + ["@bazelrio_com_ctre_phoenixpro_sim_simtalonsrx_headers//:headers"],
+    alwayslink = 1,
 )

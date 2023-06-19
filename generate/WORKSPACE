@@ -12,7 +12,12 @@ http_archive(
 
 local_repository(
     name = "bzlmodrio-gentool",
-    path = "../../gentool",
+    path = "../../../gentool",
+)
+
+local_repository(
+    name = "bzlmodrio-allwpilib-gentool",
+    path = "../../bzlmodRio-allwpilib/generate",
 )
 
 local_repository(
@@ -23,11 +28,6 @@ local_repository(
 local_repository(
     name = "bzlmodrio-ni-gentool",
     path = "../../bzlmodRio-ni/generate",
-)
-
-local_repository(
-    name = "bzlmodrio-allwpilib-gentool",
-    path = "../../bzlmodRio-allwpilib/generate",
 )
 
 load("@rules_python//python:pip.bzl", "pip_parse")

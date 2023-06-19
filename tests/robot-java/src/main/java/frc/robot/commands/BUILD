@@ -1,4 +1,5 @@
-load("//styleguide:java_styleguide.bzl", "java_styleguide")
+load("@rules_java//java:defs.bzl", "java_library")
+load("@rules_wpi_styleguide//styleguide:java_styleguide.bzl", "java_styleguide")
 
 java_library(
     name = "commands",

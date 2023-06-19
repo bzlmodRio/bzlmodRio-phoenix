@@ -1,5 +1,5 @@
 load("@rules_bazelrio//:java_rules.bzl", "bazelrio_java_binary", "bazelrio_java_test")
-load("//styleguide:java_styleguide.bzl", "java_styleguide")
+load("@rules_wpi_styleguide//styleguide:java_styleguide.bzl", "java_styleguide")
 
 bazelrio_java_binary(
     name = "main",
@@ -21,8 +21,8 @@ bazelrio_java_test(
         "bazelrio_test",
     ],
     env = {
-        "PATH": ".",
         "LD_LIBRARY_PATH": ".",
+        "PATH": ".",
     },  # TODO fishy
     jvm_flags = [
         "-Djava.library.path=.",

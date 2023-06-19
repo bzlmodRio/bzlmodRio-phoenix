@@ -1,10 +1,41 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "shared_interface",
+    srcs = select({
+        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_windowsx86-64//:static_libs"],
+    }),
+    linkstatic = True,
+    tags = ["manual"],
+    target_compatible_with = select({
+        "@bazel_tools//src/conditions:darwin": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
+    deps = ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_headers//:headers"],
+)
+
 cc_library(
     name = "shared",
-    linkstatic = 1,
-    visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
-    deps = ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_headers//:headers"] + select({
-        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_windowsx86-64//:shared_libs"],
+    srcs = select({
         "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_linuxx86-64//:shared_libs"],
+        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_windowsx86-64//:shared_libs"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_linuxathena//:shared_libs"],
     }),
+    target_compatible_with = select({
+        "@bazel_tools//src/conditions:darwin": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
+    deps = select({
+        "@rules_bazelrio//conditions:windows": [":shared_interface"],
+        "//conditions:default": [],
+    }) + ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_headers//:headers"],
+    alwayslink = 1,
 )
