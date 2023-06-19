@@ -2,29 +2,25 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 def download_dependencies():
     # JVM External
-    RULES_JVM_EXTERNAL_TAG = "4.5"
-    RULES_JVM_EXTERNAL_SHA = "b17d7388feb9bfa7f2fa09031b32707df529f26c91ab9e5d909eb1676badd9a6"
     http_archive(
         name = "rules_jvm_external",
-        sha256 = RULES_JVM_EXTERNAL_SHA,
-        strip_prefix = "rules_jvm_external-%s" % RULES_JVM_EXTERNAL_TAG,
-        url = "https://github.com/bazelbuild/rules_jvm_external/archive/%s.zip" % RULES_JVM_EXTERNAL_TAG,
+        sha256 = "f86fd42a809e1871ca0aabe89db0d440451219c3ce46c58da240c7dcdc00125f",
+        strip_prefix = "rules_jvm_external-5.2",
+        url = "https://github.com/bazelbuild/rules_jvm_external/releases/download/5.2/rules_jvm_external-5.2.tar.gz",
     )
 
     # Bazelrio Rules
     http_archive(
         name = "rules_bazelrio",
-        sha256 = "8679cf2ef1b47c184d336bfef97ac0f98fed56546b69e1a5ed02c17833bbf025",
-        strip_prefix = "rules_bazelrio-0.0.9",
-        url = "https://github.com/bzlmodRio/rules_bazelrio/archive/refs/tags/0.0.9.tar.gz",
+        sha256 = "378c92e50e9f04a600b8963d4d3dab3bdb07c1ee360caacea3b4df0ede84b4c1",
+        url = "https://github.com/bzlmodRio/rules_bazelrio/releases/download/0.0.10/rules_bazelrio-0.0.10.tar.gz",
     )
 
     # Roborio Toolchain
     http_archive(
         name = "rules_bzlmodrio_toolchains",
-        sha256 = "b24d5813300ebe9a252c5e1c69a421c0d112f50da0d7b22c8de5efd7bca6babf",
-        strip_prefix = "rules_bzlmodrio_toolchains-2023-7",
-        url = "https://github.com/bzlmodRio/rules_bzlmodrio_toolchains/archive/refs/tags/2023-7.tar.gz",
+        sha256 = "1c566358f97b093916e150de10b65d6527ad268e5bd8bc0a0a8bfd04b390751a",
+        url = "https://github.com/bzlmodRio/rules_bzlmodRio_toolchains/releases/download/2023-7/rules_bzlmodRio_toolchains-2023-7.tar.gz",
     )
 
     ########################
@@ -33,25 +29,22 @@ def download_dependencies():
     # bzlmodrio-allwpilib
     http_archive(
         name = "bzlmodrio-allwpilib",
-        sha256 = "4421ec2ef4e4904af632e7f38c6e0fe1b7fe5fd6d10955759b26e76d76551d55",
-        strip_prefix = "bzlmodRio-allwpilib-2023.2.1-1",
-        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/archive/refs/tags/2023.2.1-1.tar.gz",
+        sha256 = "100843ca4a248c1031cf19edb8d5aa7507d71c2e18bdd4e88f0dfa31b6bff91b",
+        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/releases/download/2023.3.2/bzlmodRio-allwpilib-2023.3.2.tar.gz",
     )
 
     # bzlmodrio-opencv
     http_archive(
         name = "bzlmodrio-opencv",
-        sha256 = "7cf977af07ab17bcefc84daba4975b35f9d0696a46a7b2182ff79141fdce83a5",
-        strip_prefix = "bzlmodRio-opencv-4.6.0-4-1",
-        url = "https://github.com/bzlmodRio/bzlmodRio-opencv/archive/refs/tags/4.6.0-4-1.tar.gz",
+        sha256 = "b237805c8429382723aaa50885e3a5b088ef44dba29b5eee22cdadf94b50dc9f",
+        url = "https://github.com/bzlmodRio/bzlmodRio-opencv/releases/download/4.6.0-4/bzlmodRio-opencv-4.6.0-4.tar.gz",
     )
 
     # bzlmodrio-ni
     http_archive(
         name = "bzlmodrio-ni",
-        sha256 = "0169bded6cc9e3fef1092bdafd3216e2f8bdcf247c9d7116f02a2a261c5350f6",
-        strip_prefix = "bzlmodRio-ni-2023.3.0-1",
-        url = "https://github.com/bzlmodRio/bzlmodRio-ni/archive/refs/tags/2023.3.0-1.tar.gz",
+        sha256 = "cf1532c896bb95f4eb73c8cf5bac968f74f6986c12de141d8c4f5d8ff95cd520",
+        url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2023.3.0/bzlmodRio-ni-2023.3.0.tar.gz",
     )
 
     ########################

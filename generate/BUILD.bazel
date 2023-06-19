@@ -1,6 +1,8 @@
+load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+
 py_library(
-    name = "get_ctre_dependencies",
-    srcs = ["get_ctre_dependencies.py"],
+    name = "get_phoenix_dependencies",
+    srcs = ["get_phoenix_dependencies.py"],
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib-gentool//:get_allwpilib_dependencies",
@@ -12,7 +14,7 @@ py_binary(
     name = "generate",
     srcs = ["generate.py"],
     deps = [
-        ":get_ctre_dependencies",
+        ":get_phoenix_dependencies",
         "@bzlmodrio-gentool//bazelrio_gentool",
     ],
 )
@@ -21,7 +23,16 @@ py_binary(
     name = "publish",
     srcs = ["publish.py"],
     deps = [
-        ":get_ctre_dependencies",
+        ":get_phoenix_dependencies",
+        "@bzlmodrio-gentool//bazelrio_gentool",
+    ],
+)
+
+py_binary(
+    name = "auto_update",
+    srcs = ["auto_update.py"],
+    deps = [
+        ":generate",
         "@bzlmodrio-gentool//bazelrio_gentool",
     ],
 )
