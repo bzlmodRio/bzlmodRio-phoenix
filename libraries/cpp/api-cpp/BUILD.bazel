@@ -20,8 +20,10 @@ cc_library(
                 "@bzlmodrio-ni//libraries/cpp/ni:shared",
             ],
             "//conditions:default": [
+                "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
                 "//private/cpp/api-cpp-sim:shared",
                 "//private/cpp/cci-sim:shared",
+                "//private/cpp/tools-sim:shared",
                 "//private/cpp/simCANCoder:shared",
                 "//private/cpp/simPigeonIMU:shared",
                 "//private/cpp/simProCANcoder:shared",
@@ -30,8 +32,6 @@ cc_library(
                 "//private/cpp/simTalonFX:shared",
                 "//private/cpp/simTalonSRX:shared",
                 "//private/cpp/simVictorSPX:shared",
-                "//private/cpp/tools-sim:shared",
-                "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
             ],
         }),
 )
@@ -46,8 +46,11 @@ cc_library(
             "//private/cpp/tools:shared",
         ],
         "//conditions:default": [
+            "@bzlmodrio-allwpilib//libraries/cpp/hal:jni",
+            "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
             "//private/cpp/api-cpp-sim:shared",
             "//private/cpp/cci-sim:shared",
+            "//private/cpp/tools-sim:shared",
             "//private/cpp/simCANCoder:shared",
             "//private/cpp/simPigeonIMU:shared",
             "//private/cpp/simProCANcoder:shared",
@@ -56,9 +59,6 @@ cc_library(
             "//private/cpp/simTalonFX:shared",
             "//private/cpp/simTalonSRX:shared",
             "//private/cpp/simVictorSPX:shared",
-            "//private/cpp/tools-sim:shared",
-            "@bzlmodrio-allwpilib//libraries/cpp/hal:jni",
-            "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
         ],
     }),
 )
