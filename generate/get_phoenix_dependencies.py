@@ -10,7 +10,6 @@ from bazelrio_gentool.deps.dependency_container import (
 def get_phoenix_dependencies(
     use_local_allwpilib=False, use_local_opencv=False, use_local_ni=True
 ):
-
     sim_install_name_classes = [
         "simCANCoder",
         "simPigeonIMU",
@@ -23,7 +22,7 @@ def get_phoenix_dependencies(
     ]
 
     SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
-    
+
     allwpilib_dependency = ModuleDependency(
         get_allwpilib_dependencies(
             use_local_opencv=use_local_opencv, use_local_ni=use_local_ni
@@ -39,23 +38,35 @@ def get_phoenix_dependencies(
         year=2023,
         fail_on_hash_miss=False,
         has_static_libraries=False,
-        install_name_lookup = {
+        install_name_lookup={
             "simCANCoder": dict(deps=[], artifact_install_name="CTRE_SimCANCoder"),
             "simPigeonIMU": dict(deps=[], artifact_install_name="CTRE_SimPigeonIMU"),
             "simProPigeon2": dict(deps=[], artifact_install_name="CTRE_SimProPigeon2"),
-            "simProCANcoder": dict(deps=[], artifact_install_name="CTRE_SimProCANcoder"),
+            "simProCANcoder": dict(
+                deps=[], artifact_install_name="CTRE_SimProCANcoder"
+            ),
             "simProTalonFX": dict(deps=[], artifact_install_name="CTRE_SimProTalonFX"),
             "simTalonFX": dict(deps=[], artifact_install_name="CTRE_SimTalonFX"),
             "simTalonSRX": dict(deps=[], artifact_install_name="CTRE_SimTalonSRX"),
             "simVictorSPX": dict(deps=[], artifact_install_name="CTRE_SimVictorSPX"),
-            
-            "api-cpp-sim": dict(deps=["tools-sim", "cci-sim"], artifact_install_name="CTRE_PhoenixSim"),
-            "cci-sim": dict(deps=["tools-sim"], artifact_install_name="CTRE_PhoenixCCISim"),
-            "tools-sim": dict(deps=sim_install_name_classes, artifact_install_name="CTRE_PhoenixTools_Sim"),
-            
-            "wpiapi-cpp-sim": dict(deps=["api-cpp-sim", 
-                allwpilib_dependency.container.get_cc_dependency("wpilibc-cpp"),], artifact_install_name="CTRE_Phoenix_WPISim"),
-        }
+            "api-cpp-sim": dict(
+                deps=["tools-sim", "cci-sim"], artifact_install_name="CTRE_PhoenixSim"
+            ),
+            "cci-sim": dict(
+                deps=["tools-sim"], artifact_install_name="CTRE_PhoenixCCISim"
+            ),
+            "tools-sim": dict(
+                deps=sim_install_name_classes,
+                artifact_install_name="CTRE_PhoenixTools_Sim",
+            ),
+            "wpiapi-cpp-sim": dict(
+                deps=[
+                    "api-cpp-sim",
+                    allwpilib_dependency.container.get_cc_dependency("wpilibc-cpp"),
+                ],
+                artifact_install_name="CTRE_Phoenix_WPISim",
+            ),
+        },
     )
     group.add_module_dependency(allwpilib_dependency)
 
