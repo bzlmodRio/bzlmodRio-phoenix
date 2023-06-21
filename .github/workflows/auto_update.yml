@@ -46,7 +46,7 @@ jobs:
         repository: 'bzlmodRio/bzlmodrio-allwpilib.git'
         fetch-depth: 0
         path: libraries/bzlmodrio-phoenix/../../libraries/bzlmodRio-allwpilib
-        ref: refactor_dev
+        ref: main
 
     # Checkout bzlmodrio-opencv
     - uses: actions/checkout@v3
@@ -54,7 +54,7 @@ jobs:
         repository: 'bzlmodRio/bzlmodrio-opencv.git'
         fetch-depth: 0
         path: libraries/bzlmodrio-phoenix/../../libraries/bzlmodRio-opencv
-        ref: refactor_dev
+        ref: main
 
     # Checkout bzlmodrio-ni
     - uses: actions/checkout@v3
@@ -62,7 +62,7 @@ jobs:
         repository: 'bzlmodRio/bzlmodrio-ni.git'
         fetch-depth: 0
         path: libraries/bzlmodrio-phoenix/../../libraries/bzlmodRio-ni
-        ref: refactor_dev
+        ref: main
 
 
 
@@ -100,7 +100,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.AUTO_UPDATE_KEY }}
       with:
         path: libraries/bzlmodrio-phoenix
-        base: refactor_dev
+        base: main
         token: ${{ secrets.AUTO_UPDATE_KEY }}
         reviewers: pjreiniger
         branch: autoupdate
