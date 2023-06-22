@@ -21,15 +21,20 @@ def get_phoenix_dependencies(
         "simVictorSPX",
     ]
 
+    allwpilib_version_override = "2023.3.2"
+    opencv_version_override = "4.6.0-4"
+
     SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 
     allwpilib_dependency = ModuleDependency(
         get_allwpilib_dependencies(
-            use_local_opencv=use_local_opencv, use_local_ni=use_local_ni
+            use_local_opencv=use_local_opencv, use_local_ni=use_local_ni,
+            opencv_version_override = opencv_version_override,
         ),
         use_local_version=use_local_allwpilib,
         local_rel_folder="../../libraries/bzlmodRio-allwpilib",
         remote_repo="bzlmodRio-allwpilib",
+        override_version = "2023.3.2"
     )
 
     group = vendordep_dependency(
