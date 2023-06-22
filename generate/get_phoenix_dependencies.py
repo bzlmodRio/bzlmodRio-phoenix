@@ -33,7 +33,7 @@ def get_phoenix_dependencies(
         use_local_version=use_local_allwpilib,
         local_rel_folder="../../libraries/bzlmodRio-allwpilib",
         remote_repo="bzlmodRio-allwpilib",
-        override_version = "2023.3.2"
+        override_version = allwpilib_version_override
     )
 
     group = vendordep_dependency(
