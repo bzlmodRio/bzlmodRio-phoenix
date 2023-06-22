@@ -8,7 +8,9 @@ from bazelrio_gentool.deps.dependency_container import (
 
 
 def get_phoenix_dependencies(
-    use_local_allwpilib=False, use_local_opencv=False, use_local_ni=True
+    use_local_allwpilib=False, use_local_opencv=False, use_local_ni=True,
+    allwpilib_version_override = "2023.3.2",
+    opencv_version_override = "4.6.0-4"
 ):
     sim_install_name_classes = [
         "simCANCoder",
@@ -20,9 +22,6 @@ def get_phoenix_dependencies(
         "simTalonSRX",
         "simVictorSPX",
     ]
-
-    allwpilib_version_override = "2023.3.2"
-    opencv_version_override = "4.6.0-4"
 
     SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 
