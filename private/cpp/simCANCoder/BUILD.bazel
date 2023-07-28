@@ -3,7 +3,7 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
 cc_library(
     name = "shared_interface",
     srcs = select({
-        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenixpro_sim_simcancoder_windowsx86-64//:static_libs"],
+        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix6_sim_simcancoder_windowsx86-64//:static_libs"],
     }),
     linkstatic = True,
     tags = ["manual"],
@@ -15,15 +15,15 @@ cc_library(
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
-    deps = ["@bazelrio_com_ctre_phoenixpro_sim_simcancoder_headers//:headers"],
+    deps = ["@bazelrio_com_ctre_phoenix6_sim_simcancoder_headers//:headers"],
 )
 
 cc_library(
     name = "shared",
     srcs = select({
-        "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenixpro_sim_simcancoder_linuxx86-64//:shared_libs"],
-        "@rules_bazelrio//conditions:osx": ["@bazelrio_com_ctre_phoenixpro_sim_simcancoder_osxuniversal//:shared_libs"],
-        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenixpro_sim_simcancoder_windowsx86-64//:shared_libs"],
+        "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenix6_sim_simcancoder_linuxx86-64//:shared_libs"],
+        "@rules_bazelrio//conditions:osx": ["@bazelrio_com_ctre_phoenix6_sim_simcancoder_osxuniversal//:shared_libs"],
+        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix6_sim_simcancoder_windowsx86-64//:shared_libs"],
     }),
     target_compatible_with = select({
         "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@platforms//:incompatible"],
@@ -36,6 +36,6 @@ cc_library(
     deps = select({
         "@rules_bazelrio//conditions:windows": [":shared_interface"],
         "//conditions:default": [],
-    }) + ["@bazelrio_com_ctre_phoenixpro_sim_simcancoder_headers//:headers"],
+    }) + ["@bazelrio_com_ctre_phoenix6_sim_simcancoder_headers//:headers"],
     alwayslink = 1,
 )
