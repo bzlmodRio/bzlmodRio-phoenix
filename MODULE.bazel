@@ -4,9 +4,9 @@ module(
     compatibility_level = 2023,
 )
 
-bazel_dep(name = "platforms", version = "0.0.6")
-bazel_dep(name = "rules_cc", version = "0.0.6")
-bazel_dep(name = "rules_java", version = "6.0.0")
+bazel_dep(name = "platforms", version = "0.0.7")
+bazel_dep(name = "rules_cc", version = "0.0.8")
+bazel_dep(name = "rules_java", version = "6.4.0")
 bazel_dep(name = "rules_bazelrio", version = "0.0.12")
 bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2023-7")
 bazel_dep(name = "bzlmodrio-allwpilib", version = "2023.3.2")
