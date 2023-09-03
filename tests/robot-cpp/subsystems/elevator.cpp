@@ -20,11 +20,6 @@ constexpr units::kilogram_t kCarriageMass = 4.0_kg;
 constexpr units::meter_t kMinElevatorHeight = 0_in;
 constexpr units::meter_t kMaxElevatorHeight = 50_in;
 
-// distance per pulse = (distance per revolution) / (pulses per revolution)
-//  = (Pi * D) / ppr
-constexpr double kArmEncoderDistPerPulse =
-    2.0 * 3.14 * kElevatorDrumRadius.to<double>() / 4096.0;
-
 frc::DCMotor kElevatorGearbox = frc::DCMotor::Vex775Pro(4);
 } // namespace
 
