@@ -50,7 +50,7 @@ units::meter_t Elevator::GetElevatorHeight() {
 
 double Elevator::GetMeasurement() { return GetElevatorHeight().to<double>(); }
 
-void Elevator::UseOutput(double output, double setpoint) {
+void Elevator::UseOutput(double output, double /* setpoint */) {
   m_motor.SetVoltage(kGravityOffset + units::volt_t(output));
 }
 
