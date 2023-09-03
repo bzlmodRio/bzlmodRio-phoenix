@@ -12,8 +12,8 @@ def download_dependencies():
     # Bazelrio Rules
     http_archive(
         name = "rules_bazelrio",
-        sha256 = "0caf6c4da67b08abbb8cc619729928fa0516a0d5ce01adf4141d1dd378466bc6",
-        url = "https://github.com/bzlmodRio/rules_bazelrio/releases/download/0.0.12/rules_bazelrio-0.0.12.tar.gz",
+        sha256 = "b439b1fa3ead015d8fb20f804e65fc877d28d39d337b963db011119c6c7a23a5",
+        url = "https://github.com/bzlmodRio/rules_bazelrio/releases/download/0.0.13/rules_bazelrio-0.0.13.tar.gz",
     )
 
     # Roborio Toolchain
