@@ -4,11 +4,11 @@ local_path_override(
     path = "..",
 )
 
-bazel_dep(name = "googletest", version = "1.12.1")
-bazel_dep(name = "rules_cc", version = "0.0.6")
-bazel_dep(name = "rules_java", version = "6.0.0")
-bazel_dep(name = "rules_jvm_external", version = "5.2")
-bazel_dep(name = "rules_bazelrio", version = "0.0.12")
+bazel_dep(name = "googletest", version = "1.14.0")
+bazel_dep(name = "rules_cc", version = "0.0.8")
+bazel_dep(name = "rules_java", version = "6.4.0")
+bazel_dep(name = "rules_jvm_external", version = "5.3")
+bazel_dep(name = "rules_bazelrio", version = "0.0.13")
 bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2023-7")
 bazel_dep(name = "bzlmodrio-allwpilib", version = "2023.3.2")
 bazel_dep(name = "bzlmodrio-opencv", version = "4.6.0-4")

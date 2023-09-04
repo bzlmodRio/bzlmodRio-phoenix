@@ -5,6 +5,7 @@ load("@rules_wpi_styleguide//styleguide:java_styleguide.bzl", "java_styleguide")
 java_library(
     name = "robot-lib",
     srcs = glob(["*.java"]),
+    javacopts = ["-Werror"],
     visibility = ["//visibility:public"],
     deps = [
         "//robot-java/src/main/java/frc/robot/commands",
@@ -18,6 +19,7 @@ java_library(
 robot_java_binary(
     name = "robot",
     halsim_deps = ["@bzlmodrio-allwpilib//libraries/cpp/halsim_gui:halsim_gui"],
+    javacopts = ["-Werror"],
     jvm_flags = [
         "-Djava.library.path=.",
     ],
