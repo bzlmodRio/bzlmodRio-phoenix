@@ -11,8 +11,8 @@ def get_phoenix_dependencies(
     use_local_allwpilib=False,
     use_local_opencv=False,
     use_local_ni=True,
-    allwpilib_version_override="2023.3.2",
-    opencv_version_override="4.6.0-4",
+    allwpilib_version_override="2024.1.1-beta-1",
+    opencv_version_override="2024.4.8.0-1",
 ):
     sim_install_name_classes = [
         "simCANCoder",
@@ -91,7 +91,6 @@ def get_phoenix_dependencies(
                 "hal-cpp",
                 "api-cpp-sim",
                 "cci-sim",
-                "tools-sim",
                 "simCANCoder",
                 "simPigeonIMU",
                 "simProCANcoder",
@@ -100,6 +99,7 @@ def get_phoenix_dependencies(
                 "simTalonFX",
                 "simTalonSRX",
                 "simVictorSPX",
+                "tools-sim",
             ],
         },
         jni_deps={
@@ -113,7 +113,6 @@ def get_phoenix_dependencies(
                 "wpiutil-cpp",
                 "api-cpp-sim",
                 "cci-sim",
-                "tools-sim",
                 "simCANCoder",
                 "simPigeonIMU",
                 "simProCANcoder",
@@ -122,6 +121,7 @@ def get_phoenix_dependencies(
                 "simTalonFX",
                 "simTalonSRX",
                 "simVictorSPX",
+                "tools-sim",
             ],
         },
     )
