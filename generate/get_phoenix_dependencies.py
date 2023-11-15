@@ -68,15 +68,13 @@ def get_phoenix_dependencies(
             "api-cpp-sim": dict(
                 deps=[
                     phoenix6_dependency.container.get_cc_dependency("tools-sim"),
-                    "cci-sim"
-                ], 
-                artifact_install_name="CTRE_PhoenixSim"
+                    "cci-sim",
+                ],
+                artifact_install_name="CTRE_PhoenixSim",
             ),
             "cci-sim": dict(
-                deps=[
-                    phoenix6_dependency.container.get_cc_dependency("tools-sim")
-                ], 
-                artifact_install_name="CTRE_PhoenixCCISim"
+                deps=[phoenix6_dependency.container.get_cc_dependency("tools-sim")],
+                artifact_install_name="CTRE_PhoenixCCISim",
             ),
             "wpiapi-cpp-sim": dict(
                 deps=[

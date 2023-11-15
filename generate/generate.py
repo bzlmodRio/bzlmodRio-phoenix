@@ -51,9 +51,7 @@ def manual_cleanup(repo_dir):
     with open(cleanup_file, "r") as f:
         contents = f.read()
 
-    contents = contents.replace(
-        "@bzlmodrio-phoenix6//libraries", "//private"
-    )
+    contents = contents.replace("@bzlmodrio-phoenix6//libraries", "//private")
     with open(cleanup_file, "w") as f:
         f.write(contents)
 
