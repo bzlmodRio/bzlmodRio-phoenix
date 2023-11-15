@@ -7,6 +7,7 @@ py_library(
     deps = [
         "@bzlmodrio-allwpilib-gentool//:get_allwpilib_dependencies",
         "@bzlmodrio-gentool//bazelrio_gentool",
+        "@bzlmodrio-phoenix6-gentool//:get_phoenix6_dependencies",
     ],
 )
 

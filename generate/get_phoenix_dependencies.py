@@ -2,6 +2,7 @@ import os
 
 from bazelrio_gentool.load_vendordep_dependency import vendordep_dependency
 from get_allwpilib_dependencies import get_allwpilib_dependencies
+from get_phoenix6_dependencies import get_phoenix6_dependencies
 from bazelrio_gentool.deps.dependency_container import (
     ModuleDependency,
 )
@@ -9,10 +10,13 @@ from bazelrio_gentool.deps.dependency_container import (
 
 def get_phoenix_dependencies(
     use_local_allwpilib=False,
+    use_local_phoenix6=False,
     use_local_opencv=False,
     use_local_ni=True,
     allwpilib_version_override="2024.1.1-beta-1",
+    phoenix6_version_override="24.0.0-beta-1",
     opencv_version_override="2024.4.8.0-1",
+    ni_version_override="2024.1.1",
 ):
     sim_install_name_classes = [
         "simCANCoder",
@@ -39,6 +43,21 @@ def get_phoenix_dependencies(
         override_version=allwpilib_version_override,
     )
 
+    phoenix6_dependency = ModuleDependency(
+        get_phoenix6_dependencies(
+            use_local_allwpilib=use_local_allwpilib,
+            use_local_opencv=use_local_opencv,
+            use_local_ni=use_local_ni,
+            allwpilib_version_override=allwpilib_version_override,
+            opencv_version_override=opencv_version_override,
+            ni_version_override=ni_version_override,
+        ),
+        use_local_version=use_local_phoenix6,
+        local_rel_folder="../../libraries/bzlmodRio-phoenix6",
+        remote_repo="bzlmodRio-phoenix6",
+        override_version=phoenix6_version_override,
+    )
+
     group = vendordep_dependency(
         "bzlmodrio-phoenix",
         os.path.join(SCRIPT_DIR, f"vendor_dep.json"),
@@ -46,25 +65,18 @@ def get_phoenix_dependencies(
         fail_on_hash_miss=False,
         has_static_libraries=False,
         install_name_lookup={
-            "simCANCoder": dict(deps=[], artifact_install_name="CTRE_SimCANCoder"),
-            "simPigeonIMU": dict(deps=[], artifact_install_name="CTRE_SimPigeonIMU"),
-            "simProPigeon2": dict(deps=[], artifact_install_name="CTRE_SimProPigeon2"),
-            "simProCANcoder": dict(
-                deps=[], artifact_install_name="CTRE_SimProCANcoder"
-            ),
-            "simProTalonFX": dict(deps=[], artifact_install_name="CTRE_SimProTalonFX"),
-            "simTalonFX": dict(deps=[], artifact_install_name="CTRE_SimTalonFX"),
-            "simTalonSRX": dict(deps=[], artifact_install_name="CTRE_SimTalonSRX"),
-            "simVictorSPX": dict(deps=[], artifact_install_name="CTRE_SimVictorSPX"),
             "api-cpp-sim": dict(
-                deps=["tools-sim", "cci-sim"], artifact_install_name="CTRE_PhoenixSim"
+                deps=[
+                    phoenix6_dependency.container.get_cc_dependency("tools-sim"),
+                    "cci-sim"
+                ], 
+                artifact_install_name="CTRE_PhoenixSim"
             ),
             "cci-sim": dict(
-                deps=["tools-sim"], artifact_install_name="CTRE_PhoenixCCISim"
-            ),
-            "tools-sim": dict(
-                deps=sim_install_name_classes,
-                artifact_install_name="CTRE_PhoenixTools_Sim",
+                deps=[
+                    phoenix6_dependency.container.get_cc_dependency("tools-sim")
+                ], 
+                artifact_install_name="CTRE_PhoenixCCISim"
             ),
             "wpiapi-cpp-sim": dict(
                 deps=[
@@ -76,30 +88,20 @@ def get_phoenix_dependencies(
         },
     )
     group.add_module_dependency(allwpilib_dependency)
+    group.add_module_dependency(phoenix6_dependency)
 
     group.add_cc_meta_dependency(
         "api-cpp",
-        deps=[],
+        deps=["phoenix6-hal"],
         platform_deps={
             "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
                 "api-cpp",
                 "cci",
-                "tools",
                 "ni",
             ],
             "//conditions:default": [
-                "hal-cpp",
                 "api-cpp-sim",
                 "cci-sim",
-                "simCANCoder",
-                "simPigeonIMU",
-                "simProCANcoder",
-                "simProPigeon2",
-                "simProTalonFX",
-                "simTalonFX",
-                "simTalonSRX",
-                "simVictorSPX",
-                "tools-sim",
             ],
         },
         jni_deps={
@@ -113,15 +115,6 @@ def get_phoenix_dependencies(
                 "wpiutil-cpp",
                 "api-cpp-sim",
                 "cci-sim",
-                "simCANCoder",
-                "simPigeonIMU",
-                "simProCANcoder",
-                "simProPigeon2",
-                "simProTalonFX",
-                "simTalonFX",
-                "simTalonSRX",
-                "simVictorSPX",
-                "tools-sim",
             ],
         },
     )
@@ -142,7 +135,7 @@ def get_phoenix_dependencies(
     group.add_java_meta_dependency(
         "api-java",
         group_id=f"com.ctre.phoenix",
-        deps=["api-cpp"],
+        deps=["phoenix6-hal"],
     )
 
     group.add_java_meta_dependency(

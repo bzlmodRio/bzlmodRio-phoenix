@@ -47,4 +47,11 @@ def download_dependencies():
         url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2024.1.1/bzlmodRio-ni-2024.1.1.tar.gz",
     )
 
+    # bzlmodrio-phoenix6
+    http_archive(
+        name = "bzlmodrio-phoenix6",
+        sha256 = "4b67c794f7e89ed3fc4ecebbd7c4c0382f5b0c2d25c688d4b61df15175c71c95",
+        url = "https://github.com/bzlmodRio/bzlmodRio-phoenix6/releases/download/24.0.0-beta-1/bzlmodRio-phoenix6-24.0.0-beta-1.tar.gz",
+    )
+
     ########################

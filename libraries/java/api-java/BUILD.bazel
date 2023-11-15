@@ -5,6 +5,6 @@ java_import(
     jars = ["@com_ctre_phoenix_api_java//jar:file"],
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-phoenix//libraries/cpp/api-cpp:jni",
+        "@bzlmodrio-phoenix6//libraries/cpp/phoenix6-hal:jni",
     ],
 )

@@ -10,30 +10,21 @@ cc_library(
     name = "shared",
     linkstatic = 1,
     visibility = ["//visibility:public"],
-    deps =
-        # Binaries
-        select({
-            "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
-                "//private/cpp/api-cpp:shared",
-                "//private/cpp/cci:shared",
-                "//private/cpp/tools:shared",
-                "@bzlmodrio-ni//libraries/cpp/ni:shared",
-            ],
-            "//conditions:default": [
-                "//private/cpp/api-cpp-sim:shared",
-                "//private/cpp/cci-sim:shared",
-                "//private/cpp/simCANCoder:shared",
-                "//private/cpp/simPigeonIMU:shared",
-                "//private/cpp/simProCANcoder:shared",
-                "//private/cpp/simProPigeon2:shared",
-                "//private/cpp/simProTalonFX:shared",
-                "//private/cpp/simTalonFX:shared",
-                "//private/cpp/simTalonSRX:shared",
-                "//private/cpp/simVictorSPX:shared",
-                "//private/cpp/tools-sim:shared",
-                "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-            ],
-        }),
+    deps = [
+        "@bzlmodrio-phoenix6//libraries/cpp/phoenix6-hal:shared",
+    ] +
+    # Binaries
+    select({
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
+            "//private/cpp/api-cpp:shared",
+            "//private/cpp/cci:shared",
+            "@bzlmodrio-ni//libraries/cpp/ni:shared",
+        ],
+        "//conditions:default": [
+            "//private/cpp/api-cpp-sim:shared",
+            "//private/cpp/cci-sim:shared",
+        ],
+    }),
 )
 
 cc_library(
@@ -43,20 +34,11 @@ cc_library(
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
             "//private/cpp/api-cpp:shared",
             "//private/cpp/cci:shared",
-            "//private/cpp/tools:shared",
+            "@bzlmodrio-phoenix6//libraries/cpp/tools:jni",
         ],
         "//conditions:default": [
             "//private/cpp/api-cpp-sim:shared",
             "//private/cpp/cci-sim:shared",
-            "//private/cpp/simCANCoder:shared",
-            "//private/cpp/simPigeonIMU:shared",
-            "//private/cpp/simProCANcoder:shared",
-            "//private/cpp/simProPigeon2:shared",
-            "//private/cpp/simProTalonFX:shared",
-            "//private/cpp/simTalonFX:shared",
-            "//private/cpp/simTalonSRX:shared",
-            "//private/cpp/simVictorSPX:shared",
-            "//private/cpp/tools-sim:shared",
             "@bzlmodrio-allwpilib//libraries/cpp/hal:jni",
             "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
         ],
