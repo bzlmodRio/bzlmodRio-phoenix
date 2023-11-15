@@ -5,6 +5,8 @@ load("@bzlmodrio-opencv//:maven_cpp_deps.bzl", "setup_legacy_bzlmodrio_opencv_cp
 load("@bzlmodrio-opencv//:maven_java_deps.bzl", "setup_legacy_bzlmodrio_opencv_java_dependencies")
 load("@bzlmodrio-phoenix//:maven_cpp_deps.bzl", "setup_legacy_bzlmodrio_phoenix_cpp_dependencies")
 load("@bzlmodrio-phoenix//:maven_java_deps.bzl", "setup_legacy_bzlmodrio_phoenix_java_dependencies")
+load("@bzlmodrio-phoenix6//:maven_cpp_deps.bzl", "setup_legacy_bzlmodrio_phoenix6_cpp_dependencies")
+load("@bzlmodrio-phoenix6//:maven_java_deps.bzl", "setup_legacy_bzlmodrio_phoenix6_java_dependencies")
 load("@rules_bazelrio//:nonbzlmod_setup.bzl", "setup_rules_bazelrio")
 load("@rules_bzlmodrio_toolchains//:maven_deps.bzl", "setup_legacy_setup_toolchains_dependencies")
 load("@rules_bzlmodrio_toolchains//toolchains:load_toolchains.bzl", "load_toolchains")
@@ -35,12 +37,14 @@ def _setup_cpp_dependencies():
     setup_legacy_bzlmodrio_allwpilib_cpp_dependencies()
     setup_legacy_bzlmodrio_opencv_cpp_dependencies()
     setup_legacy_bzlmodrio_ni_cpp_dependencies()
+    setup_legacy_bzlmodrio_phoenix6_cpp_dependencies()
 
 def _setup_java_dependencies():
     rules_jvm_external_deps()
     setup_legacy_bzlmodrio_phoenix_java_dependencies()
     setup_legacy_bzlmodrio_allwpilib_java_dependencies()
     setup_legacy_bzlmodrio_opencv_java_dependencies()
+    setup_legacy_bzlmodrio_phoenix6_java_dependencies()
 
 def _combine_maven_info(maven_artifacts, maven_repositories, setup_functor):
     dep_maven_artifacts, dep_maven_repositories = setup_functor()
