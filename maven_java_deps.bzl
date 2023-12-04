@@ -3,14 +3,14 @@ load("@bazel_tools//tools/build_defs/repo:jvm.bzl", "jvm_maven_import_external")
 def __setup_bzlmodrio_phoenix_java_dependencies(mctx):
     jvm_maven_import_external(
         name = "com_ctre_phoenix_api_java",
-        artifact = "com.ctre.phoenix:api-java:5.32.0-beta-1",
-        artifact_sha256 = "cc261e0406ce1a78a9e9f94c2ba9781120181d484e5400e3088613b116da7d75",
+        artifact = "com.ctre.phoenix:api-java:5.32.0-beta-2",
+        artifact_sha256 = "6413ae48c0a58a2405a1f0a5f3ee5d8c3cb37f7b41244443563691a0d8192632",
         server_urls = ["https://maven.ctr-electronics.com/release"],
     )
     jvm_maven_import_external(
         name = "com_ctre_phoenix_wpiapi_java",
-        artifact = "com.ctre.phoenix:wpiapi-java:5.32.0-beta-1",
-        artifact_sha256 = "78c0f72757fa391cb711091bd934c8c946d35a6bc0bce6731ab86a76aa08b8fa",
+        artifact = "com.ctre.phoenix:wpiapi-java:5.32.0-beta-2",
+        artifact_sha256 = "ecfeaf05ce971745a40658b91078dfb107d21d038756d2bc54e4628143554118",
         server_urls = ["https://maven.ctr-electronics.com/release"],
     )
 
