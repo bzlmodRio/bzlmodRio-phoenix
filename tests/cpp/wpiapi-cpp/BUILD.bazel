@@ -4,6 +4,10 @@ load("@rules_wpi_styleguide//styleguide:cc_styleguide.bzl", "cc_styleguide")
 cc_binary(
     name = "main",
     srcs = ["main.cpp"],
+    copts = select({
+        "@bazel_tools//src/conditions:linux_x86_64": ["-Wno-deprecated-declarations"],
+        "//conditions:default": [],
+    }),
     tags = ["no-sandbox"],
     deps = ["@bzlmodrio-phoenix//libraries/cpp/wpiapi-cpp"],
 )
@@ -11,6 +15,10 @@ cc_binary(
 cc_test(
     name = "test",
     srcs = ["test.cpp"],
+    copts = select({
+        "@bazel_tools//src/conditions:linux_x86_64": ["-Wno-deprecated-declarations"],
+        "//conditions:default": [],
+    }),
     tags = [
         "bazelrio-cpp-test",
         "no-sandbox",
