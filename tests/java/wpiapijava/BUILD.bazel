@@ -8,7 +8,7 @@ bazelrio_java_binary(
     jvm_flags = [
         "-Djava.library.path=.",
     ],
-    main_class = "bazelrio_test.Main",
+    main_class = "wpiapijava.Main",
     deps = [
         "@bzlmodrio-phoenix//libraries/java/api-java",
         "@bzlmodrio-phoenix//libraries/java/wpiapi-java",
@@ -20,7 +20,7 @@ bazelrio_java_test(
     srcs = ["BasicTest.java"],
     args = [
         "--select-package",
-        "bazelrio_test",
+        "wpiapijava",
     ],
     env = {
         "LD_LIBRARY_PATH": ".",

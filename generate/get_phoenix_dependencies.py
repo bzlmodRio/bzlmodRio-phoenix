@@ -13,10 +13,10 @@ def get_phoenix_dependencies(
     use_local_phoenix6=False,
     use_local_opencv=False,
     use_local_ni=True,
-    allwpilib_version_override="2024.1.1-beta-1",
-    phoenix6_version_override="24.0.0-beta-1",
+    allwpilib_version_override="2024.1.1-beta-4",
+    phoenix6_version_override="24.0.0-beta-7",
     opencv_version_override="2024.4.8.0-1",
-    ni_version_override="2024.1.1",
+    ni_version_override="2024.2.0",
 ):
     sim_install_name_classes = [
         "simCANCoder",
@@ -61,7 +61,6 @@ def get_phoenix_dependencies(
     group = vendordep_dependency(
         "bzlmodrio-phoenix",
         os.path.join(SCRIPT_DIR, f"vendor_dep.json"),
-        year=2023,
         fail_on_hash_miss=False,
         has_static_libraries=False,
         install_name_lookup={
@@ -106,7 +105,6 @@ def get_phoenix_dependencies(
             "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
                 "api-cpp",
                 "cci",
-                "tools",
             ],
             "//conditions:default": [
                 "hal-cpp",
@@ -133,7 +131,7 @@ def get_phoenix_dependencies(
     group.add_java_meta_dependency(
         "api-java",
         group_id=f"com.ctre.phoenix",
-        deps=["phoenix6-hal"],
+        deps=["phoenix6-hal", "api-cpp"],
     )
 
     group.add_java_meta_dependency(

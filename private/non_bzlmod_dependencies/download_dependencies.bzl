@@ -12,8 +12,8 @@ def download_dependencies():
     # Bazelrio Rules
     http_archive(
         name = "rules_bazelrio",
-        sha256 = "b439b1fa3ead015d8fb20f804e65fc877d28d39d337b963db011119c6c7a23a5",
-        url = "https://github.com/bzlmodRio/rules_bazelrio/releases/download/0.0.13/rules_bazelrio-0.0.13.tar.gz",
+        sha256 = "0c5a98476ac5b606689863b7b9ef3f7d685c47ce2681e448ca977e8e95de31c1",
+        url = "https://github.com/bzlmodRio/rules_bazelrio/releases/download/0.0.14/rules_bazelrio-0.0.14.tar.gz",
     )
 
     # Roborio Toolchain
@@ -29,8 +29,8 @@ def download_dependencies():
     # bzlmodrio-allwpilib
     http_archive(
         name = "bzlmodrio-allwpilib",
-        sha256 = "23e77cfedef9b04874161c0f53e486061251c4182be1b623c1281036bcafb72a",
-        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/releases/download/2024.1.1-beta-1/bzlmodRio-allwpilib-2024.1.1-beta-1.tar.gz",
+        sha256 = "d47b574e3cbaf75b0719d1467f0b32135d1edee7adf0c3210a410665084834b6",
+        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/releases/download/2024.1.1-beta-4/bzlmodRio-allwpilib-2024.1.1-beta-4.tar.gz",
     )
 
     # bzlmodrio-opencv
@@ -43,15 +43,15 @@ def download_dependencies():
     # bzlmodrio-ni
     http_archive(
         name = "bzlmodrio-ni",
-        sha256 = "cc15dcf0e83a46aa27aede4f4627bdf67170c413b15568787ac73ab371c0c10a",
-        url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2024.1.1/bzlmodRio-ni-2024.1.1.tar.gz",
+        sha256 = "f4101925d260c385f6a5c0a79451692db35f433cab8b8cc4092dd3ab93424559",
+        url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2024.2.0/bzlmodRio-ni-2024.2.0.tar.gz",
     )
 
     # bzlmodrio-phoenix6
     http_archive(
         name = "bzlmodrio-phoenix6",
-        sha256 = "4b67c794f7e89ed3fc4ecebbd7c4c0382f5b0c2d25c688d4b61df15175c71c95",
-        url = "https://github.com/bzlmodRio/bzlmodRio-phoenix6/releases/download/24.0.0-beta-1/bzlmodRio-phoenix6-24.0.0-beta-1.tar.gz",
+        sha256 = "b12fa56b6bc7c9ddad14f89b60959df7b9db77f3f8905cead3bff56fe17e09e3",
+        url = "https://github.com/bzlmodRio/bzlmodRio-phoenix6/releases/download/24.0.0-beta-7/bzlmodRio-phoenix6-24.0.0-beta-7.tar.gz",
     )
 
     ########################

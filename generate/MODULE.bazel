@@ -2,10 +2,12 @@ module(
     name = "bzlmodrio-phoenix-gentool",
 )
 
-bazel_dep(name = "rules_python", version = "0.21.0")
+bazel_dep(name = "rules_python", version = "0.24.0")
 bazel_dep(name = "bzlmodrio-gentool", version = "")
 bazel_dep(name = "bzlmodrio-allwpilib-gentool", version = "")
 bazel_dep(name = "bzlmodrio-phoenix6-gentool", version = "")
+bazel_dep(name = "bzlmodrio-opencv-gentool", version = "")
+bazel_dep(name = "bzlmodrio-ni-gentool", version = "")
 
 local_path_override(
     module_name = "bzlmodrio-gentool",
@@ -18,6 +20,11 @@ local_path_override(
 )
 
 local_path_override(
+    module_name = "bzlmodrio-phoenix6-gentool",
+    path = "../../bzlmodRio-phoenix6/generate",
+)
+
+local_path_override(
     module_name = "bzlmodrio-opencv-gentool",
     path = "../../bzlmodRio-opencv/generate",
 )
@@ -25,9 +32,4 @@ local_path_override(
 local_path_override(
     module_name = "bzlmodrio-ni-gentool",
     path = "../../bzlmodRio-ni/generate",
-)
-
-local_path_override(
-    module_name = "bzlmodrio-phoenix6-gentool",
-    path = "../../bzlmodRio-phoenix6/generate",
 )
