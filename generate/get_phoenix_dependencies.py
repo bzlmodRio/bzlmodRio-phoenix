@@ -133,7 +133,7 @@ def get_phoenix_dependencies(
     group.add_java_meta_dependency(
         "api-java",
         group_id=f"com.ctre.phoenix",
-        deps=["phoenix6-hal"],
+        deps=["phoenix6-hal", "api-cpp"],
     )
 
     group.add_java_meta_dependency(
