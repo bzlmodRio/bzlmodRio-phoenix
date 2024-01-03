@@ -140,4 +140,5 @@ def get_phoenix_dependencies(
         deps=["wpilibj-java", "api-java"],
     )
 
+    group.patch = ".bcr1"
     return group
