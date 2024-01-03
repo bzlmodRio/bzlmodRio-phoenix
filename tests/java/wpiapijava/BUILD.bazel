@@ -20,7 +20,7 @@ bazelrio_java_test(
     srcs = ["BasicTest.java"],
     args = [
         "--select-package",
-        "bazelrio_test",
+        "wpiapijava",
     ],
     env = {
         "LD_LIBRARY_PATH": ".",
