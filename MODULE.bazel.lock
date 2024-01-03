@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 3,
-  "moduleFileHash": "262f2d49628e3742fce7a0a9103cb39f0c8b1ad047e84fe4ff5b9abb2396c2b5",
+  "moduleFileHash": "9c4e1417b1abc22fe4a6a696907741e46cab51d8f7c875fa22949b66f2c8c42b",
   "flags": {
     "cmdRegistries": [
       "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/"
@@ -87,7 +87,7 @@
         "platforms": "platforms@0.0.7",
         "rules_cc": "rules_cc@0.0.9",
         "rules_java": "rules_java@6.4.0",
-        "rules_bazelrio": "rules_bazelrio@0.0.13",
+        "rules_bazelrio": "rules_bazelrio@0.0.14",
         "rules_bzlmodrio_toolchains": "rules_bzlmodrio_toolchains@2024-1",
         "bzlmodrio-allwpilib": "bzlmodrio-allwpilib@2024.1.1-beta-1",
         "bzlmodrio-opencv": "bzlmodrio-opencv@2024.4.8.0-1",
@@ -275,10 +275,10 @@
         }
       }
     },
-    "rules_bazelrio@0.0.13": {
+    "rules_bazelrio@0.0.14": {
       "name": "rules_bazelrio",
-      "version": "0.0.13",
-      "key": "rules_bazelrio@0.0.13",
+      "version": "0.0.14",
+      "key": "rules_bazelrio@0.0.14",
       "repoName": "rules_bazelrio",
       "executionPlatformsToRegister": [],
       "toolchainsToRegister": [],
@@ -286,9 +286,9 @@
         {
           "extensionBzlFile": "@rules_jvm_external//:extensions.bzl",
           "extensionName": "maven",
-          "usingModule": "rules_bazelrio@0.0.13",
+          "usingModule": "rules_bazelrio@0.0.14",
           "location": {
-            "file": "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.13/MODULE.bazel",
+            "file": "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/MODULE.bazel",
             "line": 12,
             "column": 22
           },
@@ -313,7 +313,7 @@
               },
               "devDependency": false,
               "location": {
-                "file": "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.13/MODULE.bazel",
+                "file": "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/MODULE.bazel",
                 "line": 13,
                 "column": 14
               }
@@ -335,13 +335,15 @@
         "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
         "ruleClassName": "http_archive",
         "attributes": {
-          "name": "rules_bazelrio~0.0.13",
+          "name": "rules_bazelrio~0.0.14",
           "urls": [
-            "https://github.com/bzlmodRio/rules_bazelrio/releases/download/0.0.13/rules_bazelrio-0.0.13.tar.gz"
+            "https://github.com/bzlmodRio/rules_bazelrio/releases/download/0.0.14/rules_bazelrio-0.0.14.tar.gz"
           ],
-          "integrity": "sha256-tDmx+j6tAV2Psg+ATmX8h30o050ze5Y9sBERnGx6I6U=",
+          "integrity": "sha256-DFqYR2rFtgZomGO3ue8/fWhcR84mgeRIypd+jpXeMcE=",
           "strip_prefix": "",
-          "remote_patches": {},
+          "remote_patches": {
+            "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/patches/module_dot_bazel.patch": "sha256-FPd6CZmaPDIlZDaH9seo+R/2vRHDs+awX0Ut4sJd9vQ="
+          },
           "remote_patch_strip": 0
         }
       }
@@ -978,7 +980,7 @@
         "rules_cc": "rules_cc@0.0.9",
         "rules_java": "rules_java@6.4.0",
         "rules_jvm_external": "rules_jvm_external@5.3",
-        "rules_bazelrio": "rules_bazelrio@0.0.13",
+        "rules_bazelrio": "rules_bazelrio@0.0.14",
         "rules_bzlmodrio_toolchains": "rules_bzlmodrio_toolchains@2024-1",
         "bzlmodrio-opencv": "bzlmodrio-opencv@2024.4.8.0-1",
         "bzlmodrio-ni": "bzlmodrio-ni@2024.1.1",
@@ -1084,7 +1086,7 @@
         "platforms": "platforms@0.0.7",
         "rules_cc": "rules_cc@0.0.9",
         "rules_java": "rules_java@6.4.0",
-        "rules_bazelrio": "rules_bazelrio@0.0.13",
+        "rules_bazelrio": "rules_bazelrio@0.0.14",
         "rules_bzlmodrio_toolchains": "rules_bzlmodrio_toolchains@2024-1",
         "bazel_tools": "bazel_tools@_",
         "local_config_platform": "local_config_platform@_"
@@ -1155,7 +1157,7 @@
         "platforms": "platforms@0.0.7",
         "rules_cc": "rules_cc@0.0.9",
         "rules_java": "rules_java@6.4.0",
-        "rules_bazelrio": "rules_bazelrio@0.0.13",
+        "rules_bazelrio": "rules_bazelrio@0.0.14",
         "rules_bzlmodrio_toolchains": "rules_bzlmodrio_toolchains@2024-1",
         "bazel_tools": "bazel_tools@_",
         "local_config_platform": "local_config_platform@_"
@@ -1269,7 +1271,7 @@
         "platforms": "platforms@0.0.7",
         "rules_cc": "rules_cc@0.0.9",
         "rules_java": "rules_java@6.4.0",
-        "rules_bazelrio": "rules_bazelrio@0.0.13",
+        "rules_bazelrio": "rules_bazelrio@0.0.14",
         "rules_bzlmodrio_toolchains": "rules_bzlmodrio_toolchains@2024-1",
         "bzlmodrio-allwpilib": "bzlmodrio-allwpilib@2024.1.1-beta-1",
         "bzlmodrio-opencv": "bzlmodrio-opencv@2024.4.8.0-1",
