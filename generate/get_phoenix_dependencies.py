@@ -105,7 +105,6 @@ def get_phoenix_dependencies(
             "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
                 "api-cpp",
                 "cci",
-                "tools",
             ],
             "//conditions:default": [
                 "hal-cpp",

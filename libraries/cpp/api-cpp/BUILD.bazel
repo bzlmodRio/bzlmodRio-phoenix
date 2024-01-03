@@ -34,7 +34,6 @@ cc_library(
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
             "//private/cpp/api-cpp:shared",
             "//private/cpp/cci:shared",
-            "@bzlmodrio-phoenix6//libraries/cpp/tools:jni",
         ],
         "//conditions:default": [
             "//private/cpp/api-cpp-sim:shared",
