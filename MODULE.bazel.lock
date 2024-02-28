@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 3,
-  "moduleFileHash": "81e467d7451b74c4b3d695960eb3f165223915207162d91ebee1e2a7c5cc66a9",
+  "moduleFileHash": "97e8e40c5e6761f2c4e7f8f8e773a209dccc642c87783c4bdd1818e116781618",
   "flags": {
     "cmdRegistries": [
       "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/"
@@ -18,7 +18,7 @@
   "moduleDepGraph": {
     "<root>": {
       "name": "bzlmodrio-phoenix",
-      "version": "5.33.0",
+      "version": "5.33.1",
       "key": "<root>",
       "repoName": "bzlmodrio-phoenix",
       "executionPlatformsToRegister": [],
@@ -1778,7 +1778,7 @@
   "moduleExtensions": {
     "//:maven_cpp_deps.bzl%setup_bzlmodrio_phoenix_cpp_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "jCC6kjbUcMIDFIQSyz1betPriEcoq3WvWaknG2ezO7c=",
+        "bzlTransitiveDigest": "DHCcwCY2bdHH8jqnvoKoFf6bZz6hMjehwBw5EkSpoIY=",
         "accumulatedFileDigests": {},
         "envVariables": {},
         "generatedRepoSpecs": {
@@ -1787,8 +1787,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_cci_linuxathena",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.33.0/cci-5.33.0-linuxathena.zip",
-              "sha256": "7bd8e9950c3e62a3c6ce967e3491c438ba08effde51d434f85b756fa004fbec9",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.33.1/cci-5.33.1-linuxathena.zip",
+              "sha256": "664844c61893be4035ec29bc6dcb4c5f280684e57d3e968dc98725043496de5b",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -1797,8 +1797,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_wpiapi-cpp_linuxx86-64",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.33.0/wpiapi-cpp-5.33.0-linuxx86-64.zip",
-              "sha256": "2370de1ab6f04739b13ab68ebe49cf5212a2d5f1362c05796d8d4eab7865f7d3",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.33.1/wpiapi-cpp-5.33.1-linuxx86-64.zip",
+              "sha256": "cd515111cae97fc7fa71d5e7b576b96a2275504a5ecc5fe733182032034aa638",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -1807,8 +1807,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_sim_wpiapi-cpp-sim_osxuniversal",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.33.0/wpiapi-cpp-sim-5.33.0-osxuniversal.zip",
-              "sha256": "650a70cc0a969610147964e8fc1c543863a191db4b138ffbbe72ed44d4ea8f67",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.33.1/wpiapi-cpp-sim-5.33.1-osxuniversal.zip",
+              "sha256": "37f821bc9d1780d099dc073d5c8b6c5c7d5790d8c4a188101ebe98e23bff134d",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n",
               "patch_cmds": [
                 "install_name_tool -id @rpath/libCTRE_Phoenix_WPISim.dylib osx/universal/shared/libCTRE_Phoenix_WPISim.dylib",
@@ -1839,8 +1839,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_api-cpp_linuxathena",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.33.0/api-cpp-5.33.0-linuxathena.zip",
-              "sha256": "e67348b0db1e61797700b5c4e50b38b745f91899665b740b09fde879e4d8ad7a",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.33.1/api-cpp-5.33.1-linuxathena.zip",
+              "sha256": "2f710dd2fc8fdd747a83ac657b301dede32598e0fc0dccadd42a0e98083e3869",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -1849,8 +1849,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_sim_api-cpp-sim_osxuniversal",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.33.0/api-cpp-sim-5.33.0-osxuniversal.zip",
-              "sha256": "baa335d2908677431a13a1cb4036d7fb6ae1321347ce6047139c3dbaf8ff819a",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.33.1/api-cpp-sim-5.33.1-osxuniversal.zip",
+              "sha256": "b6b0d6fdab545c2927fdeb3b9384041a73ee8c2f010c5a0fe91baa9945c67779",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n",
               "patch_cmds": [
                 "install_name_tool -id @rpath/libCTRE_PhoenixSim.dylib osx/universal/shared/libCTRE_PhoenixSim.dylib",
@@ -1872,8 +1872,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_cci_windowsx86-64",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.33.0/cci-5.33.0-windowsx86-64.zip",
-              "sha256": "2a07ed1a4688ff386c4a5f038d60b39ea4c2b904646e61bb70cb8c8d8e031d1c",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.33.1/cci-5.33.1-windowsx86-64.zip",
+              "sha256": "c704c12ad5202293ce4c8bd1a76ba089bc6f57d74770806fd5dc2cce7bdfec07",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -1882,8 +1882,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_sim_wpiapi-cpp-sim_windowsx86-64",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.33.0/wpiapi-cpp-sim-5.33.0-windowsx86-64.zip",
-              "sha256": "ee480927c49a76914e30b9028a3316965c30a1ad51c7bb4e9f41fb1af3413a99",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.33.1/wpiapi-cpp-sim-5.33.1-windowsx86-64.zip",
+              "sha256": "03f8aea5b76abe9776b9954473f00ae9f71510eab40ba7a147597dd9554dc5e7",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -1892,8 +1892,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_api-cpp_linuxx86-64",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.33.0/api-cpp-5.33.0-linuxx86-64.zip",
-              "sha256": "9b2fad92c837ad3cd9b099023252ddde830f87a6259afae6b4fa67fad23f62df",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.33.1/api-cpp-5.33.1-linuxx86-64.zip",
+              "sha256": "196f9534ef39abe7bb363c31b99b52265b845dda0a8fe0cdafdf070d5dc51fab",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -1902,8 +1902,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_sim_cci-sim_headers",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.33.0/cci-sim-5.33.0-headers.zip",
-              "sha256": "56cb8272d623721560eea360730d2508f4f365e2ac1060aec5fbd546cffc0771",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.33.1/cci-sim-5.33.1-headers.zip",
+              "sha256": "1f11b8fd22d6ff4b58df903e09766a87117051ebd35fc40ef6708c4530d73c7d",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -1912,8 +1912,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_sim_cci-sim_linuxx86-64",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.33.0/cci-sim-5.33.0-linuxx86-64.zip",
-              "sha256": "723327ed04f02435afc30e4b85a3996721d9d699a4db739c02b84942c6246e08",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.33.1/cci-sim-5.33.1-linuxx86-64.zip",
+              "sha256": "81a1753cff5656fef5f5b0352613cde3387958976f85eb25501f85c2548d106a",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -1922,8 +1922,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_sim_api-cpp-sim_windowsx86-64",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.33.0/api-cpp-sim-5.33.0-windowsx86-64.zip",
-              "sha256": "ecfa5e75449969964770e7b8f08886372c3761bf0ddc35754e239f4ef3f12075",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.33.1/api-cpp-sim-5.33.1-windowsx86-64.zip",
+              "sha256": "7b02be2515b12f29a29fa15497e96bb88000776abaef6382800de9d396b1b57a",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -1932,8 +1932,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_api-cpp_headers",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.33.0/api-cpp-5.33.0-headers.zip",
-              "sha256": "d2790e2495a59a3b14ab4b0fd03c2e25292d6874168f5642165acb0d1bab2f99",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.33.1/api-cpp-5.33.1-headers.zip",
+              "sha256": "d4d1b914e910a7735ecd86832ed6aad875581a3fbdc43393f347186520bb1f55",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -1942,8 +1942,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_wpiapi-cpp_linuxathena",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.33.0/wpiapi-cpp-5.33.0-linuxathena.zip",
-              "sha256": "fb5b090130ba139c318d87abd1af349f8b26101d88f5e53af7a27037cc615768",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.33.1/wpiapi-cpp-5.33.1-linuxathena.zip",
+              "sha256": "af3f8279ab4072e43e177807954c480f16e8df2af227238df22236c7fffd0834",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -1952,8 +1952,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_cci_headers",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.33.0/cci-5.33.0-headers.zip",
-              "sha256": "56cb8272d623721560eea360730d2508f4f365e2ac1060aec5fbd546cffc0771",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.33.1/cci-5.33.1-headers.zip",
+              "sha256": "1f11b8fd22d6ff4b58df903e09766a87117051ebd35fc40ef6708c4530d73c7d",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -1962,8 +1962,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_sim_cci-sim_osxuniversal",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.33.0/cci-sim-5.33.0-osxuniversal.zip",
-              "sha256": "0919e6722f4e3d4a9da0f49624ab00887e119f2d2e246bc135a89ee9ebc92164",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.33.1/cci-sim-5.33.1-osxuniversal.zip",
+              "sha256": "1bd01884a4e32bf0f1df30b4dd389e587c67ed38c650688a070d1202e1faf181",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n",
               "patch_cmds": [
                 "install_name_tool -id @rpath/libCTRE_PhoenixCCISim.dylib osx/universal/shared/libCTRE_PhoenixCCISim.dylib",
@@ -1984,8 +1984,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_cci_linuxx86-64",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.33.0/cci-5.33.0-linuxx86-64.zip",
-              "sha256": "a77bd63fb7040d8f3f6297be6f1ef9733bc5bbb46cf7540bb91f36b348efecbc",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.33.1/cci-5.33.1-linuxx86-64.zip",
+              "sha256": "a6d02fd4a28af54c0304497a43d012f351c0858820ff38f0f3dd7d65985c56a0",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -1994,8 +1994,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_sim_wpiapi-cpp-sim_headers",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.33.0/wpiapi-cpp-sim-5.33.0-headers.zip",
-              "sha256": "666b18610dd2c53f5a919a1081dc95025cadbd89321917eb5826ca73f032875f",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.33.1/wpiapi-cpp-sim-5.33.1-headers.zip",
+              "sha256": "cfb864b4c4b9516bc597acee65340b52970b818e469dfb61668ddd12da48fa41",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -2004,8 +2004,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_sim_cci-sim_windowsx86-64",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.33.0/cci-sim-5.33.0-windowsx86-64.zip",
-              "sha256": "25465566113290d28d8f33ceedf33110d28250a21134303369ecd0ffd9dc22cc",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.33.1/cci-sim-5.33.1-windowsx86-64.zip",
+              "sha256": "06395ef94002273660caddfc287e9efef814c013dbe05d26b9fb7cf8b61cc78f",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -2014,8 +2014,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_sim_api-cpp-sim_headers",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.33.0/api-cpp-sim-5.33.0-headers.zip",
-              "sha256": "a03df103311b081e85c9dede150dd660121038900ee30636e0dcbd6e99ac8da5",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.33.1/api-cpp-sim-5.33.1-headers.zip",
+              "sha256": "1e2a163af070bf4415e38dc6c3cb69f60620423168a75661f9d398ddb911408f",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -2024,8 +2024,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_wpiapi-cpp_headers",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.33.0/wpiapi-cpp-5.33.0-headers.zip",
-              "sha256": "7f7a34ee0941e37d58255eab85fbe7aacd0db6bf30e175547935787909527824",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.33.1/wpiapi-cpp-5.33.1-headers.zip",
+              "sha256": "584852fc2030ad0c29faeadf632c7507d9fb66bb36c4558fd0ad4dbea1019e02",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -2034,8 +2034,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_wpiapi-cpp_windowsx86-64",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.33.0/wpiapi-cpp-5.33.0-windowsx86-64.zip",
-              "sha256": "b0cfc40501ae9c950027afe72802dbb7fbe2de6fe9e57c62aa61fc34665520fa",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.33.1/wpiapi-cpp-5.33.1-windowsx86-64.zip",
+              "sha256": "149e77b0821f7a8e7b5df560acf790a0debbfe7b0b2efcd10cf127982d4df1ec",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -2044,8 +2044,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_sim_wpiapi-cpp-sim_linuxx86-64",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.33.0/wpiapi-cpp-sim-5.33.0-linuxx86-64.zip",
-              "sha256": "a3686ef18bfe3d783c437cefe3d503a3e6b1b4479eee361ba7df7384b5aac33f",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.33.1/wpiapi-cpp-sim-5.33.1-linuxx86-64.zip",
+              "sha256": "f8a0121ad1e8bdc9db11ba8fd371f0990f72bb73ee7e8d090897adfb1868223a",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -2054,8 +2054,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_sim_api-cpp-sim_linuxx86-64",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.33.0/api-cpp-sim-5.33.0-linuxx86-64.zip",
-              "sha256": "11d8dc80d22c3c937bf7b5251ef403ce5e31aa9f08361ffb247f21df5d6f4298",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.33.1/api-cpp-sim-5.33.1-linuxx86-64.zip",
+              "sha256": "bb344cdbb2c07a8780a46b5dbbada7457d543518d345b0a081ec6dcf11fd9c56",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -2064,8 +2064,8 @@
             "ruleClassName": "http_archive",
             "attributes": {
               "name": "_main~setup_bzlmodrio_phoenix_cpp_dependencies~bazelrio_com_ctre_phoenix_api-cpp_windowsx86-64",
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.33.0/api-cpp-5.33.0-windowsx86-64.zip",
-              "sha256": "f7e9b8528f9ece2d269d8d8bb07d036e5e165278656ec6c0e0d4469767b3c593",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.33.1/api-cpp-5.33.1-windowsx86-64.zip",
+              "sha256": "1b6c434b50e8b57fa33e91a9ab65c1543f8412cd486450a32a8e9cdaa92b3112",
               "build_file_content": "\nJNI_PATTERN=[\n    \"**/*jni.dll\",\n    \"**/*jni.so*\",\n    \"**/*jni.dylib\",\n    \"**/*_java*.dll\",\n    \"**/lib*_java*.dylib\",\n    \"**/lib*_java*.so\",\n]\n\nstatic_srcs = glob([\n        \"**/*.lib\",\n        \"**/*.a\"\n    ],\n    exclude=[\"**/*jni.lib\"]\n)\nshared_srcs = glob([\n        \"**/*.dll\",\n        \"**/*.so*\",\n        \"**/*.dylib\",\n    ],\n    exclude=JNI_PATTERN + [\"**/*.so.debug\"]\n)\nshared_jni_srcs = glob(JNI_PATTERN, exclude=[\"**/*.so.debug\"])\n\nfilegroup(\n    name = \"static_libs\",\n    srcs = static_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_libs\",\n    srcs = shared_srcs,\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"shared_jni_libs\",\n    srcs = shared_jni_srcs,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           }
@@ -2074,7 +2074,7 @@
     },
     "//:maven_java_deps.bzl%setup_bzlmodrio_phoenix_java_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "vvdb2mGdWD33FFx8dFogd+yLfovQGbeg1TvqOzYWjX8=",
+        "bzlTransitiveDigest": "XqLBGv4QrBe3wcwAa8egYbFaqp/NzVO+XpwgGptlsX8=",
         "accumulatedFileDigests": {},
         "envVariables": {},
         "generatedRepoSpecs": {
@@ -2083,17 +2083,17 @@
             "ruleClassName": "jvm_import_external",
             "attributes": {
               "artifact_urls": [
-                "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-java/5.33.0/api-java-5.33.0.jar"
+                "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-java/5.33.1/api-java-5.33.1.jar"
               ],
               "srcjar_urls": [],
-              "canonical_id": "com.ctre.phoenix:api-java:5.33.0",
+              "canonical_id": "com.ctre.phoenix:api-java:5.33.1",
               "rule_name": "java_import",
               "rule_load": "load(\"@rules_java//java:defs.bzl\", \"java_import\")",
               "tags": [
-                "maven_coordinates=com.ctre.phoenix:api-java:5.33.0"
+                "maven_coordinates=com.ctre.phoenix:api-java:5.33.1"
               ],
               "name": "_main~setup_bzlmodrio_phoenix_java_dependencies~com_ctre_phoenix_api_java",
-              "artifact_sha256": "10d5d13b448c06e37b10e8d471e9389af30fd48193b880acd41c39ca8ea6a0b5"
+              "artifact_sha256": "27f14c53fc871822314056728ecf07c948800cbb255388221e95350ef4555c03"
             }
           },
           "com_ctre_phoenix_wpiapi_java": {
@@ -2101,17 +2101,17 @@
             "ruleClassName": "jvm_import_external",
             "attributes": {
               "artifact_urls": [
-                "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-java/5.33.0/wpiapi-java-5.33.0.jar"
+                "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-java/5.33.1/wpiapi-java-5.33.1.jar"
               ],
               "srcjar_urls": [],
-              "canonical_id": "com.ctre.phoenix:wpiapi-java:5.33.0",
+              "canonical_id": "com.ctre.phoenix:wpiapi-java:5.33.1",
               "rule_name": "java_import",
               "rule_load": "load(\"@rules_java//java:defs.bzl\", \"java_import\")",
               "tags": [
-                "maven_coordinates=com.ctre.phoenix:wpiapi-java:5.33.0"
+                "maven_coordinates=com.ctre.phoenix:wpiapi-java:5.33.1"
               ],
               "name": "_main~setup_bzlmodrio_phoenix_java_dependencies~com_ctre_phoenix_wpiapi_java",
-              "artifact_sha256": "a0fb7de0e0409f3723ed6e00c465243c4fb5a33fb5e2a1d31faec63856cfda9f"
+              "artifact_sha256": "6cca748fc6685b7f54dc2b6d362eb25c00490c68435849e1f09208b47ddae8d9"
             }
           }
         }
