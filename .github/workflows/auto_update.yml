@@ -20,7 +20,7 @@ jobs:
         go-version: 1.20.x
       id: go
 
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Install Buildifier
       run: |
@@ -28,12 +28,12 @@ jobs:
         GO111MODULE=on go install github.com/bazelbuild/buildtools/buildifier@latest
 
     # Checkout repository
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         path: libraries/bzlmodrio-phoenix
 
     # Checkout gentool
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: 'bzlmodRio/gentool.git'
         fetch-depth: 0
@@ -42,7 +42,7 @@ jobs:
 
 
     # Checkout bzlmodrio-allwpilib
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: 'bzlmodRio/bzlmodrio-allwpilib.git'
         fetch-depth: 0
@@ -50,7 +50,7 @@ jobs:
         ref: main
 
     # Checkout bzlmodrio-opencv
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: 'bzlmodRio/bzlmodrio-opencv.git'
         fetch-depth: 0
@@ -58,7 +58,7 @@ jobs:
         ref: main
 
     # Checkout bzlmodrio-ni
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: 'bzlmodRio/bzlmodrio-ni.git'
         fetch-depth: 0
@@ -66,7 +66,7 @@ jobs:
         ref: main
 
     # Checkout bzlmodrio-phoenix6
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: 'bzlmodRio/bzlmodrio-phoenix6.git'
         fetch-depth: 0
@@ -100,6 +100,10 @@ jobs:
           bazel build //... --nobuild --enable_bzlmod --lockfile_mode=update
           cd tests
           bazel build //... --nobuild --enable_bzlmod --lockfile_mode=update
+
+          # Pull requests won't be created if the github actions change. Since for this
+          # We mostly care about the actual code changes, we will just revert those files
+          git checkout ../.github/workflows
         else
           echo "No changes!"
         fi;

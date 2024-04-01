@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # Checkout repository
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         path: libraries/bzlmodrio-phoenix
 
@@ -34,7 +34,7 @@ jobs:
 
 
     # Checkout bzlmodrio-allwpilib
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: 'bzlmodRio/bzlmodrio-allwpilib.git'
         fetch-depth: 0
@@ -42,7 +42,7 @@ jobs:
         ref: main
 
     # Checkout bzlmodrio-opencv
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: 'bzlmodRio/bzlmodrio-opencv.git'
         fetch-depth: 0
@@ -50,7 +50,7 @@ jobs:
         ref: main
 
     # Checkout bzlmodrio-ni
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: 'bzlmodRio/bzlmodrio-ni.git'
         fetch-depth: 0
@@ -58,7 +58,7 @@ jobs:
         ref: main
 
     # Checkout bzlmodrio-phoenix6
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: 'bzlmodRio/bzlmodrio-phoenix6.git'
         fetch-depth: 0
@@ -69,7 +69,7 @@ jobs:
 
 
     # Checkout gentool
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: 'bzlmodRio/gentool.git'
         fetch-depth: 0
@@ -77,7 +77,7 @@ jobs:
         ref: refactor_dev
 
     # Checkout BCR
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: 'bzlmodRio/bazel-central-registry.git'
         fetch-depth: 0
