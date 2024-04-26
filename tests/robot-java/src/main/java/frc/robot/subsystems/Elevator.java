@@ -29,6 +29,7 @@ public class Elevator extends PIDSubsystem {
   private ElevatorSim m_elevatorSim;
 
   /** Create a new elevator subsystem. */
+  @SuppressWarnings("this-escape")
   public Elevator() {
     super(new PIDController(kP, kI, kD));
 
