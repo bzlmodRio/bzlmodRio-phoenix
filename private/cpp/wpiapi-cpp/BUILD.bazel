@@ -3,7 +3,7 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
 cc_library(
     name = "shared_interface",
     srcs = select({
-        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_windowsx86-64//:static_libs"],
+        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_windowsx86-64//:shared_interface"],
     }),
     linkstatic = True,
     tags = ["manual"],
