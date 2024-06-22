@@ -51,8 +51,8 @@ maven_install(
 
 http_archive(
     name = "rules_wpi_styleguide",
-    sha256 = "c5c032e8e8b04cdd74d2a637c39e787156cd289d128cd9747b5c8c6d87d4f252",
-    url = "https://github.com/bzlmodRio/rules_wpi_styleguide/releases/download/1.0.0/rules_wpi_styleguide-1.0.0.tar.gz",
+    sha256 = "0359cc1772a715d958a2f5648f8254ad8c34af1e84d1a852f3bfa79040334b76",
+    url = "https://github.com/bzlmodRio/rules_wpi_styleguide/releases/download/2024.06.22/rules_wpi_styleguide-2024.06.22.tar.gz",
 )
 
 load("@rules_wpi_styleguide//dependencies:load_rule_dependencies.bzl", "load_styleguide_rule_dependencies")
