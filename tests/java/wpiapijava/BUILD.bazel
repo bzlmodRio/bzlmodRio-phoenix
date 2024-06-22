@@ -22,10 +22,6 @@ bazelrio_java_test(
         "--select-package",
         "wpiapijava",
     ],
-    env = {
-        "LD_LIBRARY_PATH": ".",
-        "PATH": ".",
-    },  # TODO fishy
     javacopts = ["-Werror"],
     jvm_flags = [
         "-Djava.library.path=.",
