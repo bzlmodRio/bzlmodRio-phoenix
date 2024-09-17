@@ -30,6 +30,7 @@ filegroup(
         "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenix_sim_wpiapi-cpp-sim_linuxx86-64//:shared"],
         "@rules_bazelrio//conditions:osx": ["@bazelrio_com_ctre_phoenix_sim_wpiapi-cpp-sim_osxuniversal//:shared"],
         "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix_sim_wpiapi-cpp-sim_windowsx86-64//:shared"],
+        "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
 )
