@@ -1,5 +1,11 @@
 load("@rules_cc//cc:defs.bzl", "cc_library")
 
+alias(
+    name = "header_files",
+    actual = "@bazelrio_com_ctre_phoenix_wpiapi-cpp_headers//:header_files",
+    visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
+)
+
 cc_library(
     name = "shared_interface",
     srcs = select({
@@ -16,12 +22,6 @@ cc_library(
     }),
     visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
     deps = ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_headers//:headers"],
-)
-
-alias(
-    name = "header_files",
-    actual = "@bazelrio_com_ctre_phoenix_wpiapi-cpp_headers//:header_files",
-    visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
 )
 
 filegroup(
