@@ -18,13 +18,25 @@ cc_library(
     deps = ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_headers//:headers"],
 )
 
-cc_library(
-    name = "shared",
+alias(
+    name = "header_files",
+    actual = "@bazelrio_com_ctre_phoenix_wpiapi-cpp_headers//:header_files",
+    visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
+)
+
+filegroup(
+    name = "shared_raw",
     srcs = select({
         "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_linuxx86-64//:shared"],
         "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_windowsx86-64//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@bazelrio_com_ctre_phoenix_wpiapi-cpp_linuxathena//:shared"],
     }),
+    visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
+)
+
+cc_library(
+    name = "shared",
+    srcs = [":shared_raw"],
     target_compatible_with = select({
         "@bazel_tools//src/conditions:darwin": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@platforms//:incompatible"],
