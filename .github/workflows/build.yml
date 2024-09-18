@@ -32,13 +32,18 @@ jobs:
         distribution: 'zulu'
         java-version: 17
         architecture: ${{ matrix.java_arch }}
-    - run: bazel ${{ matrix.bazel_options }} build -k ${{ matrix.config }} --config=remote @bzlmodrio-phoenix//...
+    - id: setup_build_buddy
+      uses: ./.github/actions/setup-build-buddy
+      with:
+        token: ${{ secrets.BUILDBUDDY_API_KEY }}
+        readonly_token: ${{ secrets.BUILDBUDDY_READONLY }}
+    - run: bazel ${{ matrix.bazel_options }} build -k ${{ matrix.config }} --config=ci @bzlmodrio-phoenix//...
       working-directory: tests
     - name: Build and allow failure # TODO Sometimes symlinks don't get created correctly the first time around
-      run: bazel ${{ matrix.bazel_options }} build -k ${{ matrix.config }} --verbose_failures --config=remote //... || true
+      run: bazel ${{ matrix.bazel_options }} build -k ${{ matrix.config }} --verbose_failures --config=ci //... || true
       working-directory: tests
     - name: Build
-      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=remote
+      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=ci
       working-directory: tests
 
 
@@ -67,11 +72,16 @@ jobs:
         distribution: 'zulu'
         java-version: 17
         architecture: ${{ matrix.java_arch }}
+    - id: setup_build_buddy
+      uses: ./.github/actions/setup-build-buddy
+      with:
+        token: ${{ secrets.BUILDBUDDY_API_KEY }}
+        readonly_token: ${{ secrets.BUILDBUDDY_READONLY }}
     - name: Build and allow failure # TODO Sometimes symlinks don't get created correctly the first time around
-      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=remote || true
+      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=ci || true
       working-directory: tests
     - name: Build
-      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=remote
+      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=ci
       working-directory: tests
 
   build_bullseye32:
@@ -99,11 +109,16 @@ jobs:
         distribution: 'zulu'
         java-version: 17
         architecture: ${{ matrix.java_arch }}
+    - id: setup_build_buddy
+      uses: ./.github/actions/setup-build-buddy
+      with:
+        token: ${{ secrets.BUILDBUDDY_API_KEY }}
+        readonly_token: ${{ secrets.BUILDBUDDY_READONLY }}
     - name: Build and allow failure # TODO Sometimes symlinks don't get created correctly the first time around
-      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=remote || true
+      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=ci || true
       working-directory: tests
     - name: Build
-      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=remote
+      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=ci
       working-directory: tests
 
 
@@ -132,9 +147,14 @@ jobs:
         distribution: 'zulu'
         java-version: 17
         architecture: ${{ matrix.java_arch }}
+    - id: setup_build_buddy
+      uses: ./.github/actions/setup-build-buddy
+      with:
+        token: ${{ secrets.BUILDBUDDY_API_KEY }}
+        readonly_token: ${{ secrets.BUILDBUDDY_READONLY }}
     - name: Build and allow failure # TODO Sometimes symlinks don't get created correctly the first time around
-      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=remote || true
+      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=ci || true
       working-directory: tests
     - name: Build
-      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=remote
+      run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=ci
       working-directory: tests
