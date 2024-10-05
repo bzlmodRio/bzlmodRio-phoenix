@@ -9,7 +9,7 @@ alias(
 cc_library(
     name = "shared_interface",
     srcs = select({
-        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_windowsx86-64//:shared_interface"],
+        "@rules_bzlmodrio_toolchains//conditions:windows": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_windowsx86-64//:shared_interface"],
     }),
     linkstatic = True,
     tags = ["manual"],
@@ -27,9 +27,9 @@ cc_library(
 filegroup(
     name = "shared_raw",
     srcs = select({
-        "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_linuxx86-64//:shared"],
-        "@rules_bazelrio//conditions:osx": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_osxuniversal//:shared"],
-        "@rules_bazelrio//conditions:windows": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_windowsx86-64//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_linuxx86-64//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:osx": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_osxuniversal//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:windows": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_windowsx86-64//:shared"],
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
@@ -47,7 +47,7 @@ cc_library(
     }),
     visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
     deps = [] + select({
-        "@rules_bazelrio//conditions:windows": [":shared_interface"],
+        "@rules_bzlmodrio_toolchains//conditions:windows": [":shared_interface"],
         "//conditions:default": [],
     }) + ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_headers//:headers"],
     alwayslink = 1,

@@ -28,9 +28,9 @@ maven_artifacts, maven_repositories = get_java_dependenicies()
 
 # Add junit
 maven_artifacts += [
-    "org.junit.jupiter:junit-jupiter-api:5.8.2",
-    "org.junit.jupiter:junit-jupiter-params:5.8.2",
-    "org.junit.jupiter:junit-jupiter-engine:5.8.2",
+    "org.junit.jupiter:junit-jupiter-api:5.10.1",
+    "org.junit.jupiter:junit-jupiter-params:5.10.1",
+    "org.junit.jupiter:junit-jupiter-engine:5.10.1",
     "org.junit.platform:junit-platform-commons:1.6.1",
     "org.junit.platform:junit-platform-console:1.6.1",
     "org.junit.platform:junit-platform-engine:1.6.1",
@@ -79,7 +79,7 @@ load_styleguide_pins()
 http_archive(
     name = "rules_bzlmodrio_jdk",
     sha256 = "36cd468c867817ec460d76c28ec0ccd2d9fac4a2cf966af3935243a8a4a08108",
-    url = "https://github.com/bzlmodRio/rules_bzlmodRio_jdk/releases/download/17.0.8-7/rules_bzlmodRio_jdk-17.0.8-7.tar.gz",
+    url = "https://github.com/wpilibsuite/rules_bzlmodRio_jdk/releases/download/17.0.8-7/rules_bzlmodRio_jdk-17.0.8-7.tar.gz",
 )
 
 load("@rules_bzlmodrio_jdk//:maven_deps.bzl", "setup_legacy_setup_jdk_dependencies")
