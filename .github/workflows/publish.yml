@@ -40,23 +40,6 @@ jobs:
         fetch-depth: 0
         path: libraries/bzlmodrio-phoenix/../../libraries/bzlmodRio-allwpilib
         ref: main
-
-    # Checkout bzlmodrio-opencv
-    - uses: actions/checkout@v4
-      with:
-        repository: 'bzlmodRio/bzlmodrio-opencv.git'
-        fetch-depth: 0
-        path: libraries/bzlmodrio-phoenix/../../libraries/bzlmodRio-opencv
-        ref: main
-
-    # Checkout bzlmodrio-ni
-    - uses: actions/checkout@v4
-      with:
-        repository: 'bzlmodRio/bzlmodrio-ni.git'
-        fetch-depth: 0
-        path: libraries/bzlmodrio-phoenix/../../libraries/bzlmodRio-ni
-        ref: main
-
     # Checkout bzlmodrio-phoenix6
     - uses: actions/checkout@v4
       with:
@@ -65,6 +48,13 @@ jobs:
         path: libraries/bzlmodrio-phoenix/../../libraries/bzlmodRio-phoenix6
         ref: main
 
+    # Checkout backdoor generation of wpilibsuite libraries
+    - uses: actions/checkout@v4
+      with:
+        repository: 'bzlmodRio/wpilibsuite_generator.git'
+        fetch-depth: 0
+        path: libraries/bzlmodrio-choreolib/../../wpilibsuite_gen
+        ref: main
 
 
 
