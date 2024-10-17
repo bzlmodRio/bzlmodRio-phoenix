@@ -36,8 +36,8 @@ def download_dependencies():
     # bzlmodrio-allwpilib
     http_archive(
         name = "bzlmodrio-allwpilib",
-        sha256 = "c549e941f174d47c7b01c13e4fcdf91c9dac9c57d2af7ed06d92f5d3ea1fe819",
-        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/releases/download/2024.1.1/bzlmodRio-allwpilib-2024.1.1.tar.gz",
+        sha256 = "986e7ba1cdb7cacadb22256185843ba12bd1c5e2b6da10019829f18bedafa3ee",
+        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/releases/download/2025.1.1-beta-1/bzlmodRio-allwpilib-2025.1.1-beta-1.tar.gz",
     )
 
     # bzlmodrio-opencv
@@ -50,8 +50,8 @@ def download_dependencies():
     # bzlmodrio-ni
     http_archive(
         name = "bzlmodrio-ni",
-        sha256 = "28abfa366389514669dabf9e71cc723749f650e98a689bf428ec1fc998ca5de9",
-        url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2024.2.1.bcr1/bzlmodRio-ni-2024.2.1.bcr1.tar.gz",
+        sha256 = "197fceac88bf44fb8427d5e000b0083118d3346172dd2ad31eccf83a5e61b3ce",
+        url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2025.0.0/bzlmodRio-ni-2025.0.0.tar.gz",
     )
 
     # bzlmodrio-phoenix6
