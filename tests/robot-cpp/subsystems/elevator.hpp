@@ -1,19 +1,22 @@
 #pragma once
 
 #include <ctre/phoenix/motorcontrol/can/WPI_TalonSRX.h>
+#include <frc/controller/PIDController.h>
 #include <frc/simulation/ElevatorSim.h>
-#include <frc2/command/PIDSubsystem.h>
+#include <frc2/command/Subsystem.h>
 #include <units/length.h>
 
-class Elevator : public frc2::PIDSubsystem {
+class Elevator : public frc2::Subsystem {
 public:
   Elevator();
 
   void Stop();
 
-  double GetMeasurement() override;
+  void SetVoltage(double output);
 
-  void UseOutput(double output, double setpoint) override;
+  void GoToHeight(units::meter_t height);
+
+  bool IsAtHeight();
 
   void Periodic() override;
 
@@ -25,7 +28,8 @@ private:
   void Log();
 
   ctre::phoenix::motorcontrol::can::WPI_TalonSRX m_motor;
-  double m_setpoint{0};
+  frc::PIDController m_controller;
+  units::meter_t m_setpoint{0};
 
   // Sim
   frc::sim::ElevatorSim m_elevatorSim;

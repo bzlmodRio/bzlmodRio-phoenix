@@ -6,7 +6,10 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import edu.wpi.first.math.numbers.N1;
+import edu.wpi.first.math.system.LinearSystem;
 import edu.wpi.first.math.system.plant.DCMotor;
+import edu.wpi.first.math.system.plant.LinearSystemId;
 import edu.wpi.first.wpilibj.RobotBase;
 import edu.wpi.first.wpilibj.RobotController;
 import edu.wpi.first.wpilibj.simulation.FlywheelSim;
@@ -32,7 +35,9 @@ public class Shooter extends SubsystemBase {
     m_motor = new WPI_TalonSRX(PortMap.kShooterMotorPort);
 
     if (RobotBase.isSimulation()) {
-      m_flywheelSim = new FlywheelSim(kGearbox, kGearing, kInertia);
+      LinearSystem<N1, N1, N1> plant =
+          LinearSystemId.createFlywheelSystem(kGearbox, kGearing, kInertia);
+      m_flywheelSim = new FlywheelSim(plant, kGearbox);
     }
   }
 

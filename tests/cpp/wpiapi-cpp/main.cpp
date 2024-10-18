@@ -4,14 +4,12 @@
 #include <thread>
 
 #include "ctre/Phoenix.h"
-#include "ctre/phoenix/motorcontrol/can/WPI_TalonFX.h"
 #include "ctre/phoenix/motorcontrol/can/WPI_TalonSRX.h"
 #include "ctre/phoenix/motorcontrol/can/WPI_VictorSPX.h"
 
 int main() {
   std::cout << "Hello World" << std::endl;
 
-  ctre::phoenix::motorcontrol::can::WPI_TalonFX talonFx{4};
   ctre::phoenix::motorcontrol::can::WPI_TalonSRX talonSrx{3};
   ctre::phoenix::motorcontrol::can::WPI_VictorSPX victorSpx{3};
 

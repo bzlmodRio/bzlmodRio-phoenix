@@ -2,13 +2,11 @@
 #include <chrono>
 #include <thread>
 
-#include "ctre/phoenix/motorcontrol/can/WPI_TalonFX.h"
 #include "ctre/phoenix/motorcontrol/can/WPI_TalonSRX.h"
 #include "ctre/phoenix/motorcontrol/can/WPI_VictorSPX.h"
 #include "gtest/gtest.h"
 
 TEST(BasicTest, Basic) {
-  ctre::phoenix::motorcontrol::can::WPI_TalonFX talonFx{4};
   ctre::phoenix::motorcontrol::can::WPI_TalonSRX talonSrx{3};
   ctre::phoenix::motorcontrol::can::WPI_VictorSPX victorSpx{3};
 
