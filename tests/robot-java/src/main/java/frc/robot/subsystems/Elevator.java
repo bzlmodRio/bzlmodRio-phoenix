@@ -8,9 +8,9 @@ import edu.wpi.first.wpilibj.RobotBase;
 import edu.wpi.first.wpilibj.RobotController;
 import edu.wpi.first.wpilibj.simulation.ElevatorSim;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj2.command.PIDSubsystem;
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-public class Elevator extends PIDSubsystem {
+public class Elevator extends SubsystemBase {
   private static final double kP = 4;
   private static final double kI = 0.0;
   private static final double kD = 0.0;
@@ -24,6 +24,9 @@ public class Elevator extends PIDSubsystem {
   private static final double kMaxElevatorHeight = Units.inchesToMeters(50);
 
   private final WPI_TalonSRX m_motor;
+  private final PIDController m_controller;
+
+  private double m_setpoint;
 
   // Sim
   private ElevatorSim m_elevatorSim;
@@ -31,11 +34,10 @@ public class Elevator extends PIDSubsystem {
   /** Create a new elevator subsystem. */
   @SuppressWarnings("this-escape")
   public Elevator() {
-    super(new PIDController(kP, kI, kD));
-
+    m_controller = new PIDController(kP, kI, kD);
     m_motor = new WPI_TalonSRX(PortMap.kElevatorMotorPort);
 
-    getController().setTolerance(0.005);
+    m_controller.setTolerance(0.005);
 
     if (RobotBase.isSimulation()) {
       m_elevatorSim =
@@ -55,14 +57,18 @@ public class Elevator extends PIDSubsystem {
     SmartDashboard.putNumber("Elevator Height", m_motor.getSelectedSensorPosition());
   }
 
-  @Override
-  public double getMeasurement() {
-    return m_motor.getSelectedSensorPosition();
+  public void setVoltage(double output) {
+    m_motor.set(output);
   }
 
-  @Override
-  public void useOutput(double output, double setpoint) {
-    m_motor.set(output);
+  public void goToHeight(double height) {
+    double pidVoltage = m_controller.calculate(m_motor.getSelectedSensorPosition(), height);
+    setVoltage(pidVoltage);
+  }
+
+  public boolean isAtHeight() {
+    double error = m_setpoint - m_motor.getSelectedSensorPosition();
+    return error < 0.5;
   }
 
   @Override

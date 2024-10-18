@@ -3,7 +3,6 @@
 #include <iostream>
 #include <thread>
 
-#include "ctre/phoenix/motorcontrol/can/TalonFX.h"
 #include "ctre/phoenix/motorcontrol/can/TalonSRX.h"
 #include "ctre/phoenix/motorcontrol/can/VictorSPX.h"
 #include "ctre/phoenix/sensors/CANCoder.h"
@@ -12,7 +11,6 @@
 int main() {
   std::cout << "Hello World" << std::endl;
 
-  ctre::phoenix::motorcontrol::can::TalonFX talonFx{3};
   ctre::phoenix::motorcontrol::can::TalonSRX talonSrx{3};
   ctre::phoenix::motorcontrol::can::VictorSPX victorSpx{3};
   ctre::phoenix::sensors::CANCoder cancoder{3};
