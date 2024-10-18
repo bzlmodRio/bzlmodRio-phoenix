@@ -23,9 +23,9 @@ http_archive(
 
 http_archive(
     name = "bzlmodrio-phoenix6",
-    sha256 = "06da14ab65fec982b1c86ab8f2475d743417ce76617169cd7cd5859bb5b23ca6",
-    strip_prefix = "bzlmodRio-phoenix6-2f671a1448d16941c618f046b456c8bbc59f0ee4",
-    urls = ["https://github.com/bzlmodrio/bzlmodrio-phoenix6/archive/2f671a1448d16941c618f046b456c8bbc59f0ee4.tar.gz"],
+    sha256 = "f04a276992d0a2168ea5b9210f752c1b9ebe6b56997d0b48bbd934bacd401373",
+    strip_prefix = "bzlmodRio-phoenix6-d9ba2c2168be2c3342a7cf2e76500ce332a45515",
+    urls = ["https://github.com/bzlmodrio/bzlmodrio-phoenix6/archive/d9ba2c2168be2c3342a7cf2e76500ce332a45515.tar.gz"],
 )
 
 load("@bzlmodrio-phoenix//private/non_bzlmod_dependencies:download_dependencies.bzl", "download_dependencies")

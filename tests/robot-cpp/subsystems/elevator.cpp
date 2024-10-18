@@ -46,8 +46,9 @@ void Elevator::SetVoltage(double output) {
 
 void Elevator::GoToHeight(units::meter_t height) {
   m_setpoint = height;
-  
-  double pidVoltage = m_controller.Calculate(GetElevatorHeight().to<double>(), height.to<double>());
+
+  double pidVoltage = m_controller.Calculate(GetElevatorHeight().to<double>(),
+                                             height.to<double>());
   SetVoltage(pidVoltage);
 }
 
