@@ -13,13 +13,19 @@ bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2024-1.bcr1")
 bazel_dep(name = "bzlmodrio-allwpilib", version = "2025.1.1-beta-1")
 bazel_dep(name = "bzlmodrio-opencv", version = "2024.4.8.0-4.bcr1")
 bazel_dep(name = "bzlmodrio-ni", version = "2025.0.0")
-bazel_dep(name = "bzlmodrio-phoenix6", version = "25.0.0-beta-1")
+bazel_dep(name = "bzlmodrio-phoenix6", version = "25.0.0-beta-2")
 bazel_dep(name = "rules_pmd", version = "7.2.0")
 bazel_dep(name = "rules_checkstyle", version = "10.12.2")
 bazel_dep(name = "rules_wpiformat", version = "2024.34")
 bazel_dep(name = "rules_wpi_styleguide", version = "2024.06.22")
 bazel_dep(name = "rules_spotless", version = "2.40.0")
 bazel_dep(name = "rules_bzlmodrio_jdk", version = "17.0.8-7")
+archive_override(
+    module_name = "rules_bzlmodrio_jdk",
+    integrity = "sha256-Q6R15GhSMF/8h/dJnncqQtxTQ9e/zHYx28qDVocS9E8=",
+    strip_prefix = "rules_bzlmodrio_jdk-d5f0db20a611e4ec4b26f95d9c772e2436b69b55",
+    urls = ["https://github.com/wpilibsuite/rules_bzlmodRio_jdk/archive/d5f0db20a611e4ec4b26f95d9c772e2436b69b55.tar.gz"],
+)
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(

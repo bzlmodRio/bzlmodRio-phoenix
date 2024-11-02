@@ -14,7 +14,7 @@ def get_phoenix_dependencies(
     use_local_opencv=False,
     use_local_ni=True,
     allwpilib_version_override="2025.1.1-beta-1",
-    phoenix6_version_override="25.0.0-beta-1",
+    phoenix6_version_override="25.0.0-beta-2",
     opencv_version_override="2024.4.8.0-4.bcr1",
     ni_version_override="2025.0.0",
 ):

@@ -57,8 +57,8 @@ def download_dependencies():
     # bzlmodrio-phoenix6
     http_archive(
         name = "bzlmodrio-phoenix6",
-        sha256 = "None",
-        url = "https://github.com/bzlmodRio/bzlmodRio-phoenix6/releases/download/25.0.0-beta-1/bzlmodRio-phoenix6-25.0.0-beta-1.tar.gz",
+        sha256 = "086d2ada6b8d55dea048944d4e2ebd38afe3b0a231afc9f4d1df3d9ec3fa8301",
+        url = "https://github.com/bzlmodRio/bzlmodRio-phoenix6/releases/download/25.0.0-beta-2/bzlmodRio-phoenix6-25.0.0-beta-2.tar.gz",
     )
 
     ########################
