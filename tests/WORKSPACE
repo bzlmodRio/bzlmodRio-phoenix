@@ -21,13 +21,6 @@ http_archive(
     urls = ["https://github.com/wpilibsuite/rules_bzlmodRio_jdk/archive/d5f0db20a611e4ec4b26f95d9c772e2436b69b55.tar.gz"],
 )
 
-http_archive(
-    name = "bzlmodrio-phoenix6",
-    sha256 = "f04a276992d0a2168ea5b9210f752c1b9ebe6b56997d0b48bbd934bacd401373",
-    strip_prefix = "bzlmodRio-phoenix6-d9ba2c2168be2c3342a7cf2e76500ce332a45515",
-    urls = ["https://github.com/bzlmodrio/bzlmodrio-phoenix6/archive/d9ba2c2168be2c3342a7cf2e76500ce332a45515.tar.gz"],
-)
-
 load("@bzlmodrio-phoenix//private/non_bzlmod_dependencies:download_dependencies.bzl", "download_dependencies")
 
 download_dependencies()
