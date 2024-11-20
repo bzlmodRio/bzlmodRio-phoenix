@@ -1,4 +1,5 @@
 import os
+
 from bazelrio_gentool.auto_update_utils import update_vendor_dep
 
 

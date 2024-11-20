@@ -6,7 +6,7 @@
 #include <frc2/command/Subsystem.h>
 
 class Shooter : public frc2::Subsystem {
-public:
+ public:
   Shooter();
 
   void Periodic() override;
@@ -18,7 +18,7 @@ public:
 
   units::revolutions_per_minute_t GetRpm();
 
-private:
+ private:
   void Log();
 
   ctre::phoenix::motorcontrol::can::WPI_TalonSRX m_motor;

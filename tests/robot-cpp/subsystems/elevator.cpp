@@ -21,10 +21,11 @@ constexpr units::meter_t kMinElevatorHeight = 0_in;
 constexpr units::meter_t kMaxElevatorHeight = 50_in;
 
 frc::DCMotor kElevatorGearbox = frc::DCMotor::Vex775Pro(4);
-} // namespace
+}  // namespace
 
 Elevator::Elevator()
-    : m_motor{kElevatorMotorPort}, m_controller{kP, kI, kD},
+    : m_motor{kElevatorMotorPort},
+      m_controller{kP, kI, kD},
       m_elevatorSim(kElevatorGearbox, kElevatorGearing, kCarriageMass,
                     kElevatorDrumRadius, kMinElevatorHeight, kMaxElevatorHeight,
                     true, units::meter_t{0}) {
