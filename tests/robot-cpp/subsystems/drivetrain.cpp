@@ -14,7 +14,8 @@ DriveTrain::DriveTrain()
     : m_leftMotorA{kDrivetrainMotorLeftAPort},
       m_leftMotorB{kDrivetrainMotorLeftBPort},
       m_rightMotorA{kDrivetrainMotorRightAPort},
-      m_rightMotorB{kDrivetrainMotorRightBPort}, m_gyro{kPigeonPort},
+      m_rightMotorB{kDrivetrainMotorRightBPort},
+      m_gyro{kPigeonPort},
       m_robotDrive{m_leftMotorA, m_rightMotorA},
       m_odometry{frc::Rotation2d(), 0_m, 0_m},
       m_drivetrainSimulator(

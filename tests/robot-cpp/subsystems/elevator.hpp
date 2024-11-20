@@ -7,7 +7,7 @@
 #include <units/length.h>
 
 class Elevator : public frc2::Subsystem {
-public:
+ public:
   Elevator();
 
   void Stop();
@@ -24,7 +24,7 @@ public:
 
   units::meter_t GetElevatorHeight();
 
-private:
+ private:
   void Log();
 
   ctre::phoenix::motorcontrol::can::WPI_TalonSRX m_motor;
