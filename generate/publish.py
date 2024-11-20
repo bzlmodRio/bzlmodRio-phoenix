@@ -1,7 +1,8 @@
 import os
-from get_phoenix_dependencies import get_phoenix_dependencies
+
 from bazelrio_gentool.publish_module import publish_module
 from bazelrio_gentool.utils import TEMPLATE_BASE_DIR
+from get_phoenix_dependencies import get_phoenix_dependencies
 
 
 def main():
