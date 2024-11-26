@@ -15,7 +15,6 @@ cc_library(
     tags = ["manual"],
     target_compatible_with = select({
         "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@platforms//:incompatible"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
@@ -30,6 +29,7 @@ filegroup(
         "@rules_bzlmodrio_toolchains//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_linuxx86-64//:shared"],
         "@rules_bzlmodrio_toolchains//conditions:osx": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_osxuniversal//:shared"],
         "@rules_bzlmodrio_toolchains//conditions:windows": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_windowsx86-64//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@bazelrio_com_ctre_phoenix_sim_api-cpp-sim_linuxarm64//:shared"],
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
@@ -40,7 +40,6 @@ cc_library(
     srcs = [":shared_raw"],
     target_compatible_with = select({
         "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@platforms//:incompatible"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
