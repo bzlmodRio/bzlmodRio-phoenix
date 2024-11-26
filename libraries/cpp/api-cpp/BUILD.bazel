@@ -16,13 +16,13 @@ cc_library(
     # Binaries
     select({
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
+            "//private/cpp/api-cpp:shared",
             "//private/cpp/cci:shared",
             "@bzlmodrio-ni//libraries/cpp/ni:shared",
-            "@bzlmodrio-phoenix6//libraries/cpp/api-cpp:shared",
         ],
         "//conditions:default": [
+            "//private/cpp/api-cpp-sim:shared",
             "//private/cpp/cci-sim:shared",
-            "@bzlmodrio-phoenix6//libraries/cpp/api-cpp-sim:shared",
         ],
     }),
 )
@@ -32,14 +32,14 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = select({
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": [
+            "//private/cpp/api-cpp:shared",
             "//private/cpp/cci:shared",
-            "@bzlmodrio-phoenix6//libraries/cpp/api-cpp:jni",
         ],
         "//conditions:default": [
+            "//private/cpp/api-cpp-sim:shared",
             "//private/cpp/cci-sim:shared",
             "@bzlmodrio-allwpilib//libraries/cpp/hal:jni",
             "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
-            "@bzlmodrio-phoenix6//libraries/cpp/api-cpp-sim:jni",
         ],
     }),
 )
