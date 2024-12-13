@@ -26,71 +26,71 @@ def __setup_bzlmodrio_phoenix_cpp_dependencies(mctx):
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_api-cpp_headers",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-3/api-cpp-5.34.0-beta-3-headers.zip",
-        sha256 = "eef9cf6e4f02bf11a73b8e46ed411e9c682c08d964738db3675afd2be8ba4bf9",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-4/api-cpp-5.34.0-beta-4-headers.zip",
+        sha256 = "39c239816a56d4b00a620a55e4a34ee61a4d87c6fb2558b53b99bdec96f02d70",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_api-cpp_windowsx86-64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-3/api-cpp-5.34.0-beta-3-windowsx86-64.zip",
-        sha256 = "97de6f62cbdbdb693b1e0152ca14bb54c0a59270ed14e68fc2b05156562e968d",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-4/api-cpp-5.34.0-beta-4-windowsx86-64.zip",
+        sha256 = "46e98a835b5d1f656341db701adc2a605530dca7d17ffa27450ff0d302f0c83b",
         build_file = "@bzlmodrio-phoenix//private/cpp/api-cpp:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_api-cpp_linuxx86-64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-3/api-cpp-5.34.0-beta-3-linuxx86-64.zip",
-        sha256 = "a5987c0eca5943a950a0bb16e7c2ddb9b2cea32d9b84f919c7f4f1cec0f3049b",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-4/api-cpp-5.34.0-beta-4-linuxx86-64.zip",
+        sha256 = "9b07bfa3e0607754f09dd42081513e34c0e85233d4d2e56d8a7b0a78a9dccdc7",
         build_file = "@bzlmodrio-phoenix//private/cpp/api-cpp:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_api-cpp_linuxarm64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-3/api-cpp-5.34.0-beta-3-linuxarm64.zip",
-        sha256 = "77b5e8efad068f74cebc981aaa3f624042b8bb5e79f44b2fc8d379cee1172874",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-4/api-cpp-5.34.0-beta-4-linuxarm64.zip",
+        sha256 = "116f7f674eddd32c1bc3ddda6c64eaa112a959ed4e99f300c504eccea92ee784",
         build_file = "@bzlmodrio-phoenix//private/cpp/api-cpp:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_api-cpp_linuxathena",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-3/api-cpp-5.34.0-beta-3-linuxathena.zip",
-        sha256 = "9837f464b29f5f0140a6d77d5b17ca3fb9a279500f41edb4a1d740f22444e6f4",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-4/api-cpp-5.34.0-beta-4-linuxathena.zip",
+        sha256 = "4c5b55021ffeb2bbfece178425852439def061445f34ec9a53c2ff14e129e585",
         build_file = "@bzlmodrio-phoenix//private/cpp/api-cpp:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_api-cpp-sim_headers",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-3/api-cpp-sim-5.34.0-beta-3-headers.zip",
-        sha256 = "900d1c719a010f26c642a8252902ee83358786fcb9356e1635b67ec2b36cfc99",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-4/api-cpp-sim-5.34.0-beta-4-headers.zip",
+        sha256 = "4eb48ac34e1836a22d01ec3bcfc44882e717b1500327480d9bebacd9404afdc6",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_api-cpp-sim_windowsx86-64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-3/api-cpp-sim-5.34.0-beta-3-windowsx86-64.zip",
-        sha256 = "13d69f41d8faffa837c0605e98965a3a1a207810deaa864d07d3b13fb9424bdc",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-4/api-cpp-sim-5.34.0-beta-4-windowsx86-64.zip",
+        sha256 = "0441fdb3333277b59687d5f8fc5d6540442d6009373f25010868cfd68f35db28",
         build_file = "@bzlmodrio-phoenix//private/cpp/api-cpp-sim:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_api-cpp-sim_linuxx86-64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-3/api-cpp-sim-5.34.0-beta-3-linuxx86-64.zip",
-        sha256 = "5bf1eedb71326e5ce64ca2b52a94b54eb97f166800390cbea7b51a162c043285",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-4/api-cpp-sim-5.34.0-beta-4-linuxx86-64.zip",
+        sha256 = "21393d263dfdebdd8dcec4d228e259849e196483895d187920580bb93df94b1f",
         build_file = "@bzlmodrio-phoenix//private/cpp/api-cpp-sim:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_api-cpp-sim_linuxarm64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-3/api-cpp-sim-5.34.0-beta-3-linuxarm64.zip",
-        sha256 = "b3f88e40cb1ad332263f5679073497a02cce80891021b5c34bad7eb1b84458d4",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-4/api-cpp-sim-5.34.0-beta-4-linuxarm64.zip",
+        sha256 = "a4a8a6fd3c9c4d9261afff48a2887555f066510dada0525d38f2bafc173e5c4e",
         build_file = "@bzlmodrio-phoenix//private/cpp/api-cpp-sim:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_api-cpp-sim_osxuniversal",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-3/api-cpp-sim-5.34.0-beta-3-osxuniversal.zip",
-        sha256 = "1ba1aca36e122653727926d4a9cc8d676157c2a4217703403926e1f5c0e3c8ad",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-4/api-cpp-sim-5.34.0-beta-4-osxuniversal.zip",
+        sha256 = "553ed1a042961e3a06f16dfb1cd21204dfea73adfb00bd57aabca69eb4b96523",
         build_file = "@bzlmodrio-phoenix//private/cpp/api-cpp-sim:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libCTRE_PhoenixSim.dylib osx/universal/shared/libCTRE_PhoenixSim.dylib",
@@ -108,71 +108,71 @@ def __setup_bzlmodrio_phoenix_cpp_dependencies(mctx):
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_cci_headers",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-3/cci-5.34.0-beta-3-headers.zip",
-        sha256 = "420ce50339179dfd061d85622c38c66bb18d103c5f9d0c9e7041d79fcd310412",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-4/cci-5.34.0-beta-4-headers.zip",
+        sha256 = "a9d12cb0efe64bb8a13613e3ed67987c7779866c986a4c0dac0544ff409f5930",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_cci_windowsx86-64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-3/cci-5.34.0-beta-3-windowsx86-64.zip",
-        sha256 = "2464882190cb3352396b5b6a64ff381de9b6c3efc8e1445a5725cddca2fda646",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-4/cci-5.34.0-beta-4-windowsx86-64.zip",
+        sha256 = "c22423b8b9e9e69ca3cca7e5bc64546d09707ab3321f7be984420666b4c5aa92",
         build_file = "@bzlmodrio-phoenix//private/cpp/cci:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_cci_linuxx86-64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-3/cci-5.34.0-beta-3-linuxx86-64.zip",
-        sha256 = "539e31180ebb41d249652c275c2a336efad5ef00cd682804742c65c32dd52d80",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-4/cci-5.34.0-beta-4-linuxx86-64.zip",
+        sha256 = "d51af8ef48491e9fd0a46b61509b2358ed5d35f1e91f883952cfdabe6c357e0a",
         build_file = "@bzlmodrio-phoenix//private/cpp/cci:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_cci_linuxarm64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-3/cci-5.34.0-beta-3-linuxarm64.zip",
-        sha256 = "dbb563f6d1e6637990abff28c3053b34817866f091b7e49c7c228e66685456ee",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-4/cci-5.34.0-beta-4-linuxarm64.zip",
+        sha256 = "eb1550ac1f8fe00af9f1b92527c3949e1f3a6c3856663bba38431579e551582d",
         build_file = "@bzlmodrio-phoenix//private/cpp/cci:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_cci_linuxathena",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-3/cci-5.34.0-beta-3-linuxathena.zip",
-        sha256 = "f9846c046a772282c97e2f222a172a59de04cd8d100227fb9c5c96445e6dd345",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-4/cci-5.34.0-beta-4-linuxathena.zip",
+        sha256 = "a9e17cf4e86d4b9b823f61ecbab00a46a8b5f11d798cfabc8caa6842956ddc92",
         build_file = "@bzlmodrio-phoenix//private/cpp/cci:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_cci-sim_headers",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-3/cci-sim-5.34.0-beta-3-headers.zip",
-        sha256 = "420ce50339179dfd061d85622c38c66bb18d103c5f9d0c9e7041d79fcd310412",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-4/cci-sim-5.34.0-beta-4-headers.zip",
+        sha256 = "a9d12cb0efe64bb8a13613e3ed67987c7779866c986a4c0dac0544ff409f5930",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_cci-sim_windowsx86-64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-3/cci-sim-5.34.0-beta-3-windowsx86-64.zip",
-        sha256 = "fb290598e1579975f25f8ae5e183f610f0d27a514b86fcd23724110793cba3ed",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-4/cci-sim-5.34.0-beta-4-windowsx86-64.zip",
+        sha256 = "468beeb5112e2b08176ac604b48c832934d71c716fd63724b94d6af3b218ad51",
         build_file = "@bzlmodrio-phoenix//private/cpp/cci-sim:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_cci-sim_linuxx86-64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-3/cci-sim-5.34.0-beta-3-linuxx86-64.zip",
-        sha256 = "3bf41e16cecf68f78178651121c83fe80a93e4e152a885ff69d6b957f82f249a",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-4/cci-sim-5.34.0-beta-4-linuxx86-64.zip",
+        sha256 = "a111e8c6b2c2a212d21dcfea63b1af3ee5026bbd60bc07e91291ade396be3947",
         build_file = "@bzlmodrio-phoenix//private/cpp/cci-sim:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_cci-sim_linuxarm64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-3/cci-sim-5.34.0-beta-3-linuxarm64.zip",
-        sha256 = "7e5278216ab4e69c729850a0221a73265924c00e0b455ca27b87cb86c30d3afc",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-4/cci-sim-5.34.0-beta-4-linuxarm64.zip",
+        sha256 = "6fb85a9db9b12d77120088449d2ff51fd53a6f88bd91ed92c7ec0ebfb35a121d",
         build_file = "@bzlmodrio-phoenix//private/cpp/cci-sim:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_cci-sim_osxuniversal",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-3/cci-sim-5.34.0-beta-3-osxuniversal.zip",
-        sha256 = "b048cd208b6963df72364e8f78274c43a054fc2608eae015803ea6ba50bb7d37",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-4/cci-sim-5.34.0-beta-4-osxuniversal.zip",
+        sha256 = "026862285d7ce48bce7ba6ecfcf83acc1b56fa5ae284ae3b48ff864b73c760bc",
         build_file = "@bzlmodrio-phoenix//private/cpp/cci-sim:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libCTRE_PhoenixCCISim.dylib osx/universal/shared/libCTRE_PhoenixCCISim.dylib",
@@ -189,71 +189,71 @@ def __setup_bzlmodrio_phoenix_cpp_dependencies(mctx):
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_wpiapi-cpp_headers",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-3/wpiapi-cpp-5.34.0-beta-3-headers.zip",
-        sha256 = "38ac66df4260934af3d846365447e759554a50f0d0d3e41e8d6738a96f3017ac",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-4/wpiapi-cpp-5.34.0-beta-4-headers.zip",
+        sha256 = "b9cfe9af2abff5896ddc5ed1088f7e186c17597c5d683c918df6696dacbfa434",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_wpiapi-cpp_windowsx86-64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-3/wpiapi-cpp-5.34.0-beta-3-windowsx86-64.zip",
-        sha256 = "1663d3d3b7444b7a0394c186f1cdff3e77848de049d0834d978f2dd6cce6d7c1",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-4/wpiapi-cpp-5.34.0-beta-4-windowsx86-64.zip",
+        sha256 = "7be8df9d2acd409dea5482704773a269b5afc4c7d5dc557ad783684fae61fcab",
         build_file = "@bzlmodrio-phoenix//private/cpp/wpiapi-cpp:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_wpiapi-cpp_linuxx86-64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-3/wpiapi-cpp-5.34.0-beta-3-linuxx86-64.zip",
-        sha256 = "c43880fc204fd2bec1f59cdd237ecf8719266bc09e5fa6dc6df60fbb1f2a1471",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-4/wpiapi-cpp-5.34.0-beta-4-linuxx86-64.zip",
+        sha256 = "a79c5bea352b0ba2f7752e3b451ae86ead98d7371b34526b1b1fced322f07068",
         build_file = "@bzlmodrio-phoenix//private/cpp/wpiapi-cpp:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_wpiapi-cpp_linuxarm64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-3/wpiapi-cpp-5.34.0-beta-3-linuxarm64.zip",
-        sha256 = "db204b061e7e23b93a19727711de36632c9e03b1255025d2fc58f23e169d2781",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-4/wpiapi-cpp-5.34.0-beta-4-linuxarm64.zip",
+        sha256 = "5ea84490824a21953738d6e9cc43bd78429c14b721aed55274d69c9660bc7d18",
         build_file = "@bzlmodrio-phoenix//private/cpp/wpiapi-cpp:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_wpiapi-cpp_linuxathena",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-3/wpiapi-cpp-5.34.0-beta-3-linuxathena.zip",
-        sha256 = "f319bfe7fc8d1d0ab9ae5ddccad78b9b0a7ad7cadfcac92e5936400fde2be58d",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-4/wpiapi-cpp-5.34.0-beta-4-linuxathena.zip",
+        sha256 = "6cfa98d790af9a7f2dcc55e143bb7be3775997156c6cbcace7e89cbd49da1669",
         build_file = "@bzlmodrio-phoenix//private/cpp/wpiapi-cpp:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_wpiapi-cpp-sim_headers",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-3/wpiapi-cpp-sim-5.34.0-beta-3-headers.zip",
-        sha256 = "a09df7c8859f1a15133b3f63a58a62efdd2117333719ab460404112a243b793d",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-4/wpiapi-cpp-sim-5.34.0-beta-4-headers.zip",
+        sha256 = "15fbb7625d5af4892c331aeb9398eeec71e87a344568173786e92eecd4340afd",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_wpiapi-cpp-sim_windowsx86-64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-3/wpiapi-cpp-sim-5.34.0-beta-3-windowsx86-64.zip",
-        sha256 = "42ef482fb5fbab2e1b51222b5aacbbc088d04370d8830e516be632b6a523d9f1",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-4/wpiapi-cpp-sim-5.34.0-beta-4-windowsx86-64.zip",
+        sha256 = "5dfff677e2972fc4ce0f13f495cc57d5146f899b4d124d470ac4305e8e63bcfe",
         build_file = "@bzlmodrio-phoenix//private/cpp/wpiapi-cpp-sim:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_wpiapi-cpp-sim_linuxx86-64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-3/wpiapi-cpp-sim-5.34.0-beta-3-linuxx86-64.zip",
-        sha256 = "54bf77d24b26a64d1053650c6f4340f697a7d9d9be844fcbc161fb93a2dcc1f6",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-4/wpiapi-cpp-sim-5.34.0-beta-4-linuxx86-64.zip",
+        sha256 = "426a46bb174818dce8e8629de3ecd9b40eed71979972f888b19c1171a6279a3c",
         build_file = "@bzlmodrio-phoenix//private/cpp/wpiapi-cpp-sim:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_wpiapi-cpp-sim_linuxarm64",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-3/wpiapi-cpp-sim-5.34.0-beta-3-linuxarm64.zip",
-        sha256 = "d0157f7f40c71b307387c731e2d91e4443a22a00222615647b2c66efee146b09",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-4/wpiapi-cpp-sim-5.34.0-beta-4-linuxarm64.zip",
+        sha256 = "abe400ab46073bfcd6a6acd90a42f9ef5167c3f59e6573d0fde83b1393db15fc",
         build_file = "@bzlmodrio-phoenix//private/cpp/wpiapi-cpp-sim:shared.BUILD.bazel",
     )
     maybe(
         http_archive,
         "bazelrio_com_ctre_phoenix_sim_wpiapi-cpp-sim_osxuniversal",
-        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-3/wpiapi-cpp-sim-5.34.0-beta-3-osxuniversal.zip",
-        sha256 = "1b368ab8636fc3164139db0c29c1232db86da48389c9848e9527f2bf7e91bf2e",
+        url = "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-4/wpiapi-cpp-sim-5.34.0-beta-4-osxuniversal.zip",
+        sha256 = "06261fe680898200dad4262d785213271409b370af695b3a57466d807f155db5",
         build_file = "@bzlmodrio-phoenix//private/cpp/wpiapi-cpp-sim:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libCTRE_Phoenix_WPISim.dylib osx/universal/shared/libCTRE_Phoenix_WPISim.dylib",
