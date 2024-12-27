@@ -9,9 +9,9 @@ bazel_dep(name = "rules_cc", version = "0.0.9")
 bazel_dep(name = "rules_java", version = "7.6.5")
 bazel_dep(name = "rules_jvm_external", version = "6.1")
 bazel_dep(name = "rules_bazelrio", version = "0.0.14")
-bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2024-1.bcr1")
-bazel_dep(name = "bzlmodrio-allwpilib", version = "2025.1.1-beta-1")
-bazel_dep(name = "bzlmodrio-opencv", version = "2024.4.8.0-4.bcr1")
+bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2025-1")
+bazel_dep(name = "bzlmodrio-allwpilib", version = "2025.1.1-beta-3")
+bazel_dep(name = "bzlmodrio-opencv", version = "2025.4.10.0-2")
 bazel_dep(name = "bzlmodrio-ni", version = "2025.0.0")
 bazel_dep(name = "bzlmodrio-phoenix6", version = "25.0.0-beta-2")
 bazel_dep(name = "rules_pmd", version = "7.2.0")
@@ -19,12 +19,24 @@ bazel_dep(name = "rules_checkstyle", version = "10.12.2")
 bazel_dep(name = "rules_wpiformat", version = "2024.45")
 bazel_dep(name = "rules_wpi_styleguide", version = "2024.11.19")
 bazel_dep(name = "rules_spotless", version = "2.40.0")
-bazel_dep(name = "rules_bzlmodrio_jdk", version = "17.0.8-7")
+bazel_dep(name = "rules_bzlmodrio_jdk", version = "17.0.12-7")
 archive_override(
     module_name = "rules_bzlmodrio_jdk",
-    integrity = "sha256-Q6R15GhSMF/8h/dJnncqQtxTQ9e/zHYx28qDVocS9E8=",
-    strip_prefix = "rules_bzlmodrio_jdk-d5f0db20a611e4ec4b26f95d9c772e2436b69b55",
-    urls = ["https://github.com/wpilibsuite/rules_bzlmodRio_jdk/archive/d5f0db20a611e4ec4b26f95d9c772e2436b69b55.tar.gz"],
+    integrity = "sha256-SrikyrF2v2lENdqn9aFC//d0TkIE620lR60yXTrWFTs=",
+    strip_prefix = "rules_bzlmodrio_jdk-4ecd4cbc97dfbfe2ceefa627de1228e2f2ca5773",
+    urls = ["https://github.com/wpilibsuite/rules_bzlmodRio_jdk/archive/4ecd4cbc97dfbfe2ceefa627de1228e2f2ca5773.tar.gz"],
+)
+
+archive_override(
+    module_name = "bzlmodrio-ni",
+    integrity = "sha256-3v8GgKIDk8znKjsoUlyzgp5DLUc1a5jVGAsJTZTQ1zs=",
+    strip_prefix = "bzlmodRio-ni-31bd7c9e46e7e3e5f86ed89c68f0544fb3662441",
+    urls = ["https://github.com/wpilibsuite/bzlmodRio-ni/archive/31bd7c9e46e7e3e5f86ed89c68f0544fb3662441.tar.gz"],
+)
+
+local_path_override(
+    module_name = "bzlmodrio-phoenix6",
+    path = "../../bzlmodRio-phoenix6",
 )
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
