@@ -36,7 +36,7 @@ def download_dependencies():
     # bzlmodrio-allwpilib
     http_archive(
         name = "bzlmodrio-allwpilib",
-        sha256 = "None",
+        sha256 = "a8502e75476cc41718956bb6fc79c3e3a1411f90e7857a9a10504c8fa399cf5f",
         url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/releases/download/2025.1.1/bzlmodRio-allwpilib-2025.1.1.tar.gz",
     )
 
