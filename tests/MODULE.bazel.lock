@@ -5683,8 +5683,8 @@
     },
     "@@bzlmodrio-phoenix~//:maven_cpp_deps.bzl%setup_bzlmodrio_phoenix_cpp_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "Z/OKaS6eNlAxyC37hN1iBlfk66EsBEu7Qza2lHasgf4=",
-        "usagesDigest": "s9EIuZ6eUETOEwZSDCr0qw7qgXuu1yAeIyzW+94zwoA=",
+        "bzlTransitiveDigest": "N/UtO4uYZ7ea6Y5tXNQxbTJBKL2YyNqM8hdfheD5kLo=",
+        "usagesDigest": "1fwwYUQx5hmDXxmlaDGEHu/XGTUuVo2RW7OjtasrKcc=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -5693,8 +5693,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-4/cci-5.34.0-beta-4-linuxathena.zip",
-              "sha256": "a9e17cf4e86d4b9b823f61ecbab00a46a8b5f11d798cfabc8caa6842956ddc92",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.35.0/cci-5.35.0-linuxathena.zip",
+              "sha256": "cc8b1c4fb62368779cff97ef03ed6faf3612e7b327ba08a73849d789ea3a3b3c",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/cci:shared.BUILD.bazel"
             }
           },
@@ -5702,8 +5702,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-4/wpiapi-cpp-5.34.0-beta-4-linuxarm64.zip",
-              "sha256": "5ea84490824a21953738d6e9cc43bd78429c14b721aed55274d69c9660bc7d18",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.35.0/wpiapi-cpp-5.35.0-linuxarm64.zip",
+              "sha256": "929f03ba401fc90a6e8595ce3d500e02854ff40ebf867bc65e07cec3ae44dd0b",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/wpiapi-cpp:shared.BUILD.bazel"
             }
           },
@@ -5711,8 +5711,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-4/wpiapi-cpp-sim-5.34.0-beta-4-linuxarm64.zip",
-              "sha256": "abe400ab46073bfcd6a6acd90a42f9ef5167c3f59e6573d0fde83b1393db15fc",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.35.0/wpiapi-cpp-sim-5.35.0-linuxarm64.zip",
+              "sha256": "7202bdc4c7d8fb1d49d998ae216cb56e85431c8510b22ee667828509d222b5b8",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/wpiapi-cpp-sim:shared.BUILD.bazel"
             }
           },
@@ -5720,8 +5720,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-4/wpiapi-cpp-sim-5.34.0-beta-4-osxuniversal.zip",
-              "sha256": "06261fe680898200dad4262d785213271409b370af695b3a57466d807f155db5",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.35.0/wpiapi-cpp-sim-5.35.0-osxuniversal.zip",
+              "sha256": "0c1137676d8001fb14c1ebec009223b261b2b348bf90498b145c554f54975f17",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/wpiapi-cpp-sim:shared.BUILD.bazel",
               "patch_cmds": [
                 "install_name_tool -id @rpath/libCTRE_Phoenix_WPISim.dylib osx/universal/shared/libCTRE_Phoenix_WPISim.dylib",
@@ -5750,8 +5750,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-4/api-cpp-5.34.0-beta-4-linuxathena.zip",
-              "sha256": "4c5b55021ffeb2bbfece178425852439def061445f34ec9a53c2ff14e129e585",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.35.0/api-cpp-5.35.0-linuxathena.zip",
+              "sha256": "b16d089f4f71804bbdb5245952de307b75410f2814392b6832f751177057c936",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/api-cpp:shared.BUILD.bazel"
             }
           },
@@ -5759,8 +5759,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-4/api-cpp-sim-5.34.0-beta-4-osxuniversal.zip",
-              "sha256": "553ed1a042961e3a06f16dfb1cd21204dfea73adfb00bd57aabca69eb4b96523",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.35.0/api-cpp-sim-5.35.0-osxuniversal.zip",
+              "sha256": "6fd678456ebf0a91f7ee5c38abf596713cb3ba3b1f0535e181d98d81badbc7c6",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/api-cpp-sim:shared.BUILD.bazel",
               "patch_cmds": [
                 "install_name_tool -id @rpath/libCTRE_PhoenixSim.dylib osx/universal/shared/libCTRE_PhoenixSim.dylib",
@@ -5780,8 +5780,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-4/api-cpp-5.34.0-beta-4-linuxx86-64.zip",
-              "sha256": "9b07bfa3e0607754f09dd42081513e34c0e85233d4d2e56d8a7b0a78a9dccdc7",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.35.0/api-cpp-5.35.0-linuxx86-64.zip",
+              "sha256": "c5b212cfe1686916f63c375ba22ba19c66078fe9891c9bafc49a033ed9f14052",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/api-cpp:shared.BUILD.bazel"
             }
           },
@@ -5789,8 +5789,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-4/api-cpp-sim-5.34.0-beta-4-windowsx86-64.zip",
-              "sha256": "0441fdb3333277b59687d5f8fc5d6540442d6009373f25010868cfd68f35db28",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.35.0/api-cpp-sim-5.35.0-windowsx86-64.zip",
+              "sha256": "52017dec048760b7a2664dd1119adf64349034240e2436672d4f08973a2e758c",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/api-cpp-sim:shared.BUILD.bazel"
             }
           },
@@ -5798,8 +5798,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-4/cci-sim-5.34.0-beta-4-osxuniversal.zip",
-              "sha256": "026862285d7ce48bce7ba6ecfcf83acc1b56fa5ae284ae3b48ff864b73c760bc",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.35.0/cci-sim-5.35.0-osxuniversal.zip",
+              "sha256": "5b770dd8a8acd1a5368d70563d6a9f1d797bae39a6b87de4c6ec026f9f3587d1",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/cci-sim:shared.BUILD.bazel",
               "patch_cmds": [
                 "install_name_tool -id @rpath/libCTRE_PhoenixCCISim.dylib osx/universal/shared/libCTRE_PhoenixCCISim.dylib",
@@ -5818,8 +5818,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-4/api-cpp-sim-5.34.0-beta-4-linuxarm64.zip",
-              "sha256": "a4a8a6fd3c9c4d9261afff48a2887555f066510dada0525d38f2bafc173e5c4e",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.35.0/api-cpp-sim-5.35.0-linuxarm64.zip",
+              "sha256": "deda0ded31b121a9f3792d52378668397d054ae0f326e20715f2f05a6abfad5c",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/api-cpp-sim:shared.BUILD.bazel"
             }
           },
@@ -5827,8 +5827,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-4/cci-5.34.0-beta-4-linuxx86-64.zip",
-              "sha256": "d51af8ef48491e9fd0a46b61509b2358ed5d35f1e91f883952cfdabe6c357e0a",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.35.0/cci-5.35.0-linuxx86-64.zip",
+              "sha256": "51cdb05465206dfd4015982e2b4e7bc96c5aabfb69874f4073ec6938648a61cc",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/cci:shared.BUILD.bazel"
             }
           },
@@ -5836,8 +5836,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-4/wpiapi-cpp-sim-5.34.0-beta-4-headers.zip",
-              "sha256": "15fbb7625d5af4892c331aeb9398eeec71e87a344568173786e92eecd4340afd",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.35.0/wpiapi-cpp-sim-5.35.0-headers.zip",
+              "sha256": "049ad1111d6287528fffbba1278d8ff5b6e0cebb11d2d676eaf8c60689a8c525",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -5845,8 +5845,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-4/api-cpp-sim-5.34.0-beta-4-headers.zip",
-              "sha256": "4eb48ac34e1836a22d01ec3bcfc44882e717b1500327480d9bebacd9404afdc6",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.35.0/api-cpp-sim-5.35.0-headers.zip",
+              "sha256": "558714afb2d15a42beea5375b561b2d214948c856c5e223c4234cce216d45fb8",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -5854,8 +5854,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-4/wpiapi-cpp-5.34.0-beta-4-windowsx86-64.zip",
-              "sha256": "7be8df9d2acd409dea5482704773a269b5afc4c7d5dc557ad783684fae61fcab",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.35.0/wpiapi-cpp-5.35.0-windowsx86-64.zip",
+              "sha256": "18865e21de23453f7e02b57e6256b8edb5a75480751f6e18f3c71eb8b1ef2c0d",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/wpiapi-cpp:shared.BUILD.bazel"
             }
           },
@@ -5863,8 +5863,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-4/cci-sim-5.34.0-beta-4-linuxarm64.zip",
-              "sha256": "6fb85a9db9b12d77120088449d2ff51fd53a6f88bd91ed92c7ec0ebfb35a121d",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.35.0/cci-sim-5.35.0-linuxarm64.zip",
+              "sha256": "fe2e721a49b33b3e22488c6beb5bacc36d3a798bc3a6018f519060ebf706c4c4",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/cci-sim:shared.BUILD.bazel"
             }
           },
@@ -5872,8 +5872,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-4/wpiapi-cpp-sim-5.34.0-beta-4-linuxx86-64.zip",
-              "sha256": "426a46bb174818dce8e8629de3ecd9b40eed71979972f888b19c1171a6279a3c",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.35.0/wpiapi-cpp-sim-5.35.0-linuxx86-64.zip",
+              "sha256": "a22538d65695294834e1a18e3ae20a48dcec9a1a4a628dfce985281543d126a3",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/wpiapi-cpp-sim:shared.BUILD.bazel"
             }
           },
@@ -5881,8 +5881,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-4/api-cpp-5.34.0-beta-4-windowsx86-64.zip",
-              "sha256": "46e98a835b5d1f656341db701adc2a605530dca7d17ffa27450ff0d302f0c83b",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.35.0/api-cpp-5.35.0-windowsx86-64.zip",
+              "sha256": "14b9cb33c72e71150d9fffebbb8b4fa48be4475761702e4b3ae0fffe2ea2d845",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/api-cpp:shared.BUILD.bazel"
             }
           },
@@ -5890,8 +5890,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-4/wpiapi-cpp-5.34.0-beta-4-linuxx86-64.zip",
-              "sha256": "a79c5bea352b0ba2f7752e3b451ae86ead98d7371b34526b1b1fced322f07068",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.35.0/wpiapi-cpp-5.35.0-linuxx86-64.zip",
+              "sha256": "b739acfe97bdf41e42b4bfdf1e38ec0dba7293af7796318cfff2cfb21841d638",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/wpiapi-cpp:shared.BUILD.bazel"
             }
           },
@@ -5899,8 +5899,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-4/cci-5.34.0-beta-4-windowsx86-64.zip",
-              "sha256": "c22423b8b9e9e69ca3cca7e5bc64546d09707ab3321f7be984420666b4c5aa92",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.35.0/cci-5.35.0-windowsx86-64.zip",
+              "sha256": "040c4d6b2fca2137d84d3fbbbbfc9882e57893a836db289451fda5726bce1ccb",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/cci:shared.BUILD.bazel"
             }
           },
@@ -5908,8 +5908,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.34.0-beta-4/wpiapi-cpp-sim-5.34.0-beta-4-windowsx86-64.zip",
-              "sha256": "5dfff677e2972fc4ce0f13f495cc57d5146f899b4d124d470ac4305e8e63bcfe",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/wpiapi-cpp-sim/5.35.0/wpiapi-cpp-sim-5.35.0-windowsx86-64.zip",
+              "sha256": "79783a09c5794f0967621783511ae996fd6932dd7d416f06167b561a2bb5d3ce",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/wpiapi-cpp-sim:shared.BUILD.bazel"
             }
           },
@@ -5917,8 +5917,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-4/cci-sim-5.34.0-beta-4-headers.zip",
-              "sha256": "a9d12cb0efe64bb8a13613e3ed67987c7779866c986a4c0dac0544ff409f5930",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.35.0/cci-sim-5.35.0-headers.zip",
+              "sha256": "352fb8b0a73e18f0a00aa3c04880545c14a2bd09009031798a4f9a854ee71ff3",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -5926,8 +5926,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-4/cci-sim-5.34.0-beta-4-linuxx86-64.zip",
-              "sha256": "a111e8c6b2c2a212d21dcfea63b1af3ee5026bbd60bc07e91291ade396be3947",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.35.0/cci-sim-5.35.0-linuxx86-64.zip",
+              "sha256": "94593a0fcc3cda78fb742e3482063158ee26d4533eadc8dab829b7451cfbec65",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/cci-sim:shared.BUILD.bazel"
             }
           },
@@ -5935,8 +5935,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-4/api-cpp-5.34.0-beta-4-headers.zip",
-              "sha256": "39c239816a56d4b00a620a55e4a34ee61a4d87c6fb2558b53b99bdec96f02d70",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.35.0/api-cpp-5.35.0-headers.zip",
+              "sha256": "5abb072f9e5b6b3bcc86ddbfed4ecf4108d9ea85a6b91921633d45a88b4a0b0b",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -5944,8 +5944,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-4/wpiapi-cpp-5.34.0-beta-4-linuxathena.zip",
-              "sha256": "6cfa98d790af9a7f2dcc55e143bb7be3775997156c6cbcace7e89cbd49da1669",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.35.0/wpiapi-cpp-5.35.0-linuxathena.zip",
+              "sha256": "50ac63cf388cbe4393785ff4adc066579fb824a4826b5766044bc27b6a27c712",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/wpiapi-cpp:shared.BUILD.bazel"
             }
           },
@@ -5953,8 +5953,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-4/cci-5.34.0-beta-4-headers.zip",
-              "sha256": "a9d12cb0efe64bb8a13613e3ed67987c7779866c986a4c0dac0544ff409f5930",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.35.0/cci-5.35.0-headers.zip",
+              "sha256": "352fb8b0a73e18f0a00aa3c04880545c14a2bd09009031798a4f9a854ee71ff3",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -5962,8 +5962,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.34.0-beta-4/cci-sim-5.34.0-beta-4-windowsx86-64.zip",
-              "sha256": "468beeb5112e2b08176ac604b48c832934d71c716fd63724b94d6af3b218ad51",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/cci-sim/5.35.0/cci-sim-5.35.0-windowsx86-64.zip",
+              "sha256": "518dfed13716c2bb7d045b4715c26e8cb2b8988aa0d7f388d71d2677f58cb3ec",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/cci-sim:shared.BUILD.bazel"
             }
           },
@@ -5971,8 +5971,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.34.0-beta-4/wpiapi-cpp-5.34.0-beta-4-headers.zip",
-              "sha256": "b9cfe9af2abff5896ddc5ed1088f7e186c17597c5d683c918df6696dacbfa434",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-cpp/5.35.0/wpiapi-cpp-5.35.0-headers.zip",
+              "sha256": "a3a69a90da22e86a618ea3e4bfba224103f721385b6a6f766ea5f51e3bd0609c",
               "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
@@ -5980,8 +5980,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.34.0-beta-4/api-cpp-5.34.0-beta-4-linuxarm64.zip",
-              "sha256": "116f7f674eddd32c1bc3ddda6c64eaa112a959ed4e99f300c504eccea92ee784",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-cpp/5.35.0/api-cpp-5.35.0-linuxarm64.zip",
+              "sha256": "213f2143243bd1a3e7f01023425518d031431c98e418796060a8999fa697bf01",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/api-cpp:shared.BUILD.bazel"
             }
           },
@@ -5989,8 +5989,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.34.0-beta-4/api-cpp-sim-5.34.0-beta-4-linuxx86-64.zip",
-              "sha256": "21393d263dfdebdd8dcec4d228e259849e196483895d187920580bb93df94b1f",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/sim/api-cpp-sim/5.35.0/api-cpp-sim-5.35.0-linuxx86-64.zip",
+              "sha256": "f349a50498fa69b40e5a3bd9ac046e679140a70b30ae7280d3a9b8aaa5e8aafb",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/api-cpp-sim:shared.BUILD.bazel"
             }
           },
@@ -5998,8 +5998,8 @@
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
             "attributes": {
-              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.34.0-beta-4/cci-5.34.0-beta-4-linuxarm64.zip",
-              "sha256": "eb1550ac1f8fe00af9f1b92527c3949e1f3a6c3856663bba38431579e551582d",
+              "url": "https://maven.ctr-electronics.com/release/com/ctre/phoenix/cci/5.35.0/cci-5.35.0-linuxarm64.zip",
+              "sha256": "b41a46a5edd2c1db4dab5b61f15ff0657220283526d69455575deeaf2e6b376d",
               "build_file": "@@bzlmodrio-phoenix~//private/cpp/cci:shared.BUILD.bazel"
             }
           }
@@ -6015,8 +6015,8 @@
     },
     "@@bzlmodrio-phoenix~//:maven_java_deps.bzl%setup_bzlmodrio_phoenix_java_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "9AGk25/L0rTxKqbcHNtDWlspX8/YX7Was+IFa32tMmQ=",
-        "usagesDigest": "PC+o6wvnkb1nfETIg0ZKDzFSfhj3B5RbtiMFIk1N10o=",
+        "bzlTransitiveDigest": "kLplF5GTgfVcjtp3ZS9b66WAvMOnDgtJ7ytjf3yjM9Q=",
+        "usagesDigest": "RSEtO8FlM3X4N7lpz7MMKP+8eIRTj9omd7g2ax7uG1c=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -6027,15 +6027,15 @@
             "attributes": {
               "generated_rule_name": "com_ctre_phoenix_api_java",
               "artifact_urls": [
-                "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-java/5.34.0-beta-4/api-java-5.34.0-beta-4.jar"
+                "https://maven.ctr-electronics.com/release/com/ctre/phoenix/api-java/5.35.0/api-java-5.35.0.jar"
               ],
               "srcjar_urls": [],
-              "canonical_id": "com.ctre.phoenix:api-java:5.34.0-beta-4",
+              "canonical_id": "com.ctre.phoenix:api-java:5.35.0",
               "rule_name": "java_import",
               "tags": [
-                "maven_coordinates=com.ctre.phoenix:api-java:5.34.0-beta-4"
+                "maven_coordinates=com.ctre.phoenix:api-java:5.35.0"
               ],
-              "artifact_sha256": "127f5a1abcbee32072aba63e780f94909523fe2a84462de7dbeb8dfadbf2d803"
+              "artifact_sha256": "c3f221183c07eea74516352f8d4ca383fc2a6605b97bac7500b6c868fc749a1e"
             }
           },
           "com_ctre_phoenix_wpiapi_java": {
@@ -6044,15 +6044,15 @@
             "attributes": {
               "generated_rule_name": "com_ctre_phoenix_wpiapi_java",
               "artifact_urls": [
-                "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-java/5.34.0-beta-4/wpiapi-java-5.34.0-beta-4.jar"
+                "https://maven.ctr-electronics.com/release/com/ctre/phoenix/wpiapi-java/5.35.0/wpiapi-java-5.35.0.jar"
               ],
               "srcjar_urls": [],
-              "canonical_id": "com.ctre.phoenix:wpiapi-java:5.34.0-beta-4",
+              "canonical_id": "com.ctre.phoenix:wpiapi-java:5.35.0",
               "rule_name": "java_import",
               "tags": [
-                "maven_coordinates=com.ctre.phoenix:wpiapi-java:5.34.0-beta-4"
+                "maven_coordinates=com.ctre.phoenix:wpiapi-java:5.35.0"
               ],
-              "artifact_sha256": "8b47635517d66c4be5eab0956453c9cf10f43b7e1c91a7c43c31a4b35a01e7fc"
+              "artifact_sha256": "67cd69fd54dbb1e5c1d607bbf0070c55fb835b87a8fcc3c49ddda4d093ff454d"
             }
           }
         },
