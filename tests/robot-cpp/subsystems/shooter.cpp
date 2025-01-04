@@ -1,5 +1,6 @@
 #include "robot-cpp/subsystems/shooter.hpp"
 
+#include <frc/RobotController.h>
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <frc/system/plant/LinearSystemId.h>
 
