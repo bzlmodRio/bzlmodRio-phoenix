@@ -8,6 +8,7 @@ from bazelrio_gentool.generate_module_project_files import (
     create_default_mandatory_settings,
     generate_module_project_files,
 )
+from bazelrio_gentool.manual_cleanup_helper import manual_cleanup_helper
 from get_phoenix_dependencies import get_phoenix_dependencies
 
 
@@ -44,16 +45,25 @@ def main():
 
 
 def manual_cleanup(repo_dir):
-    # Manual cleanup
-    cleanup_file = os.path.join(
-        repo_dir, "libraries", "cpp", "wpiapi-cpp", "BUILD.bazel"
+    manual_cleanup_helper(
+        os.path.join(repo_dir, "libraries", "cpp", "wpiapi-cpp", "BUILD.bazel"),
+        lambda x: x.replace("@bzlmodrio-phoenix6//libraries", "//private"),
     )
-    with open(cleanup_file, "r") as f:
-        contents = f.read()
 
-    contents = contents.replace("@bzlmodrio-phoenix6//libraries", "//private")
-    with open(cleanup_file, "w") as f:
-        f.write(contents)
+    def cleanup_api_cpp(contents):
+        contents = contents.replace("@bzlmodrio-phoenix6//libraries", "//private")
+        contents = contents.replace(
+            "//private/cpp/phoenix6-hal:shared",
+            "@bzlmodrio-phoenix6//libraries/cpp/phoenix6-hal:shared",
+        )
+        contents = contents.replace("api-cpp:jni", "api-cpp:shared")
+        contents = contents.replace("api-cpp-sim:jni", "api-cpp-sim:shared")
+        return contents
+
+    manual_cleanup_helper(
+        os.path.join(repo_dir, "libraries", "cpp", "api-cpp", "BUILD.bazel"),
+        cleanup_api_cpp,
+    )
 
 
 if __name__ == "__main__":
