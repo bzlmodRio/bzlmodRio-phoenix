@@ -26,8 +26,8 @@ def download_dependencies():
     # Roborio Toolchain
     http_archive(
         name = "rules_bzlmodrio_toolchains",
-        sha256 = "fe267e2af53c1def1e962700a9aeda9e8fdfa9fb46b72167c615ec0e25447dd6",
-        url = "https://github.com/wpilibsuite/rules_bzlmodRio_toolchains/releases/download/2025-1/rules_bzlmodRio_toolchains-2025-1.tar.gz",
+        sha256 = "559ff5ddc402dca6266a765770c3a65db23e2060c45355c57612737bcc592b78",
+        url = "https://github.com/wpilibsuite/rules_bzlmodRio_toolchains/releases/download/2025-1.bcr1/rules_bzlmodRio_toolchains-2025-1.bcr1.tar.gz",
     )
 
     ########################
@@ -36,22 +36,22 @@ def download_dependencies():
     # bzlmodrio-allwpilib
     http_archive(
         name = "bzlmodrio-allwpilib",
-        sha256 = "0e66d46695d90ab61a7a27b626d8a4c7496c780af83fcd75972cd1a93babc940",
-        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/releases/download/2025.1.1-beta-3/bzlmodRio-allwpilib-2025.1.1-beta-3.tar.gz",
+        sha256 = "None",
+        url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/releases/download/2025.1.1/bzlmodRio-allwpilib-2025.1.1.tar.gz",
     )
 
     # bzlmodrio-opencv
     http_archive(
         name = "bzlmodrio-opencv",
-        sha256 = "4f4a607956ca8555618736c3058dd96e09d02df19e95088c1e352d2319fd70c7",
-        url = "https://github.com/bzlmodRio/bzlmodRio-opencv/releases/download/2025.4.10.0-2/bzlmodRio-opencv-2025.4.10.0-2.tar.gz",
+        sha256 = "58c0069fc323259f3993750fe8245798f0db8b2fbf3772c5136253fa92912a16",
+        url = "https://github.com/bzlmodRio/bzlmodRio-opencv/releases/download/2025.4.10.0-3/bzlmodRio-opencv-2025.4.10.0-3.tar.gz",
     )
 
     # bzlmodrio-ni
     http_archive(
         name = "bzlmodrio-ni",
-        sha256 = "197fceac88bf44fb8427d5e000b0083118d3346172dd2ad31eccf83a5e61b3ce",
-        url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2025.0.0/bzlmodRio-ni-2025.0.0.tar.gz",
+        sha256 = "fff62c3cb3e83f9a0d0a01f1739477c9ca5e9a6fac05be1ad59dafcd385801f7",
+        url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2025.2.0/bzlmodRio-ni-2025.2.0.tar.gz",
     )
 
     # bzlmodrio-phoenix6
