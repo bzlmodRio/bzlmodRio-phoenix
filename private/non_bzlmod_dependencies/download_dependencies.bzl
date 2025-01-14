@@ -24,10 +24,12 @@ def download_dependencies():
     )
 
     # Roborio Toolchain
+    # TODO - TEMPORARY OVERRIDE
     http_archive(
         name = "rules_bzlmodrio_toolchains",
-        sha256 = "559ff5ddc402dca6266a765770c3a65db23e2060c45355c57612737bcc592b78",
-        url = "https://github.com/wpilibsuite/rules_bzlmodRio_toolchains/releases/download/2025-1.bcr1/rules_bzlmodRio_toolchains-2025-1.bcr1.tar.gz",
+        integrity = "sha256-45EV1waPl/X8S1LocEDpYD6W3XMsX5W3f/1cLPS/VK8=",
+        strip_prefix = "rules_bzlmodrio_toolchains-696c423fd86e9dd0dfbf17fb151295ddf1a03468",
+        urls = ["https://github.com/wpilibsuite/rules_bzlmodRio_toolchains/archive/696c423fd86e9dd0dfbf17fb151295ddf1a03468.tar.gz"],
     )
 
     ########################
