@@ -19,6 +19,13 @@ bazel_dep(name = "rules_checkstyle", version = "10.12.2")
 bazel_dep(name = "rules_wpiformat", version = "2024.45")
 bazel_dep(name = "rules_wpi_styleguide", version = "2024.11.19")
 bazel_dep(name = "rules_spotless", version = "2.40.0")
+archive_override(
+    module_name = "rules_spotless",
+    integrity = "sha256-b3ZLp66ExJOAJvUaUtnoGW+A2yvEsdwebnj8WFvliNI=",
+    strip_prefix = "rules_spotless-ebddd6f724d7f18c0c4bd3ab910e27d689e281ef",
+    urls = ["https://github.com/bzlmodrio/rules_spotless/archive/ebddd6f724d7f18c0c4bd3ab910e27d689e281ef.tar.gz"],
+)
+
 bazel_dep(name = "rules_bzlmodrio_jdk", version = "17.0.12-7")
 archive_override(
     module_name = "rules_bzlmodrio_jdk",

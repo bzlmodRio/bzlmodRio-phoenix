@@ -92,15 +92,16 @@ http_archive(
 
 http_archive(
     name = "rules_spotless",
-    sha256 = "984b7b6f7da7b1963161812cf2a735e6e59958efdb641e2751af088ff4a03b97",
-    url = "https://github.com/bzlmodRio/rules_spotless/releases/download/2.40.0/rules_spotless-2.40.0.tar.gz",
+    integrity = "sha256-b3ZLp66ExJOAJvUaUtnoGW+A2yvEsdwebnj8WFvliNI=",
+    strip_prefix = "rules_spotless-ebddd6f724d7f18c0c4bd3ab910e27d689e281ef",
+    urls = ["https://github.com/bzlmodrio/rules_spotless/archive/ebddd6f724d7f18c0c4bd3ab910e27d689e281ef.tar.gz"],
 )
 
 http_archive(
     name = "rules_python",
-    sha256 = "3b8b4cdc991bc9def8833d118e4c850f1b7498b3d65d5698eea92c3528b8cf2c",
-    strip_prefix = "rules_python-0.30.0",
-    url = "https://github.com/bazelbuild/rules_python/releases/download/0.30.0/rules_python-0.30.0.tar.gz",
+    sha256 = "690e0141724abb568267e003c7b6d9a54925df40c275a870a4d934161dc9dd53",
+    strip_prefix = "rules_python-0.40.0",
+    url = "https://github.com/bazelbuild/rules_python/releases/download/0.40.0/rules_python-0.40.0.tar.gz",
 )
 
 http_archive(
@@ -112,12 +113,11 @@ http_archive(
 
 http_archive(
     name = "com_google_protobuf",
-    sha256 = "da288bf1daa6c04d03a9051781caa52aceb9163586bff9aa6cfb12f69b9395aa",
-    strip_prefix = "protobuf-27.0",
-    urls = [
-        "https://github.com/protocolbuffers/protobuf/archive/v27.0.tar.gz",
-    ],
+    sha256 = "10a0d58f39a1a909e95e00e8ba0b5b1dc64d02997f741151953a2b3659f6e78c",
+    strip_prefix = "protobuf-29.0",
+    urls = ["https://github.com/protocolbuffers/protobuf/archive/v29.0.tar.gz"],
 )
+
 ########################
 
 ########################
@@ -151,6 +151,12 @@ rules_jvm_external_setup()
 load("@bzlmodrio-phoenix//private/non_bzlmod_dependencies:setup_dependencies.bzl", "get_java_dependenicies", "setup_dependencies")
 
 setup_dependencies()
+
+load("@rules_shell//shell:repositories.bzl", "rules_shell_dependencies", "rules_shell_toolchains")
+
+rules_shell_dependencies()
+
+rules_shell_toolchains()
 ########################
 
 load("@rules_jvm_external//:defs.bzl", "maven_install")
@@ -187,7 +193,6 @@ http_archive(
 
 load("@rules_checkstyle//dependencies:load_rule_dependencies.bzl", "load_checkstyle_rule_dependencies")
 load("@rules_pmd//dependencies:load_rule_dependencies.bzl", "load_pmd_rule_dependencies")
-load("@rules_spotless//dependencies:load_rule_dependencies.bzl", "load_spotless_rule_dependencies")
 load("@rules_wpiformat//dependencies:load_rule_dependencies.bzl", "load_wpiformat_rule_dependencies")
 
 load_pmd_rule_dependencies()
@@ -195,8 +200,6 @@ load_pmd_rule_dependencies()
 load_checkstyle_rule_dependencies()
 
 load_wpiformat_rule_dependencies()
-
-load_spotless_rule_dependencies()
 
 load("@rules_wpiformat//dependencies:load_dependencies.bzl", "load_wpiformat_dependencies")
 
