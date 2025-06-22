@@ -74,14 +74,14 @@ http_archive(
 
 http_archive(
     name = "rules_pmd",
-    sha256 = "e0ac8b48e5ef240d4f5103431dde0351feedde55353777eb89601604781fced9",
-    url = "https://github.com/bzlmodRio/rules_pmd/releases/download/7.2.0/rules_pmd-7.2.0.tar.gz",
+    sha256 = "676aea680376c32dfaab2293962f95f7755c14183833b3cd8f62323f43b7cf75",
+    url = "https://github.com/bzlmodRio/rules_pmd/releases/download/7.2.0.bcr1/rules_pmd-7.2.0.bcr1.tar.gz",
 )
 
 http_archive(
     name = "rules_checkstyle",
-    sha256 = "7194b5ceb525b997d13e0b37604df2c057ea99e15fd88501cd00847dd6b41697",
-    url = "https://github.com/bzlmodRio/rules_checkstyle/releases/download/10.12.2/rules_checkstyle-10.12.2.tar.gz",
+    sha256 = "7bfc1e0d587a30da4c6f0865fe8a8f2c5dfeaa188a3dd7047a4b9d0ba7192e4c",
+    url = "https://github.com/bzlmodRio/rules_checkstyle/releases/download/10.12.2.bcr1/rules_checkstyle-10.12.2.bcr1.tar.gz",
 )
 
 http_archive(
