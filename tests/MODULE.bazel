@@ -34,7 +34,6 @@ archive_override(
     strip_prefix = "rules_python-29a7f6a0d5c8996f4d3f36e08269e0faf478927b",
     urls = ["https://github.com/bazel-contrib/rules_python/archive/29a7f6a0d5c8996f4d3f36e08269e0faf478927b.tar.gz"],
 )
-
 archive_override(
     module_name = "bzlmodrio-allwpilib",
     sha256 = "8c36b55cef9ce00bdf2124fda4bafc0ed7ec662064119a0daad721018c4dac25",
