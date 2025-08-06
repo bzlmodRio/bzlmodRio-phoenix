@@ -9,7 +9,7 @@ alias(
 cc_library(
     name = "shared_interface",
     srcs = select({
-        "@rules_bzlmodrio_toolchains//conditions:windows": ["@bazelrio_com_ctre_phoenix_cci_windowsx86-64//:shared_interface"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_x86_64": ["@bazelrio_com_ctre_phoenix_cci_windowsx86-64//:shared_interface"],
     }),
     linkstatic = True,
     tags = ["manual"],
@@ -26,7 +26,7 @@ filegroup(
     name = "shared_raw",
     srcs = select({
         "@rules_bzlmodrio_toolchains//conditions:linux_x86_64": ["@bazelrio_com_ctre_phoenix_cci_linuxx86-64//:shared"],
-        "@rules_bzlmodrio_toolchains//conditions:windows": ["@bazelrio_com_ctre_phoenix_cci_windowsx86-64//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_x86_64": ["@bazelrio_com_ctre_phoenix_cci_windowsx86-64//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@bazelrio_com_ctre_phoenix_cci_linuxarm64//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@bazelrio_com_ctre_phoenix_cci_linuxathena//:shared"],
         "//conditions:default": [],
@@ -44,7 +44,8 @@ cc_library(
     }),
     visibility = ["@bzlmodrio-phoenix//:__subpackages__"],
     deps = [] + select({
-        "@rules_bzlmodrio_toolchains//conditions:windows": [":shared_interface"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64": [":shared_interface"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_x86_64": [":shared_interface"],
         "//conditions:default": [],
     }) + ["@bazelrio_com_ctre_phoenix_cci_headers//:headers"],
     alwayslink = 1,
