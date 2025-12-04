@@ -10,13 +10,13 @@ bazel_dep(name = "rules_java", version = "8.12.0")
 bazel_dep(name = "rules_jvm_external", version = "6.3")
 bazel_dep(name = "rules_bazelrio", version = "0.0.14")
 bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2025-1.bcr5")
-bazel_dep(name = "bzlmodrio-allwpilib", version = "2025.3.2.bcr1")
+bazel_dep(name = "bzlmodrio-allwpilib", version = "2026.1.1-beta-1")
 bazel_dep(name = "bzlmodrio-opencv", version = "2025.4.10.0-3.bcr3")
-bazel_dep(name = "bzlmodrio-ni", version = "2025.2.0.bcr1")
-bazel_dep(name = "bzlmodrio-phoenix6", version = "25.4.0")
+bazel_dep(name = "bzlmodrio-ni", version = "2026.1.0")
+bazel_dep(name = "bzlmodrio-phoenix6", version = "26.0.0-beta-1")
 bazel_dep(name = "rules_pmd", version = "7.2.0.bcr1")
 bazel_dep(name = "rules_checkstyle", version = "10.12.2.bcr1")
-bazel_dep(name = "rules_wpiformat", version = "2025.33")
+bazel_dep(name = "rules_wpiformat", version = "2025.68")
 bazel_dep(name = "rules_wpi_styleguide", version = "2025.06.22")
 bazel_dep(name = "rules_spotless", version = "2.40.0.bcr1")
 bazel_dep(name = "rules_bzlmodrio_jdk", version = "17.0.12-7.bcr1")
@@ -25,28 +25,6 @@ archive_override(
     integrity = "sha256-OrJI8gl3PiEw3J54p/jtNydjMY2xRlpI1yfKfPKnIYQ=",
     strip_prefix = "rules_bzlmodrio_jdk-23a1c1fd1a9e1d1521164c854be10e3eb35e84cd",
     urls = ["https://github.com/wpilibsuite/rules_bzlmodRio_jdk/archive/23a1c1fd1a9e1d1521164c854be10e3eb35e84cd.tar.gz"],
-)
-
-# TODO replace with released version once they make one that has Austins patch
-archive_override(
-    module_name = "rules_python",
-    integrity = "sha256-cx46XtT7EnCQmo3Ad5AqWOp8dB6kTGrXVmKCCwjadxw=",
-    strip_prefix = "rules_python-29a7f6a0d5c8996f4d3f36e08269e0faf478927b",
-    urls = ["https://github.com/bazel-contrib/rules_python/archive/29a7f6a0d5c8996f4d3f36e08269e0faf478927b.tar.gz"],
-)
-
-archive_override(
-    module_name = "bzlmodrio-allwpilib",
-    sha256 = "8c36b55cef9ce00bdf2124fda4bafc0ed7ec662064119a0daad721018c4dac25",
-    strip_prefix = "bzlmodRio-allwpilib-b56c6a9dd55181c24a6a5b93b1e565d29da36cc3",
-    url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/archive/b56c6a9dd55181c24a6a5b93b1e565d29da36cc3.tar.gz",
-)
-
-archive_override(
-    module_name = "bzlmodrio-phoenix6",
-    sha256 = "fb318dc4831b4c716d1b2507964caf6e15a2e5ad400cffec31a2841c74c0afcf",
-    strip_prefix = "bzlmodRio-phoenix6-8c111464bd535204fe6166dedad5ad59f4097048",
-    url = "https://github.com/bzlmodRio/bzlmodRio-phoenix6/archive/8c111464bd535204fe6166dedad5ad59f4097048.tar.gz",
 )
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")

@@ -41,12 +41,10 @@ http_archive(
     url = "https://github.com/wpilibsuite/rules_bzlmodRio_toolchains/releases/download/2025-1.bcr5/rules_bzlmodRio_toolchains-2025-1.bcr5.tar.gz",
 )
 
-# TODO replace with released version once they make one that has Austins patch
 http_archive(
     name = "bzlmodrio-allwpilib",
-    sha256 = "8c36b55cef9ce00bdf2124fda4bafc0ed7ec662064119a0daad721018c4dac25",
-    strip_prefix = "bzlmodRio-allwpilib-b56c6a9dd55181c24a6a5b93b1e565d29da36cc3",
-    url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/archive/b56c6a9dd55181c24a6a5b93b1e565d29da36cc3.tar.gz",
+    sha256 = "df2e575e89b6eb0c4c9f7e3022bfa8356dc440c8c7058ba54cb2936c90ddd37f",
+    url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/releases/download/2026.1.1-beta-1/bzlmodRio-allwpilib-2026.1.1-beta-1.tar.gz",
 )
 
 http_archive(
@@ -57,16 +55,14 @@ http_archive(
 
 http_archive(
     name = "bzlmodrio-ni",
-    sha256 = "5ee1e2d6c1a670eba178eaa5c933f31dccf550b7ab613d4b22c37ead45497c45",
-    url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2025.2.0.bcr1/bzlmodRio-ni-2025.2.0.bcr1.tar.gz",
+    sha256 = "e8232c386bacfad08c45aaa7e625f587ec040cfb71f25a3b8f17b6abd909f38e",
+    url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2026.1.0/bzlmodRio-ni-2026.1.0.tar.gz",
 )
 
-# TODO
 http_archive(
     name = "bzlmodrio-phoenix6",
-    sha256 = "fb318dc4831b4c716d1b2507964caf6e15a2e5ad400cffec31a2841c74c0afcf",
-    strip_prefix = "bzlmodRio-phoenix6-8c111464bd535204fe6166dedad5ad59f4097048",
-    url = "https://github.com/bzlmodRio/bzlmodRio-phoenix6/archive/8c111464bd535204fe6166dedad5ad59f4097048.tar.gz",
+    sha256 = "910c3fdbc019a5611a11acd08fca47ed803b743771c9bb2c5d88d2633eae207f",
+    url = "https://github.com/bzlmodRio/bzlmodRio-phoenix6/releases/download/26.0.0-beta-1/bzlmodRio-phoenix6-26.0.0-beta-1.tar.gz",
 )
 
 http_archive(
@@ -103,8 +99,8 @@ http_archive(
 
 http_archive(
     name = "rules_wpiformat",
-    sha256 = "d27a5706aff034c84fca018f46c751575792a2ef267cb5a9af70c677b2b52c40",
-    url = "https://github.com/bzlmodRio/rules_wpiformat/releases/download/2025.33/rules_wpiformat-2025.33.tar.gz",
+    sha256 = "ac055f723802c2bfcdaf2c46e3426e0dc685988561173ba8d4f6ad55f6e65a99",
+    url = "https://github.com/bzlmodRio/rules_wpiformat/releases/download/2025.68/rules_wpiformat-2025.68.tar.gz",
 )
 
 http_archive(
@@ -113,12 +109,11 @@ http_archive(
     url = "https://github.com/bzlmodRio/rules_spotless/releases/download/2.40.0.bcr1/rules_spotless-2.40.0.bcr1.tar.gz",
 )
 
-# TODO replace with released version once they make one that has Austins patch
 http_archive(
     name = "rules_python",
-    sha256 = "731e3a5ed4fb1270909a8dc077902a58ea7c741ea44c6ad75662820b08da771c",
-    strip_prefix = "rules_python-29a7f6a0d5c8996f4d3f36e08269e0faf478927b",
-    url = "https://github.com/bazel-contrib/rules_python/archive/29a7f6a0d5c8996f4d3f36e08269e0faf478927b.tar.gz",
+    sha256 = "f609f341d6e9090b981b3f45324d05a819fd7a5a56434f849c761971ce2c47da",
+    strip_prefix = "rules_python-1.7.0",
+    url = "https://github.com/bazelbuild/rules_python/releases/download/1.7.0/rules_python-1.7.0.tar.gz",
 )
 
 http_archive(
