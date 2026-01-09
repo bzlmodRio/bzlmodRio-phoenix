@@ -46,8 +46,8 @@ http_archive(
 
 http_archive(
     name = "bzlmodrio-allwpilib",
-    sha256 = "df2e575e89b6eb0c4c9f7e3022bfa8356dc440c8c7058ba54cb2936c90ddd37f",
-    url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/releases/download/2026.1.1-beta-1/bzlmodRio-allwpilib-2026.1.1-beta-1.tar.gz",
+    sha256 = "680d59428b1ee752bd5a48bec6256c0da6078fb5bf70b744bd94d48049ca4022",
+    url = "https://github.com/bzlmodRio/bzlmodRio-allwpilib/releases/download/2026.1.1/bzlmodRio-allwpilib-2026.1.1.tar.gz",
 )
 
 http_archive(
@@ -64,8 +64,8 @@ http_archive(
 
 http_archive(
     name = "bzlmodrio-phoenix6",
-    sha256 = "910c3fdbc019a5611a11acd08fca47ed803b743771c9bb2c5d88d2633eae207f",
-    url = "https://github.com/bzlmodRio/bzlmodRio-phoenix6/releases/download/26.0.0-beta-1/bzlmodRio-phoenix6-26.0.0-beta-1.tar.gz",
+    sha256 = "dd275004dc2225d2dd0087467d34a00d24beb7cf014d863fa3fb852c47aa6203",
+    url = "https://github.com/bzlmodRio/bzlmodRio-phoenix6/releases/download/26.1.0/bzlmodRio-phoenix6-26.1.0.tar.gz",
 )
 
 ########################
