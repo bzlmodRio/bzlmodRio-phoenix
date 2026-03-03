@@ -79,12 +79,12 @@ jobs:
 
     # Run update
     - name: Run update
-      run: bazel run //:auto_update
+      run: bazel run //:auto_update --noenable_bzlmod --enable_workspace
       working-directory: libraries/bzlmodrio-phoenix/generate
 
     - name: Generate if changed
       run: |
-        if [[ $(git --no-pager diff --exit-code HEAD) != '' ]]; then
+        if [[ $(git --no-pager diff --exit-code HEAD  ':!./MODULE.bazel.lock') != '' ]]; then
           echo "Something changed, need to re-generate"
           bazel run //:generate
           buildifier -warnings all --lint=fix -r ..
