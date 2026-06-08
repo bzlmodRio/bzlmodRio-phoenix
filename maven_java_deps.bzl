@@ -14,9 +14,6 @@ def __setup_bzlmodrio_phoenix_java_dependencies(mctx):
         server_urls = ["https://maven.ctr-electronics.com/release"],
     )
 
-def setup_legacy_bzlmodrio_phoenix_java_dependencies():
-    __setup_bzlmodrio_phoenix_java_dependencies(None)
-
 setup_bzlmodrio_phoenix_java_dependencies = module_extension(
     __setup_bzlmodrio_phoenix_java_dependencies,
 )

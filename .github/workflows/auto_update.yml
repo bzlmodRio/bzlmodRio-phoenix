@@ -79,7 +79,7 @@ jobs:
 
     # Run update
     - name: Run update
-      run: bazel run //:auto_update --noenable_bzlmod --enable_workspace
+      run: bazel run //:auto_update
       working-directory: libraries/bzlmodrio-phoenix/generate
 
     - name: Generate if changed

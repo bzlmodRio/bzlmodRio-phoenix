@@ -279,9 +279,6 @@ def __setup_bzlmodrio_phoenix_cpp_dependencies(mctx):
         ],
     )
 
-def setup_legacy_bzlmodrio_phoenix_cpp_dependencies():
-    __setup_bzlmodrio_phoenix_cpp_dependencies(None)
-
 setup_bzlmodrio_phoenix_cpp_dependencies = module_extension(
     __setup_bzlmodrio_phoenix_cpp_dependencies,
 )
